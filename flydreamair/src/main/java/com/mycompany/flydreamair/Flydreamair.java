@@ -11,6 +11,8 @@ package com.mycompany.flydreamair;
 public class Flydreamair {
 
     public static void main(String[] args) {
+        String test = "hi";
+        System.out.println(test);
         System.out.println("Hello World!");
     }
 }
