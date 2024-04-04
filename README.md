@@ -1,9 +1,10 @@
 # FlyDreamAir - CSIT214 Project
 
-| Name          | Student Number |
-| ------------- | -------------- |
-| Callum Herring| 6658106        |
- 
+| Name           | Student Number |
+| -------------- | -------------- |
+| Callum Herring | 6658106        |
+| Daniel Gibson  | 5003854        |
+
 ### What is this repository for?
 
 - Quick summary
