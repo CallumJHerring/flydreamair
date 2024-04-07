@@ -11,6 +11,7 @@ import javax.swing.*;
  * @author callum
  */
 public class LoginPage extends javax.swing.JFrame {
+    private static JFrame mainFrame;
     /**
      * Creates new form LoginPage
      */
@@ -49,6 +50,11 @@ public class LoginPage extends javax.swing.JFrame {
 
         jButton1.setBackground(new java.awt.Color(110, 102, 153));
         jButton1.setText("Login");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 500, 110, 40));
 
         usernameLogin.setBackground(new java.awt.Color(255, 255, 255));
@@ -126,6 +132,19 @@ public class LoginPage extends javax.swing.JFrame {
             userPassword.setForeground(new Color(153, 153, 153));
         }
     }//GEN-LAST:event_userPasswordFocusLost
+    // [CH] will change to saved users later
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        if (usernameLogin.getText().equals("")) {
+            JOptionPane.showMessageDialog(null, "Please enter username");
+        } else if (userPassword.getText().equals("")) {
+            JOptionPane.showMessageDialog(null, "Please enter password");
+        } else if (usernameLogin.getText().equals("user") && userPassword.getText().equals("password")) {
+            //JOptionPane.showMessageDialog(null, "Login Success!");
+            openMainPage();
+        } else {
+            JOptionPane.showMessageDialog(null, "Incorrect login details!","System Error",JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
     
     /**
      * @param args the command line arguments
@@ -163,6 +182,16 @@ public class LoginPage extends javax.swing.JFrame {
                 
             }
         });
+    }
+    
+    private void openMainPage() {
+        mainFrame = new MainPage();
+        mainFrame.setSize(1920,1080);
+        mainFrame.setBackground(Color.gray);
+        mainFrame.setVisible(true);
+
+        // Close the login frame 
+        dispose();
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

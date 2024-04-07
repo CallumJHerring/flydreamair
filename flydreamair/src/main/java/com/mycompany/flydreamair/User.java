@@ -7,7 +7,7 @@ public class User {
     private String name;
     private String gender;
     private int pin;
-    public ArrayList<Ticket> tickets;
+    private ArrayList<Ticket> tickets;
     
     
     public User(int userID, String name, String gender, int pin) {
@@ -57,7 +57,7 @@ public class User {
     public ArrayList<Ticket> getTickets() {
         return this.tickets;
     }
-            
+              
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
