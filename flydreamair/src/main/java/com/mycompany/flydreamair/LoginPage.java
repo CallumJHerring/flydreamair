@@ -1,15 +1,9 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package com.mycompany.flydreamair;
+
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
-/**
- *
- * @author callum
- */
+
 public class LoginPage extends javax.swing.JFrame {
     private static JFrame mainFrame;
     /**
@@ -19,6 +13,8 @@ public class LoginPage extends javax.swing.JFrame {
         initComponents();
 
         this.setLocationRelativeTo(null); // [CH] Center window
+        jLabel1.requestFocusInWindow(); // [CH] Take mouse focus off inputs (show placeholders)
+       
     }
 
     /**

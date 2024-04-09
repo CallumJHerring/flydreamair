@@ -9,7 +9,6 @@ public class User {
     private int pin;
     private ArrayList<Ticket> tickets;
     
-    
     public User(int userID, String name, String gender, int pin) {
         this.userID = userID;
         this.name = name;
@@ -57,7 +56,7 @@ public class User {
     public ArrayList<Ticket> getTickets() {
         return this.tickets;
     }
-              
+        
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
