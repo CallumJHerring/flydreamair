@@ -1,11 +1,14 @@
 # FlyDreamAir - CSIT214 Project
 
-| Name           | Student Number |
-| -------------- | -------------- |
-| Callum Herring | 6658106        |
-| Daniel Gibson  | 5003854        |
-| Shaun Peng | 7482097 |
-| Nicholas Srbinoski | 7497945 |
+| Name               | Student Number |
+| ------------------ | -------------- |
+| Callum Herring     | 6658106        |
+| Daniel Gibson      | 5003854        |
+| Shaun Peng         | 7482097        |
+| Nicholas Srbinoski | 7497945        |
+| Thomas McCormack   | 7486248        |
+| Sahil Singh Sorout | 7588744        |
+
 ### What is this repository for?
 
 - Quick summary
