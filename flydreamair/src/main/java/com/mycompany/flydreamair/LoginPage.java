@@ -13,7 +13,7 @@ public class LoginPage extends javax.swing.JFrame {
         initComponents();
 
         this.setLocationRelativeTo(null); // [CH] Center window
-        jLabel1.requestFocusInWindow(); // [CH] Take mouse focus off inputs (show placeholders)
+        LoginPanel.requestFocusInWindow(); // [CH] Take mouse focus off inputs (show placeholders)
        
     }
 
@@ -31,7 +31,7 @@ public class LoginPage extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         usernameLogin = new javax.swing.JTextField();
         userPassword = new javax.swing.JPasswordField();
-        jLabel1 = new javax.swing.JLabel();
+        LoginPanel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -40,8 +40,6 @@ public class LoginPage extends javax.swing.JFrame {
         jPanel1.setPreferredSize(new java.awt.Dimension(720, 500));
         jPanel1.setSize(new java.awt.Dimension(720, 500));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel2.setIcon(new javax.swing.ImageIcon("/Users/callum/Desktop/flydreamairsmall.png")); // NOI18N
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-70, 0, 220, 160));
 
         jButton1.setBackground(new java.awt.Color(110, 102, 153));
@@ -53,7 +51,6 @@ public class LoginPage extends javax.swing.JFrame {
         });
         jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 500, 110, 40));
 
-        usernameLogin.setBackground(new java.awt.Color(255, 255, 255));
         usernameLogin.setForeground(new java.awt.Color(102, 102, 102));
         usernameLogin.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         usernameLogin.setText("Username");
@@ -69,7 +66,6 @@ public class LoginPage extends javax.swing.JFrame {
         });
         jPanel1.add(usernameLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 330, 240, 50));
 
-        userPassword.setBackground(new java.awt.Color(255, 255, 255));
         userPassword.setForeground(new java.awt.Color(102, 102, 102));
         userPassword.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         userPassword.setText("Password");
@@ -84,8 +80,8 @@ public class LoginPage extends javax.swing.JFrame {
         });
         jPanel1.add(userPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 410, 240, 50));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("/Users/callum/Desktop/_9be77314-4fa1-4a0f-8170-0c3ebeb5fa14.png")); // NOI18N
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1030, -1));
+        LoginPanel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/LoginImage.png"))); // NOI18N
+        jPanel1.add(LoginPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1030, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -191,8 +187,8 @@ public class LoginPage extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel LoginPanel;
     private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPasswordField userPassword;
