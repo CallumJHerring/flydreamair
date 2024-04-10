@@ -1,6 +1,6 @@
 package com.mycompany.flydreamair;
 
-import java.util.ArrayList;
+import java.util.*;
 
 public class User {
     private int userID;
@@ -56,7 +56,25 @@ public class User {
     public ArrayList<Ticket> getTickets() {
         return this.tickets;
     }
-        
+   
+    public boolean addTicket(Ticket booking) {
+        int newTicketID = booking.getTicketID();
+        for (Ticket exisitngTicket: tickets) {
+            if (exisitngTicket.getTicketID() == newTicketID) {
+                
+                return false;
+                
+            }
+        } 
+        tickets.add(booking);
+        return true;
+    }
+    
+    public int createUserID() {
+        Random newID = new Random();
+        return newID.nextInt(9000) + 1000;
+    }
+    
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();

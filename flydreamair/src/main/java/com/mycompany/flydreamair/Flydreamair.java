@@ -14,16 +14,17 @@ public class Flydreamair {
         ArrayList<Ticket> tickets = new ArrayList<>();
         
         User testUser = new User(1, "Callum", "Male", 1234);
-        OneWayTicket testOneWayTicket = new OneWayTicket(101, 1, "Callum", "Banned flyer");
+        //OneWayTicket testOneWayTicket = new OneWayTicket(101, 1, "Callum", "Banned flyer");
         ReturnTicket testReturnTicket = new ReturnTicket(102,1, "Callum", "Vegan");
         
         users.add(testUser);
-        tickets.add(testOneWayTicket);
+       // tickets.add(testOneWayTicket);
         tickets.add(testReturnTicket);
         
         System.out.println(testUser);
-        System.out.println(testOneWayTicket);
+        //System.out.println(testOneWayTicket);
         System.out.println(testReturnTicket);
+      
          
         /*
         int choice = 0;
