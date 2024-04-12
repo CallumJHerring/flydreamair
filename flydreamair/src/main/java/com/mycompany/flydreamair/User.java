@@ -6,14 +6,14 @@ public class User {
     private int userID;
     private String name;
     private String gender;
-    private int pin;
+    private String password;
     private ArrayList<Ticket> tickets;
     
-    public User(int userID, String name, String gender, int pin) {
+    public User(int userID, String name, String gender, String password) {
         this.userID = userID;
         this.name = name;
         this.gender = gender;
-        this.pin = pin;
+        this.password = password;
         this.tickets = tickets;
     }
     
@@ -33,7 +33,7 @@ public class User {
         return this.name;
     }
     
-    public void setGender() {
+    public void setGender(String gender) {
         this.gender = gender;
     }
     
@@ -41,12 +41,12 @@ public class User {
         return this.gender;
     }
     
-    public void setPin(int pin) {
-        this.pin = pin;
+    public void setPassword(String password) {
+        this.password = password;
     }
     
-    public int getPin() {
-        return this.pin;
+    public String getPassword() {
+        return this.password;
     }
     
     public void setBookings(ArrayList<Ticket> tickets) {
@@ -81,7 +81,7 @@ public class User {
         sb.append("UserID: ").append(this.userID).append("\n");
         sb.append("Name: ").append(this.name).append("\n");
         sb.append("Gender: ").append(this.gender).append("\n");
-        sb.append("Pin: ").append(this.pin).append("\n");
+        sb.append("Pin: ").append(this.password).append("\n");
         return sb.toString();
     }
 }

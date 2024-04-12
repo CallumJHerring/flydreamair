@@ -4,9 +4,12 @@ import java.awt.Color;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
+import java.util.*;
+import java.io.*;
 
-public class BookFlightPage extends javax.swing.JFrame {
-    //private static JTextField flyToTextBox;
+public class BookFlightPage extends javax.swing.JFrame implements Serializable {
+    private ArrayList<Flight> flights = new ArrayList<>();
+            
     /**
      * Creates new form BookFlightPage
      */
@@ -29,11 +32,20 @@ public class BookFlightPage extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         flyFromTextbox = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        bookFlightNextButton = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         flyToTextbox = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        departureYear = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
+        arrivalYear = new javax.swing.JTextField();
+        departureMonth = new javax.swing.JTextField();
+        departureDay = new javax.swing.JTextField();
+        jLabel8 = new javax.swing.JLabel();
+        arrivalMonth = new javax.swing.JTextField();
+        arrivalDay = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -55,10 +67,15 @@ public class BookFlightPage extends javax.swing.JFrame {
         flyFromTextbox.setText("Airport/city");
         flyFromTextbox.setBorder(null);
 
-        jButton1.setBackground(new java.awt.Color(255, 255, 255));
-        jButton1.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(102, 102, 102));
-        jButton1.setText("Next ");
+        bookFlightNextButton.setBackground(new java.awt.Color(255, 255, 255));
+        bookFlightNextButton.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
+        bookFlightNextButton.setForeground(new java.awt.Color(102, 102, 102));
+        bookFlightNextButton.setText("Next ");
+        bookFlightNextButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bookFlightNextButtonMouseClicked(evt);
+            }
+        });
 
         jLabel4.setBackground(new java.awt.Color(255, 255, 255));
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
@@ -77,6 +94,48 @@ public class BookFlightPage extends javax.swing.JFrame {
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
 
+        jLabel6.setFont(new java.awt.Font("Georgia", 0, 18)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setText("Departure date");
+
+        departureYear.setBackground(new java.awt.Color(0, 153, 204));
+        departureYear.setFont(new java.awt.Font("Georgia", 0, 24)); // NOI18N
+        departureYear.setText("YYYY");
+        departureYear.setBorder(null);
+
+        jLabel7.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel7.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
+
+        arrivalYear.setBackground(new java.awt.Color(0, 153, 204));
+        arrivalYear.setFont(new java.awt.Font("Georgia", 0, 24)); // NOI18N
+        arrivalYear.setText("YYYY");
+        arrivalYear.setBorder(null);
+
+        departureMonth.setBackground(new java.awt.Color(0, 153, 204));
+        departureMonth.setFont(new java.awt.Font("Georgia", 0, 24)); // NOI18N
+        departureMonth.setText("MM");
+        departureMonth.setBorder(null);
+
+        departureDay.setBackground(new java.awt.Color(0, 153, 204));
+        departureDay.setFont(new java.awt.Font("Georgia", 0, 24)); // NOI18N
+        departureDay.setText("DD");
+        departureDay.setBorder(null);
+
+        jLabel8.setBackground(new java.awt.Color(0, 153, 204));
+        jLabel8.setFont(new java.awt.Font("Georgia", 0, 18)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel8.setText("Arrival date");
+
+        arrivalMonth.setBackground(new java.awt.Color(0, 153, 204));
+        arrivalMonth.setFont(new java.awt.Font("Georgia", 0, 24)); // NOI18N
+        arrivalMonth.setText("MM");
+        arrivalMonth.setBorder(null);
+
+        arrivalDay.setBackground(new java.awt.Color(0, 153, 204));
+        arrivalDay.setFont(new java.awt.Font("Georgia", 0, 24)); // NOI18N
+        arrivalDay.setText("DD");
+        arrivalDay.setBorder(null);
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -85,23 +144,44 @@ public class BookFlightPage extends javax.swing.JFrame {
                 .addGap(14, 14, 14)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 344, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel3)
-                        .addGap(354, 354, 354))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jButton1)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(flyFromTextbox, javax.swing.GroupLayout.PREFERRED_SIZE, 358, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(203, 203, 203)
+                                .addComponent(jLabel2)
+                                .addGap(351, 351, 351)
+                                .addComponent(jLabel3))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(flyToTextbox, javax.swing.GroupLayout.DEFAULT_SIZE, 358, Short.MAX_VALUE))))
-                        .addContainerGap(47, Short.MAX_VALUE))))
+                                    .addComponent(flyFromTextbox, javax.swing.GroupLayout.DEFAULT_SIZE, 310, Short.MAX_VALUE)
+                                    .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGap(109, 109, 109)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(flyToTextbox, javax.swing.GroupLayout.PREFERRED_SIZE, 358, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 335, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel6)
+                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addComponent(departureYear, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(departureMonth, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(departureDay, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(106, 106, 106)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel8)
+                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addComponent(arrivalYear, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(arrivalMonth, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(arrivalDay, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 558, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 225, Short.MAX_VALUE)
+                        .addComponent(bookFlightNextButton)
+                        .addGap(105, 105, 105))))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -115,12 +195,31 @@ public class BookFlightPage extends javax.swing.JFrame {
                     .addComponent(flyToTextbox, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(flyFromTextbox, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(52, 52, 52)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel6)
+                    .addComponent(jLabel8))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel5)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 2, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(44, 44, 44)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(247, Short.MAX_VALUE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(departureYear, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(departureMonth, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(departureDay, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(arrivalYear, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(arrivalMonth, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(arrivalDay))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(bookFlightNextButton, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 2, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(134, 134, 134))
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -155,6 +254,36 @@ public class BookFlightPage extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void bookFlightNextButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bookFlightNextButtonMouseClicked
+        String departure = flyFromTextbox.getText();
+        
+        String arrival = flyToTextbox.getText();
+        
+        String depYear = departureYear.getText();
+        int departYear = Integer.parseInt(depYear);
+        
+        String depMoth = departureMonth.getText();
+        int departMonth = Integer.parseInt(depMoth);
+        
+        String depDay = departureMonth.getText();
+        int departDay = Integer.parseInt(depDay);
+        
+        String arYear = arrivalYear.getText();
+        int arrivalYear = Integer.parseInt(arYear);
+        
+        String arMonth = arrivalMonth.getText();
+        int arrivalMonth = Integer.parseInt(arMonth);
+        
+        String arDay = arrivalDay.getText();
+        int arrivalDay = Integer.parseInt(arDay);
+        
+        Flight newFlight = new Flight(departure, arrival, new MyDate (departYear, departMonth, departDay), new MyDate (arrivalYear, arrivalMonth, arrivalDay));
+        
+        flights.add(newFlight);
+        
+        System.out.print(newFlight.toString());
+    }//GEN-LAST:event_bookFlightNextButtonMouseClicked
         
     /*    */
     /**
@@ -193,14 +322,23 @@ public class BookFlightPage extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField arrivalDay;
+    private javax.swing.JTextField arrivalMonth;
+    private javax.swing.JTextField arrivalYear;
+    private javax.swing.JButton bookFlightNextButton;
+    private javax.swing.JTextField departureDay;
+    private javax.swing.JTextField departureMonth;
+    private javax.swing.JTextField departureYear;
     private javax.swing.JTextField flyFromTextbox;
     private javax.swing.JTextField flyToTextbox;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables

@@ -1,6 +1,8 @@
 package com.mycompany.flydreamair;
 
-public class MyDate {
+import java.io.*;
+
+public class MyDate implements Serializable {
     public int year;
     public int month;
     public int day;
@@ -10,4 +12,15 @@ public class MyDate {
         this.month = month;
         this.day = day;
     }
+    
+    /*
+    public String toDelimitedString() {
+        return year + "/" + month + "/" + day;
+    }
+    */
+    
+    @Override
+    public String toString() {
+        return year + "/" + month + "/" + day;
+    }  
 }
