@@ -7,7 +7,7 @@ import java.awt.event.*;
 
         
 public class AccountCreation extends javax.swing.JFrame {
-    private ArrayList<User> customers;
+    //private ArrayList<User> customers;
     private int genID = 100;
     /**
      * Creates new form AccountCreation
