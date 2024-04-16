@@ -1,5 +1,6 @@
 package com.mycompany.flydreamair;
 
+/*
 public class ReturnTicket extends Ticket {
     protected String dietComments;
     
@@ -27,3 +28,4 @@ public class ReturnTicket extends Ticket {
     }
     
 }
+*/

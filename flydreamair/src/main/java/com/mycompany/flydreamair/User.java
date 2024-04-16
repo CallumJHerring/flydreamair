@@ -3,42 +3,24 @@ package com.mycompany.flydreamair;
 import java.util.*;
 
 public class User {
-    private int userID;
-    private String name;
-    private String gender;
+    private String username;
     private String password;
+    private String email;
     private ArrayList<Ticket> tickets;
     
-    public User(int userID, String name, String gender, String password) {
-        this.userID = userID;
-        this.name = name;
-        this.gender = gender;
+    public User(String username, String password, String email) {
+        this.username = username;
         this.password = password;
+        this.email = email;
         this.tickets = tickets;
     }
     
-    public void setUserID(int userID) {
-        this.userID = userID;
+    public void setUsername(String username) {
+        this.username = username;
     }
     
-    public int getUserID() {
-        return this.userID;
-    }
-    
-    public void setName(String name) {
-        this.name = name;
-    }
-    
-    public String getName() {
-        return this.name;
-    }
-    
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
-    
-    public String getGender() {
-        return this.gender;
+    public String getUsername() {
+        return this.username;
     }
     
     public void setPassword(String password) {
@@ -49,6 +31,14 @@ public class User {
         return this.password;
     }
     
+    public void setEmail(String email) {
+        this.email = email;
+    }
+    
+    public String getEmail() {
+        return this.email;
+    }
+    
     public void setBookings(ArrayList<Ticket> tickets) {
         this.tickets = tickets;
     }
@@ -57,31 +47,17 @@ public class User {
         return this.tickets;
     }
    
+    // [CH] Implement method
     public boolean addTicket(Ticket booking) {
-        int newTicketID = booking.getTicketID();
-        for (Ticket exisitngTicket: tickets) {
-            if (exisitngTicket.getTicketID() == newTicketID) {
-                
-                return false;
-                
-            }
-        } 
-        tickets.add(booking);
-        return true;
-    }
-    
-    public int createUserID() {
-        Random newID = new Random();
-        return newID.nextInt(9000) + 1000;
+        return false;
     }
     
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("UserID: ").append(this.userID).append("\n");
-        sb.append("Name: ").append(this.name).append("\n");
-        sb.append("Gender: ").append(this.gender).append("\n");
-        sb.append("Pin: ").append(this.password).append("\n");
+        sb.append("Name: ").append(this.username).append("\n");
+        sb.append("Password: ").append(this.password).append("\n");
+        sb.append("Email: ").append(this.email).append("\n");
         return sb.toString();
     }
 }

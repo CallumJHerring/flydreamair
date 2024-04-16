@@ -1,5 +1,6 @@
 package com.mycompany.flydreamair;
 
+/*
 public class OneWayTicket extends Ticket {
     protected String comments;
     
@@ -26,3 +27,4 @@ public class OneWayTicket extends Ticket {
         return sb.toString();
     }
 }
+*/

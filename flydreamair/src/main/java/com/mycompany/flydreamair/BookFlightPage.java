@@ -1,11 +1,8 @@
 package com.mycompany.flydreamair;
 
-import java.awt.Color;
-import java.awt.*;
-import java.awt.event.*;
-import javax.swing.*;
 import java.util.*;
 import java.io.*;
+import java.time.*;
 
 public class BookFlightPage extends javax.swing.JFrame implements Serializable {
     private ArrayList<Flight> flights = new ArrayList<>();
@@ -46,6 +43,7 @@ public class BookFlightPage extends javax.swing.JFrame implements Serializable {
         jLabel8 = new javax.swing.JLabel();
         arrivalMonth = new javax.swing.JTextField();
         arrivalDay = new javax.swing.JTextField();
+        seatBooking = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -136,6 +134,8 @@ public class BookFlightPage extends javax.swing.JFrame implements Serializable {
         arrivalDay.setText("DD");
         arrivalDay.setBorder(null);
 
+        seatBooking.setText("Seat");
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -182,6 +182,10 @@ public class BookFlightPage extends javax.swing.JFrame implements Serializable {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 225, Short.MAX_VALUE)
                         .addComponent(bookFlightNextButton)
                         .addGap(105, 105, 105))))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(111, 111, 111)
+                .addComponent(seatBooking, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -205,10 +209,11 @@ public class BookFlightPage extends javax.swing.JFrame implements Serializable {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(departureYear, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(departureMonth, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(departureDay, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(departureDay, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(departureYear, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(departureMonth, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
@@ -219,7 +224,9 @@ public class BookFlightPage extends javax.swing.JFrame implements Serializable {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(bookFlightNextButton, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 2, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(134, 134, 134))
+                .addGap(31, 31, 31)
+                .addComponent(seatBooking, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(80, 80, 80))
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -278,7 +285,12 @@ public class BookFlightPage extends javax.swing.JFrame implements Serializable {
         String arDay = arrivalDay.getText();
         int arrivalDay = Integer.parseInt(arDay);
         
-        Flight newFlight = new Flight(departure, arrival, new MyDate (departYear, departMonth, departDay), new MyDate (arrivalYear, arrivalMonth, arrivalDay));
+        LocalDateTime userDepDate = LocalDateTime.of(departYear, departMonth, departDay, 0,0,0);
+        LocalDateTime userArrDate = LocalDateTime.of(departYear, departMonth, departDay, 0,0,0);
+        
+        String seat = seatBooking.getText();
+        
+        Flight newFlight = new Flight(departure, arrival, userDepDate, userArrDate, 100, seat);
         
         flights.add(newFlight);
         
@@ -341,5 +353,6 @@ public class BookFlightPage extends javax.swing.JFrame implements Serializable {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JTextField seatBooking;
     // End of variables declaration//GEN-END:variables
 }

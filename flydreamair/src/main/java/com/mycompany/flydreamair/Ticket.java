@@ -1,45 +1,61 @@
 package com.mycompany.flydreamair;
 
+import java.util.UUID; // [CH] Universally Unique Identifier
+
 public class Ticket {
-    protected int ticketID;
-    protected int customerID;
-    protected String ticketOwnerName;
+    private User user;
+    private Flight flight;
+    private String ticketID;
     
-    public Ticket(int ticketID, int customerID, String ticketOwnerName) {
-        this.ticketID = ticketID;
-        this.customerID = customerID;
-        this.ticketOwnerName = ticketOwnerName;
+    public Ticket(User user, Flight flight) {
+        this.user = user;
+        this.flight = flight;
+        this.ticketID = UUID.randomUUID().toString();
     }
     
-    public void setTicketID(int ticketID) {
+    public void setUser(User user) {
+        this.user = user;
+    }
+    
+    public User getUser() {
+        return this.user;
+    }
+    
+    public void setFlight(Flight flight) {
+        this.flight = flight;
+    }
+    
+    public Flight getFlight() {
+        return this.flight;
+    }
+    
+    public void setTicketID(String ticketID) {
         this.ticketID = ticketID;
     }
-    public int getTicketID() {
+    
+    public String getTicketID() {
         return this.ticketID;
     }
     
-    public void setCustomerID(int customerID) {
-        this.customerID = customerID;
+    public String generateTicketNumber() {
+        return UUID.randomUUID().toString();
     }
     
-    public int getCustomerID() {
-        return this.customerID;
+    /*
+    @Override
+    public String toString() {
+        return "User: " + user + "Flight: "
     }
+    */
     
-    public void setTicketOwnerName(String ticketOwnerName) {
-        this.ticketOwnerName = ticketOwnerName;
-    }
-    
-    public String getTicketOwnerName() {
-        return this.ticketOwnerName;
-    }
     
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("Ticket ID: ").append(this.ticketID).append("\n");
-        sb.append("Customer ID: ").append(this.customerID).append("\n");
-        sb.append("Ticket Owner: ").append(this.ticketOwnerName).append("\n");
+        sb.append("User Information: \n").append(this.user).append("\n");
+        sb.append("Flight Information: \n").append(this.flight).append("\n");
+        sb.append("Booking Reference: ").append(this.ticketID).append("\n");
         return sb.toString();
     }
+    
 }

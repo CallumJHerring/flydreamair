@@ -32,11 +32,9 @@ public class AccountCreation extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         userNameText = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
+        emailNewAccount = new javax.swing.JTextField();
         createUserButton = new javax.swing.JButton();
-        jLabel4 = new javax.swing.JLabel();
-        userIDText = new javax.swing.JTextField();
-        pinCodeText = new javax.swing.JTextField();
+        passwordNewAccount = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -47,24 +45,24 @@ public class AccountCreation extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Georgia", 0, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Username");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 190, -1, -1));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 90, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("Georgia", 0, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Gender");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 270, -1, -1));
+        jLabel2.setText("Email");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 230, -1, -1));
 
         jLabel3.setBackground(new java.awt.Color(0, 153, 204));
         jLabel3.setFont(new java.awt.Font("Georgia", 0, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Password");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 350, -1, -1));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 160, -1, -1));
 
         userNameText.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel1.add(userNameText, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 190, 238, 35));
+        jPanel1.add(userNameText, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 90, 238, 35));
 
-        jTextField2.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 270, 238, 33));
+        emailNewAccount.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.add(emailNewAccount, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 230, 238, 33));
 
         createUserButton.setBackground(new java.awt.Color(255, 255, 255));
         createUserButton.setFont(new java.awt.Font("Georgia", 2, 18)); // NOI18N
@@ -75,18 +73,10 @@ public class AccountCreation extends javax.swing.JFrame {
                 createUserButtonMouseClicked(evt);
             }
         });
-        jPanel1.add(createUserButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 420, -1, -1));
+        jPanel1.add(createUserButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 310, -1, -1));
 
-        jLabel4.setFont(new java.awt.Font("Georgia", 0, 18)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("User ID");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 120, -1, -1));
-
-        userIDText.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel1.add(userIDText, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 120, 238, 34));
-
-        pinCodeText.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel1.add(pinCodeText, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 350, 238, 31));
+        passwordNewAccount.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.add(passwordNewAccount, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 160, 238, 31));
 
         jLabel5.setFont(new java.awt.Font("Times New Roman", 2, 36)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
@@ -97,7 +87,7 @@ public class AccountCreation extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 602, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -110,21 +100,15 @@ public class AccountCreation extends javax.swing.JFrame {
     // [CH] Create user button
     private void createUserButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_createUserButtonMouseClicked
         ArrayList<User> customers = new ArrayList<>();
-  
-        String newID = userIDText.getText();
-        int newUserID = Integer.parseInt(newID);
        
-        String newName = userNameText.getText();
+        String username = userNameText.getText();
+        String password = passwordNewAccount.getText();
+        String email = emailNewAccount.getText();
         
-        String newGender = jTextField2.getText();
-
-        String newPassword = pinCodeText.getText();
-        
-        
-        User newUser = new User(newUserID, newName, newGender, newPassword);
+        User newUser = new User(username, password, email);
         customers.add(newUser);
         System.out.println(newUser.toString());
-        JOptionPane.showMessageDialog(null, "User created");
+        JOptionPane.showMessageDialog(null, "User created!");
         dispose();
         
     }//GEN-LAST:event_createUserButtonMouseClicked
@@ -166,15 +150,13 @@ public class AccountCreation extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton createUserButton;
+    private javax.swing.JTextField emailNewAccount;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField pinCodeText;
-    private javax.swing.JTextField userIDText;
+    private javax.swing.JTextField passwordNewAccount;
     private javax.swing.JTextField userNameText;
     // End of variables declaration//GEN-END:variables
 }

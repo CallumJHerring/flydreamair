@@ -2,42 +2,35 @@ package com.mycompany.flydreamair;
 
 import java.util.*;
 import java.io.*;
-import java.text.*;
-
-
+import java.time.*;
 
 public class Flydreamair implements Serializable {
 
     public static void main(String[] args) {
-        // [CH] Opens application, comment these lines out if you need to test code
-        
+        // [CH] Opens application, comment these lines out if you want to stop the GUI loading
+        /*
         LoginPage loginPage = new LoginPage();
         loginPage.setVisible(true);
-        
-        // --------------------------------------------------------------- \\
-        
-        DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
-        Date date = new Date();
-        System.out.println(dateFormat.format(date));    
-        
-        // Start of project
-        
+        */
+ 
         // [CH] Test User object and Ticket types
         ArrayList<User> users = new ArrayList<>();
         ArrayList<Ticket> tickets = new ArrayList<>();
         ArrayList<Flight> flights = new ArrayList<>();
         
-        User testUser = new User(1, "Callum", "Male", "password1");
-        OneWayTicket testOneWayTicket = new OneWayTicket(101, 1, "Callum", "Banned flyer");
-        ReturnTicket testReturnTicket = new ReturnTicket(102,1, "Callum", "Vegan");
+        LocalDateTime depTime = LocalDateTime.of(2024,4,16,9,30);
+        LocalDateTime arrTime = LocalDateTime.of(2024,4,16,9,30);
+      
+        User user1 = new User("Callum Herring", "password1", "callumjh@uow.edu.au");
+        Flight flight1 = new Flight("Sydney", "Brisbane", depTime, arrTime, 100, "B12");
+        Ticket ticket1 = new Ticket(user1, flight1);
         
-        users.add(testUser);
-        tickets.add(testOneWayTicket);
-        tickets.add(testReturnTicket);
-        
-        System.out.println(testUser);
-        System.out.println(testOneWayTicket);
-        System.out.println(testReturnTicket);
+        users.add(user1);
+        flights.add(flight1);
+        tickets.add(ticket1);
+        //System.out.println("Users: \n" + user1.toString());
+        //System.out.println("Flights: \n" + flight1.toString());
+        System.out.println("Ticket Details: \n" + ticket1.toString());
         
         /*
         // [CH] Menu for testing components before GUI implementation
