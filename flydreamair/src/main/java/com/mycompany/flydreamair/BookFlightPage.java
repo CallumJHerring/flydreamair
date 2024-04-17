@@ -1,18 +1,54 @@
 package com.mycompany.flydreamair;
 
+import java.awt.Color;
 import java.util.*;
 import java.io.*;
 import java.time.*;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
 
-public class BookFlightPage extends javax.swing.JFrame implements Serializable {
+public class BookFlightPage extends javax.swing.JFrame {
     private ArrayList<Flight> flights = new ArrayList<>();
-            
+    private static JFrame bookFlightFrame;
+    private ArrayList<String> travel = new ArrayList<>();
+    
+    private JTextField textField;
+    private JLabel[] labels = new JLabel[40];
+    
     /**
      * Creates new form BookFlightPage
      */
     public BookFlightPage() {
         initComponents();
         jPanel2.requestFocusInWindow();
+        
+        /* // [Callum] Not working yet, trying to create Array
+        labels[0] = jLabel7;
+        
+        LabelMouseListener listener = new LabelMouseListener(textField);
+        
+        for (JLabel label : labels) {
+            label.addMouseListener(listener);
+        }
+        */
+        
+        
+        /*
+        for (int i = 0; i<labels.length; i++) {
+            jLabel7.add
+            labels[i].addMouseListener(listener);
+        }
+        */
+        
+        /*
+        String aus1 = "Sydney";
+        travel.add(aus1);
+        
+        String[] initialItems = {"Sydney (SYD)", "Brisbane (BNE)"};
+        jComboBox1.setModel(new DefaultComboBoxModel<>(initialItems));
+        */
+  
     }
 
     /**
@@ -34,25 +70,35 @@ public class BookFlightPage extends javax.swing.JFrame implements Serializable {
         jLabel3 = new javax.swing.JLabel();
         flyToTextbox = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        departureYear = new javax.swing.JTextField();
+        australiaTravel = new javax.swing.JTabbedPane();
+        jPanel3 = new javax.swing.JPanel();
+        sAusLabel = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        arrivalYear = new javax.swing.JTextField();
-        departureMonth = new javax.swing.JTextField();
-        departureDay = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        arrivalMonth = new javax.swing.JTextField();
-        arrivalDay = new javax.swing.JTextField();
-        seatBooking = new javax.swing.JTextField();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jPanel4 = new javax.swing.JPanel();
+        jPanel5 = new javax.swing.JPanel();
+        jPanel6 = new javax.swing.JPanel();
+        jPanel7 = new javax.swing.JPanel();
+        jPanel8 = new javax.swing.JPanel();
+        jPanel9 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(0, 153, 204));
         jPanel1.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Georgia", 0, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Welcome to Fly Dream Air");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(326, 17, -1, -1));
 
         jPanel2.setBackground(new java.awt.Color(0, 153, 204));
 
@@ -92,100 +138,99 @@ public class BookFlightPage extends javax.swing.JFrame implements Serializable {
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
 
-        jLabel6.setFont(new java.awt.Font("Georgia", 0, 18)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setText("Departure date");
+        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        departureYear.setBackground(new java.awt.Color(0, 153, 204));
-        departureYear.setFont(new java.awt.Font("Georgia", 0, 24)); // NOI18N
-        departureYear.setText("YYYY");
-        departureYear.setBorder(null);
+        sAusLabel.setText("S");
+        jPanel3.add(sAusLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 20, -1, -1));
 
-        jLabel7.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel7.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
+        jLabel7.setText("Sydney (SYD)");
+        jLabel7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel7MouseClicked(evt);
+            }
+        });
+        jPanel3.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 50, -1, -1));
 
-        arrivalYear.setBackground(new java.awt.Color(0, 153, 204));
-        arrivalYear.setFont(new java.awt.Font("Georgia", 0, 24)); // NOI18N
-        arrivalYear.setText("YYYY");
-        arrivalYear.setBorder(null);
+        jLabel6.setFont(new java.awt.Font("Helvetica Neue", 1, 14)); // NOI18N
+        jLabel6.setText("A");
+        jPanel3.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
 
-        departureMonth.setBackground(new java.awt.Color(0, 153, 204));
-        departureMonth.setFont(new java.awt.Font("Georgia", 0, 24)); // NOI18N
-        departureMonth.setText("MM");
-        departureMonth.setBorder(null);
+        jLabel8.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
+        jLabel8.setText("Alice Springs (ASP)");
+        jPanel3.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, -1, -1));
 
-        departureDay.setBackground(new java.awt.Color(0, 153, 204));
-        departureDay.setFont(new java.awt.Font("Georgia", 0, 24)); // NOI18N
-        departureDay.setText("DD");
-        departureDay.setBorder(null);
+        jLabel9.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
+        jLabel9.setText("Adelaide (ADL)");
+        jPanel3.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, -1, -1));
 
-        jLabel8.setBackground(new java.awt.Color(0, 153, 204));
-        jLabel8.setFont(new java.awt.Font("Georgia", 0, 18)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel8.setText("Arrival date");
+        jLabel10.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
+        jLabel10.setText("Arimdale (ARM)");
+        jPanel3.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, -1, -1));
 
-        arrivalMonth.setBackground(new java.awt.Color(0, 153, 204));
-        arrivalMonth.setFont(new java.awt.Font("Georgia", 0, 24)); // NOI18N
-        arrivalMonth.setText("MM");
-        arrivalMonth.setBorder(null);
+        jLabel11.setFont(new java.awt.Font("Helvetica Neue", 1, 14)); // NOI18N
+        jLabel11.setText("B");
+        jPanel3.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, -1, -1));
 
-        arrivalDay.setBackground(new java.awt.Color(0, 153, 204));
-        arrivalDay.setFont(new java.awt.Font("Georgia", 0, 24)); // NOI18N
-        arrivalDay.setText("DD");
-        arrivalDay.setBorder(null);
+        jLabel12.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
+        jLabel12.setText("Ballina Byron (BNK)");
+        jPanel3.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, -1, -1));
 
-        seatBooking.setText("Seat");
+        jLabel13.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
+        jLabel13.setText("Biloela (ZBL)");
+        jPanel3.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 170, -1, -1));
+
+        jLabel14.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
+        jLabel14.setText("Brisbane (BNE)");
+        jPanel3.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, -1, -1));
+
+        australiaTravel.addTab("Australia", jPanel3);
+
+        jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        australiaTravel.addTab("New Zealand", jPanel4);
+
+        jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        australiaTravel.addTab("Asia Pacific", jPanel5);
+
+        jPanel6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        australiaTravel.addTab("North America", jPanel6);
+
+        jPanel7.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        australiaTravel.addTab("UK & Europe", jPanel7);
+
+        jPanel8.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        australiaTravel.addTab("Middle East", jPanel8);
+
+        jPanel9.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        australiaTravel.addTab("Africa", jPanel9);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(14, 14, 14)
+                .addGap(78, 78, 78)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jLabel2)
-                                .addGap(351, 351, 351)
-                                .addComponent(jLabel3))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(flyFromTextbox, javax.swing.GroupLayout.DEFAULT_SIZE, 310, Short.MAX_VALUE)
-                                    .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addGap(109, 109, 109)
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(flyToTextbox, javax.swing.GroupLayout.PREFERRED_SIZE, 358, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 335, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(bookFlightNextButton)
+                        .addGap(37, 37, 37))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel2)
+                            .addComponent(flyFromTextbox, javax.swing.GroupLayout.PREFERRED_SIZE, 310, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 319, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(flyToTextbox, javax.swing.GroupLayout.PREFERRED_SIZE, 358, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel6)
-                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addComponent(departureYear, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(departureMonth, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(departureDay, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGap(106, 106, 106)
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel8)
-                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addComponent(arrivalYear, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(arrivalMonth, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(arrivalDay, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                            .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 558, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 225, Short.MAX_VALUE)
-                        .addComponent(bookFlightNextButton)
-                        .addGap(105, 105, 105))))
+                                .addGap(6, 6, 6)
+                                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 316, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabel3))
+                        .addGap(68, 68, 68))))
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(111, 111, 111)
-                .addComponent(seatBooking, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(102, 102, 102)
+                .addComponent(australiaTravel, javax.swing.GroupLayout.PREFERRED_SIZE, 744, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 104, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -202,51 +247,14 @@ public class BookFlightPage extends javax.swing.JFrame implements Serializable {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(52, 52, 52)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6)
-                    .addComponent(jLabel8))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(departureDay, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(departureYear, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(departureMonth, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(arrivalYear, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(arrivalMonth, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(arrivalDay))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(bookFlightNextButton, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 2, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(31, 31, 31)
-                .addComponent(seatBooking, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(80, 80, 80))
+                .addGap(36, 36, 36)
+                .addComponent(australiaTravel, javax.swing.GroupLayout.PREFERRED_SIZE, 311, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 132, Short.MAX_VALUE)
+                .addComponent(bookFlightNextButton, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(24, 24, 24))
         );
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(326, 326, 326)
-                .addComponent(jLabel1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(17, 17, 17)
-                .addComponent(jLabel1)
-                .addGap(18, 18, 18)
-                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 63, 950, 640));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -262,41 +270,52 @@ public class BookFlightPage extends javax.swing.JFrame implements Serializable {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    
     private void bookFlightNextButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bookFlightNextButtonMouseClicked
-        String departure = flyFromTextbox.getText();
-        
-        String arrival = flyToTextbox.getText();
-        
+        /*
+        String departureCity = flyFromTextbox.getText();
+
+        String arrivalCity = flyToTextbox.getText();
+
         String depYear = departureYear.getText();
         int departYear = Integer.parseInt(depYear);
-        
+
         String depMoth = departureMonth.getText();
         int departMonth = Integer.parseInt(depMoth);
-        
+
         String depDay = departureMonth.getText();
         int departDay = Integer.parseInt(depDay);
-        
+
         String arYear = arrivalYear.getText();
         int arrivalYear = Integer.parseInt(arYear);
-        
+
         String arMonth = arrivalMonth.getText();
         int arrivalMonth = Integer.parseInt(arMonth);
-        
+
         String arDay = arrivalDay.getText();
         int arrivalDay = Integer.parseInt(arDay);
-        
+
         LocalDateTime userDepDate = LocalDateTime.of(departYear, departMonth, departDay, 0,0,0);
-        LocalDateTime userArrDate = LocalDateTime.of(departYear, departMonth, departDay, 0,0,0);
-        
+        LocalDateTime userArrDate = LocalDateTime.of(arrivalYear, arrivalMonth, arrivalDay, 0,0,0);
+
         String seat = seatBooking.getText();
-        
-        Flight newFlight = new Flight(departure, arrival, userDepDate, userArrDate, 100, seat);
-        
+
+        Flight newFlight = new Flight(departureCity, arrivalCity, userDepDate, userArrDate, 100, seat);
+
         flights.add(newFlight);
-        
+
         System.out.print(newFlight.toString());
-    }//GEN-LAST:event_bookFlightNextButtonMouseClicked
+        */
         
+    }//GEN-LAST:event_bookFlightNextButtonMouseClicked
+    // [CH] Click functiions, lots to do
+    private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseClicked
+        if (evt.getButton() == evt.BUTTON1) {
+            flyFromTextbox.setText("Sydney");
+        } 
+        
+    }//GEN-LAST:event_jLabel7MouseClicked
+
     /*    */
     /**
      * @param args the command line arguments
@@ -334,16 +353,16 @@ public class BookFlightPage extends javax.swing.JFrame implements Serializable {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField arrivalDay;
-    private javax.swing.JTextField arrivalMonth;
-    private javax.swing.JTextField arrivalYear;
+    private javax.swing.JTabbedPane australiaTravel;
     private javax.swing.JButton bookFlightNextButton;
-    private javax.swing.JTextField departureDay;
-    private javax.swing.JTextField departureMonth;
-    private javax.swing.JTextField departureYear;
     private javax.swing.JTextField flyFromTextbox;
     private javax.swing.JTextField flyToTextbox;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -351,8 +370,16 @@ public class BookFlightPage extends javax.swing.JFrame implements Serializable {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JTextField seatBooking;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel7;
+    private javax.swing.JPanel jPanel8;
+    private javax.swing.JPanel jPanel9;
+    private javax.swing.JLabel sAusLabel;
     // End of variables declaration//GEN-END:variables
 }

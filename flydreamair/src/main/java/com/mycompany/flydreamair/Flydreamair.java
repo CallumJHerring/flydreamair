@@ -8,18 +8,18 @@ public class Flydreamair implements Serializable {
 
     public static void main(String[] args) {
         // [CH] Opens application, comment these lines out if you want to stop the GUI loading
-        /*
+        
         LoginPage loginPage = new LoginPage();
         loginPage.setVisible(true);
-        */
+        
  
         // [CH] Test User object and Ticket types
         ArrayList<User> users = new ArrayList<>();
         ArrayList<Ticket> tickets = new ArrayList<>();
         ArrayList<Flight> flights = new ArrayList<>();
         
-        LocalDateTime depTime = LocalDateTime.of(2024,4,16,9,30);
-        LocalDateTime arrTime = LocalDateTime.of(2024,4,16,9,30);
+        LocalDateTime depTime = LocalDateTime.of(2024,4,16,5,30);
+        LocalDateTime arrTime = LocalDateTime.of(2024,4,16,15,30);
       
         User user1 = new User("Callum Herring", "password1", "callumjh@uow.edu.au");
         Flight flight1 = new Flight("Sydney", "Brisbane", depTime, arrTime, 100, "B12");
@@ -28,9 +28,11 @@ public class Flydreamair implements Serializable {
         users.add(user1);
         flights.add(flight1);
         tickets.add(ticket1);
+        System.out.println("Ticket Details: \n" + ticket1.toString());
+        
         //System.out.println("Users: \n" + user1.toString());
         //System.out.println("Flights: \n" + flight1.toString());
-        System.out.println("Ticket Details: \n" + ticket1.toString());
+        //FlightSerializer.readFlightsFile();
         
         /*
         // [CH] Menu for testing components before GUI implementation

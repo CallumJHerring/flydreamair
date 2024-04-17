@@ -39,7 +39,7 @@ public class User {
         return this.email;
     }
     
-    public void setBookings(ArrayList<Ticket> tickets) {
+    public void setTickets(ArrayList<Ticket> tickets) {
         this.tickets = tickets;
     }
     

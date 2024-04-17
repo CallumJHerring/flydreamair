@@ -37,10 +37,11 @@ public class Ticket {
         return this.ticketID;
     }
     
+    /*
     public String generateTicketNumber() {
         return UUID.randomUUID().toString();
     }
-    
+    */
     /*
     @Override
     public String toString() {
