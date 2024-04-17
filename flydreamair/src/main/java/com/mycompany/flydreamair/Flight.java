@@ -3,7 +3,7 @@ package com.mycompany.flydreamair;
 import java.time.*;
 import java.io.*;
 
-public class Flight implements Serializable {
+public class Flight {
     
     public String departureCity;
     public String arrivalCity;

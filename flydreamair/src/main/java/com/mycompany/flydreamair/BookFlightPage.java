@@ -73,7 +73,7 @@ public class BookFlightPage extends javax.swing.JFrame {
         australiaTravel = new javax.swing.JTabbedPane();
         jPanel3 = new javax.swing.JPanel();
         sAusLabel = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
+        sydney = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
@@ -82,12 +82,10 @@ public class BookFlightPage extends javax.swing.JFrame {
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
-        jPanel4 = new javax.swing.JPanel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
         jPanel6 = new javax.swing.JPanel();
-        jPanel7 = new javax.swing.JPanel();
-        jPanel8 = new javax.swing.JPanel();
-        jPanel9 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -143,13 +141,13 @@ public class BookFlightPage extends javax.swing.JFrame {
         sAusLabel.setText("S");
         jPanel3.add(sAusLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 20, -1, -1));
 
-        jLabel7.setText("Sydney (SYD)");
-        jLabel7.addMouseListener(new java.awt.event.MouseAdapter() {
+        sydney.setText("Sydney (SYD)");
+        sydney.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel7MouseClicked(evt);
+                sydneyMouseClicked(evt);
             }
         });
-        jPanel3.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 50, -1, -1));
+        jPanel3.add(sydney, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 50, -1, -1));
 
         jLabel6.setFont(new java.awt.Font("Helvetica Neue", 1, 14)); // NOI18N
         jLabel6.setText("A");
@@ -183,25 +181,21 @@ public class BookFlightPage extends javax.swing.JFrame {
         jLabel14.setText("Brisbane (BNE)");
         jPanel3.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, -1, -1));
 
-        australiaTravel.addTab("Australia", jPanel3);
+        jLabel7.setFont(new java.awt.Font("Helvetica Neue", 1, 14)); // NOI18N
+        jLabel7.setText("C");
+        jPanel3.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 10, 20, -1));
 
-        jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        australiaTravel.addTab("New Zealand", jPanel4);
+        jLabel15.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
+        jLabel15.setText("Cairns (CNS)");
+        jPanel3.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 30, -1, -1));
+
+        australiaTravel.addTab("Australia", jPanel3);
 
         jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         australiaTravel.addTab("Asia Pacific", jPanel5);
 
         jPanel6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         australiaTravel.addTab("North America", jPanel6);
-
-        jPanel7.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        australiaTravel.addTab("UK & Europe", jPanel7);
-
-        jPanel8.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        australiaTravel.addTab("Middle East", jPanel8);
-
-        jPanel9.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        australiaTravel.addTab("Africa", jPanel9);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -308,13 +302,13 @@ public class BookFlightPage extends javax.swing.JFrame {
         */
         
     }//GEN-LAST:event_bookFlightNextButtonMouseClicked
+
     // [CH] Click functiions, lots to do
-    private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseClicked
+    private void sydneyMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_sydneyMouseClicked
         if (evt.getButton() == evt.BUTTON1) {
             flyFromTextbox.setText("Sydney");
-        } 
-        
-    }//GEN-LAST:event_jLabel7MouseClicked
+        }
+    }//GEN-LAST:event_sydneyMouseClicked
 
     /*    */
     /**
@@ -363,6 +357,7 @@ public class BookFlightPage extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -374,12 +369,9 @@ public class BookFlightPage extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
-    private javax.swing.JPanel jPanel7;
-    private javax.swing.JPanel jPanel8;
-    private javax.swing.JPanel jPanel9;
     private javax.swing.JLabel sAusLabel;
+    private javax.swing.JLabel sydney;
     // End of variables declaration//GEN-END:variables
 }
