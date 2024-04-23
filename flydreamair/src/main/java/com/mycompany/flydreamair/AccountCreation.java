@@ -7,15 +7,15 @@ import java.awt.event.*;
 
         
 public class AccountCreation extends javax.swing.JFrame {
-    //private ArrayList<User> customers;
-    private int genID = 100;
+    private ArrayList<User> customers;
+
     /**
      * Creates new form AccountCreation
      */
     public AccountCreation() {
         initComponents();
-        
         this.setLocationRelativeTo(null);
+        customers = new ArrayList<>(); 
     }
 
     /**
@@ -31,10 +31,10 @@ public class AccountCreation extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        userNameText = new javax.swing.JTextField();
-        emailNewAccount = new javax.swing.JTextField();
+        newUsername = new javax.swing.JTextField();
+        newEmail = new javax.swing.JTextField();
         createUserButton = new javax.swing.JButton();
-        passwordNewAccount = new javax.swing.JTextField();
+        newPassword = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -58,11 +58,11 @@ public class AccountCreation extends javax.swing.JFrame {
         jLabel3.setText("Password");
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 160, -1, -1));
 
-        userNameText.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel1.add(userNameText, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 90, 238, 35));
+        newUsername.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.add(newUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 90, 238, 35));
 
-        emailNewAccount.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel1.add(emailNewAccount, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 230, 238, 33));
+        newEmail.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.add(newEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 230, 238, 33));
 
         createUserButton.setBackground(new java.awt.Color(255, 255, 255));
         createUserButton.setFont(new java.awt.Font("Georgia", 2, 18)); // NOI18N
@@ -75,8 +75,8 @@ public class AccountCreation extends javax.swing.JFrame {
         });
         jPanel1.add(createUserButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 310, -1, -1));
 
-        passwordNewAccount.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel1.add(passwordNewAccount, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 160, 238, 31));
+        newPassword.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.add(newPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 160, 238, 31));
 
         jLabel5.setFont(new java.awt.Font("Times New Roman", 2, 36)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
@@ -99,17 +99,24 @@ public class AccountCreation extends javax.swing.JFrame {
     
     // [CH] Create user button
     private void createUserButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_createUserButtonMouseClicked
-        ArrayList<User> customers = new ArrayList<>();
-       
-        String username = userNameText.getText();
-        String password = passwordNewAccount.getText();
-        String email = emailNewAccount.getText();
+        if (evt.getButton() == evt.BUTTON1) {
+            String username = newUsername.getText();
+            String password = newPassword.getText();
+            String email = newEmail.getText();
+           
+            for (User newUser: customers) {
+                if (newUser.getUsername().equals(username)) {
+                    JOptionPane.showMessageDialog(this, "User already exists!");
+                    return;
+                }
+            }
+            User newUser = new User(username,password,email);
+            customers.add(newUser);
+            
+            JOptionPane.showMessageDialog(this, "Account created successfully!\nWelcome to FlyDreamAir " + newUser.getUsername() + ".");
+            dispose();
+        }
         
-        User newUser = new User(username, password, email);
-        customers.add(newUser);
-        System.out.println(newUser.toString());
-        JOptionPane.showMessageDialog(null, "User created!");
-        dispose();
         
     }//GEN-LAST:event_createUserButtonMouseClicked
 
@@ -150,13 +157,13 @@ public class AccountCreation extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton createUserButton;
-    private javax.swing.JTextField emailNewAccount;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField passwordNewAccount;
-    private javax.swing.JTextField userNameText;
+    private javax.swing.JTextField newEmail;
+    private javax.swing.JTextField newPassword;
+    private javax.swing.JTextField newUsername;
     // End of variables declaration//GEN-END:variables
 }
