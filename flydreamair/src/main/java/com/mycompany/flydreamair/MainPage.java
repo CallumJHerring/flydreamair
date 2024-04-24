@@ -42,6 +42,8 @@ public class MainPage extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         logoutButton = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
@@ -97,6 +99,7 @@ public class MainPage extends javax.swing.JFrame {
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1462, -1));
 
         jPanel3.setBackground(new java.awt.Color(0, 153, 204));
+        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         bookFlightLabel.setFont(new java.awt.Font("Georgia", 0, 18)); // NOI18N
         bookFlightLabel.setForeground(new java.awt.Color(255, 255, 255));
@@ -112,47 +115,30 @@ public class MainPage extends javax.swing.JFrame {
                 bookFlightLabelMouseExited(evt);
             }
         });
+        jPanel3.add(bookFlightLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(348, 42, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Georgia", 0, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Manage Reservation");
+        jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(536, 42, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Georgia", 0, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Manage Seating");
+        jPanel3.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(782, 42, -1, -1));
 
         jLabel6.setFont(new java.awt.Font("Georgia", 0, 18)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("In-Flight Services");
+        jPanel3.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(977, 42, -1, -1));
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(348, 348, 348)
-                .addComponent(bookFlightLabel)
-                .addGap(96, 96, 96)
-                .addComponent(jLabel4)
-                .addGap(82, 82, 82)
-                .addComponent(jLabel5)
-                .addGap(68, 68, 68)
-                .addComponent(jLabel6)
-                .addContainerGap(345, Short.MAX_VALUE))
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(42, 42, 42)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(bookFlightLabel)
-                    .addComponent(jLabel4)
-                    .addComponent(jLabel5)
-                    .addComponent(jLabel6))
-                .addContainerGap(73, Short.MAX_VALUE))
-        );
+        jLabel3.setText("About Us");
+        jPanel3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, 440, 20));
 
-        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, -1, -1));
+        jLabel7.setText("jLabel7");
+        jPanel3.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 110, -1, -1));
+
+        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 1460, -1));
 
         logoutButton.setText("Logout");
         logoutButton.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -250,9 +236,11 @@ public class MainPage extends javax.swing.JFrame {
     private javax.swing.JLabel dateBox;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JPanel jPanel1;
