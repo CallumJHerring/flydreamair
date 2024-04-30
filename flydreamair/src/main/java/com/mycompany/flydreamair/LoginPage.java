@@ -88,6 +88,11 @@ public class LoginPage extends javax.swing.JFrame {
                 userPasswordFocusLost(evt);
             }
         });
+        userPassword.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                userPasswordActionPerformed(evt);
+            }
+        });
         jPanel1.add(userPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 410, 240, 50));
 
         LoginPanel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/LoginImage.png"))); // NOI18N
@@ -162,6 +167,10 @@ public class LoginPage extends javax.swing.JFrame {
     private void accountCreationButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_accountCreationButtonMouseClicked
         openAccountCreation();
     }//GEN-LAST:event_accountCreationButtonMouseClicked
+
+    private void userPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userPasswordActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_userPasswordActionPerformed
     
     /**
      * @param args the command line arguments

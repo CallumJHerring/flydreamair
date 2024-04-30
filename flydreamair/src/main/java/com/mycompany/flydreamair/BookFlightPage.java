@@ -108,6 +108,21 @@ public class BookFlightPage extends javax.swing.JFrame {
         jLabel36 = new javax.swing.JLabel();
         jLabel37 = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
+        Atlanta = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
+        Austin = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
+        Boston = new javax.swing.JLabel();
+        Chicago = new javax.swing.JLabel();
+        jLabel29 = new javax.swing.JLabel();
+        jLabel30 = new javax.swing.JLabel();
+        jLabel28 = new javax.swing.JLabel();
+        Cleverland = new javax.swing.JLabel();
+        Columbus = new javax.swing.JLabel();
+        jLabel31 = new javax.swing.JLabel();
+        Dallas = new javax.swing.JLabel();
+        jLabel32 = new javax.swing.JLabel();
+        LasVegas = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -335,6 +350,149 @@ public class BookFlightPage extends javax.swing.JFrame {
         countryTravel.addTab("Asia Pacific", jPanel5);
 
         jPanel6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        Atlanta.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
+        Atlanta.setText("Atlanta (ATL)");
+        Atlanta.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                AtlantaMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                AtlantaMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                AtlantaMouseExited(evt);
+            }
+        });
+        jPanel6.add(Atlanta, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, -1, -1));
+
+        jLabel23.setFont(new java.awt.Font("Georgia", 1, 14)); // NOI18N
+        jLabel23.setText("A");
+        jPanel6.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
+
+        Austin.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
+        Austin.setText("Austin (AUS)");
+        Austin.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                AustinMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                AustinMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                AustinMouseExited(evt);
+            }
+        });
+        jPanel6.add(Austin, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, -1, -1));
+
+        jLabel22.setFont(new java.awt.Font("Georgia", 1, 14)); // NOI18N
+        jLabel22.setText("B");
+        jPanel6.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, -1, -1));
+
+        Boston.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
+        Boston.setText("Boston (BOS)");
+        Boston.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                BostonMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                BostonMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                BostonMouseExited(evt);
+            }
+        });
+        jPanel6.add(Boston, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, -1, -1));
+
+        Chicago.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
+        Chicago.setText("Chicago (ORD)");
+        Chicago.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ChicagoMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                ChicagoMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                ChicagoMouseExited(evt);
+            }
+        });
+        jPanel6.add(Chicago, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, -1, -1));
+        jPanel6.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, -1, -1));
+        jPanel6.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, -1, -1));
+
+        jLabel28.setFont(new java.awt.Font("Georgia", 1, 14)); // NOI18N
+        jLabel28.setText("C");
+        jPanel6.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, -1, -1));
+
+        Cleverland.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
+        Cleverland.setText("Cleverland (CLE)");
+        Cleverland.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                CleverlandMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                CleverlandMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                CleverlandMouseExited(evt);
+            }
+        });
+        jPanel6.add(Cleverland, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, -1, -1));
+
+        Columbus.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
+        Columbus.setText("Columbus (CMH)");
+        Columbus.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ColumbusMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                ColumbusMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                ColumbusMouseExited(evt);
+            }
+        });
+        jPanel6.add(Columbus, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, -1, -1));
+
+        jLabel31.setFont(new java.awt.Font("Georgia", 1, 14)); // NOI18N
+        jLabel31.setText("D");
+        jPanel6.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 20, -1, -1));
+
+        Dallas.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
+        Dallas.setText("Dallas/Fort Worth (DFW)");
+        Dallas.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                DallasMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                DallasMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                DallasMouseExited(evt);
+            }
+        });
+        jPanel6.add(Dallas, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 40, -1, -1));
+
+        jLabel32.setFont(new java.awt.Font("Georgia", 1, 14)); // NOI18N
+        jLabel32.setText("L");
+        jPanel6.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 100, -1, -1));
+
+        LasVegas.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
+        LasVegas.setText("Las Vegas (LAS)");
+        LasVegas.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                LasVegasMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                LasVegasMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                LasVegasMouseExited(evt);
+            }
+        });
+        jPanel6.add(LasVegas, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 120, -1, -1));
+
         countryTravel.addTab("North America", jPanel6);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -460,6 +618,7 @@ public class BookFlightPage extends javax.swing.JFrame {
         sydney.setForeground(Color.BLACK);
     }//GEN-LAST:event_sydneyMouseExited
 
+<<<<<<< Updated upstream
     private void jLabel33MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel33MouseEntered
         jLabel33.setForeground(Color.GREEN); //tokyo
     }//GEN-LAST:event_jLabel33MouseEntered
@@ -489,6 +648,155 @@ public class BookFlightPage extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel35MouseClicked
 
    
+=======
+    
+        
+    
+    
+  
+    
+    private void AtlantaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AtlantaMouseExited
+        // TODO add your handling code here:
+        Atlanta.setForeground(Color.BLACK);
+    }//GEN-LAST:event_AtlantaMouseExited
+
+    private void AtlantaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AtlantaMouseEntered
+        // TODO add your handling code here:
+        Atlanta.setForeground(Color.GREEN);
+    }//GEN-LAST:event_AtlantaMouseEntered
+
+    private void AtlantaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AtlantaMouseClicked
+        // TODO add your handling code here:
+        if (evt.getButton() == evt.BUTTON1) {
+            flyFromTextbox.setText("Atlanta");
+        }
+    }//GEN-LAST:event_AtlantaMouseClicked
+
+    
+    private void AustinMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AustinMouseEntered
+        // TODO add your handling code here:
+        Austin.setForeground(Color.GREEN);
+        
+    }//GEN-LAST:event_AustinMouseEntered
+
+    private void AustinMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AustinMouseExited
+        // TODO add your handling code here:
+        Austin.setForeground(Color.BLACK);
+    }//GEN-LAST:event_AustinMouseExited
+
+    private void AustinMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AustinMouseClicked
+        // TODO add your handling code here:
+        if (evt.getButton() == evt.BUTTON1){
+            flyFromTextbox.setText("Austin");
+        }
+    }//GEN-LAST:event_AustinMouseClicked
+
+    private void BostonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BostonMouseEntered
+        // TODO add your handling code here:
+        Boston.setForeground(Color.GREEN);
+    }//GEN-LAST:event_BostonMouseEntered
+
+    private void BostonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BostonMouseExited
+        // TODO add your handling code here:
+        Austin.setForeground(Color.BLACK);
+    }//GEN-LAST:event_BostonMouseExited
+
+    private void BostonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BostonMouseClicked
+        // TODO add your handling code here:
+        if (evt.getButton() == evt.BUTTON1){
+            flyFromTextbox.setText("Boston");
+        }
+    }//GEN-LAST:event_BostonMouseClicked
+
+    private void ChicagoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ChicagoMouseEntered
+        // TODO add your handling code here:
+        Chicago.setForeground (Color.GREEN);
+    }//GEN-LAST:event_ChicagoMouseEntered
+
+    private void ChicagoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ChicagoMouseExited
+        // TODO add your handling code here:
+        Chicago.setForeground(Color.BLACK);
+    }//GEN-LAST:event_ChicagoMouseExited
+
+    private void ChicagoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ChicagoMouseClicked
+        // TODO add your handling code here:
+        if (evt.getButton() == evt.BUTTON1){
+            flyFromTextbox.setText("Chicago");
+        }
+    }//GEN-LAST:event_ChicagoMouseClicked
+
+    private void CleverlandMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CleverlandMouseEntered
+        // TODO add your handling code here:
+        Cleverland.setForeground (Color.GREEN);
+    }//GEN-LAST:event_CleverlandMouseEntered
+
+    private void CleverlandMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CleverlandMouseExited
+        // TODO add your handling code here:
+        Cleverland.setForeground(Color.BLACK);
+    }//GEN-LAST:event_CleverlandMouseExited
+
+    private void CleverlandMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CleverlandMouseClicked
+        // TODO add your handling code here:
+        if (evt.getButton() == evt.BUTTON1){
+            flyFromTextbox.setText("Cleverland");
+        }
+    }//GEN-LAST:event_CleverlandMouseClicked
+
+    private void ColumbusMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ColumbusMouseEntered
+        // TODO add your handling code here:
+        Columbus.setForeground(Color.GREEN);
+    }//GEN-LAST:event_ColumbusMouseEntered
+
+    private void ColumbusMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ColumbusMouseExited
+        // TODO add your handling code here:
+        Columbus.setForeground(Color.BLACK);
+    }//GEN-LAST:event_ColumbusMouseExited
+
+    private void ColumbusMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ColumbusMouseClicked
+        // TODO add your handling code here:
+        if (evt.getButton() == evt.BUTTON1){
+            flyFromTextbox.setText("Columbus");
+           
+        }
+            
+    }//GEN-LAST:event_ColumbusMouseClicked
+
+    private void DallasMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DallasMouseEntered
+        // TODO add your handling code here:
+        Dallas.setForeground(Color.GREEN);
+    }//GEN-LAST:event_DallasMouseEntered
+
+    private void DallasMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DallasMouseExited
+        // TODO add your handling code here:
+        Dallas.setForeground(Color.BLACK);
+    }//GEN-LAST:event_DallasMouseExited
+
+    private void DallasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DallasMouseClicked
+        // TODO add your handling code here:
+        if (evt.getButton() == evt.BUTTON1){
+            flyFromTextbox.setText("Dallas");
+           
+    }//GEN-LAST:event_DallasMouseClicked
+
+    private void LasVegasMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LasVegasMouseEntered
+        // TODO add your handling code here:
+        LasVegas.setForeground(Color.GREEN);
+    }//GEN-LAST:event_LasVegasMouseEntered
+
+    private void LasVegasMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LasVegasMouseExited
+        // TODO add your handling code here:
+        LasVegas.setForeground(Color.BLACK);
+    }//GEN-LAST:event_LasVegasMouseExited
+
+    private void LasVegasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LasVegasMouseClicked
+        // TODO add your handling code here:
+         if (evt.getButton() == evt.BUTTON1){
+              flyFromTextbox.setText("LasVegas");
+        }
+                   
+    }//GEN-LAST:event_LasVegasMouseClicked
+
+>>>>>>> Stashed changes
     /*    */
     /**
      * @param args the command line arguments
@@ -526,6 +834,14 @@ public class BookFlightPage extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Atlanta;
+    private javax.swing.JLabel Austin;
+    private javax.swing.JLabel Boston;
+    private javax.swing.JLabel Chicago;
+    private javax.swing.JLabel Cleverland;
+    private javax.swing.JLabel Columbus;
+    private javax.swing.JLabel Dallas;
+    private javax.swing.JLabel LasVegas;
     private javax.swing.JButton bookFlightNextButton;
     private javax.swing.JTabbedPane countryTravel;
     private javax.swing.JTextField flyFromTextbox;
@@ -556,11 +872,14 @@ public class BookFlightPage extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel32;
+<<<<<<< Updated upstream
     private javax.swing.JLabel jLabel33;
     private javax.swing.JLabel jLabel34;
     private javax.swing.JLabel jLabel35;
     private javax.swing.JLabel jLabel36;
     private javax.swing.JLabel jLabel37;
+=======
+>>>>>>> Stashed changes
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
