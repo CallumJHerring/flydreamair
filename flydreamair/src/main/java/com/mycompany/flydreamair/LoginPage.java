@@ -194,7 +194,7 @@ public class LoginPage extends javax.swing.JFrame {
             String username = usernameLogin.getText();
             String password = passwordLogin.getText();
 
-            boolean loginSuccess = false;
+            boolean loginSuccess = true;
             for (User user : customers) {
                 if (user.getUsername().equals(username) && user.getPassword().equals(password)) {
                     loginSuccess = true;
