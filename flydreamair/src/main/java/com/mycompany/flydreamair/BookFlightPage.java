@@ -618,7 +618,7 @@ public class BookFlightPage extends javax.swing.JFrame {
         sydney.setForeground(Color.BLACK);
     }//GEN-LAST:event_sydneyMouseExited
 
-<<<<<<< Updated upstream
+    //
     private void jLabel33MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel33MouseEntered
         jLabel33.setForeground(Color.GREEN); //tokyo
     }//GEN-LAST:event_jLabel33MouseEntered
@@ -648,8 +648,6 @@ public class BookFlightPage extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel35MouseClicked
 
    
-=======
-    
         
     
     
@@ -775,7 +773,7 @@ public class BookFlightPage extends javax.swing.JFrame {
         // TODO add your handling code here:
         if (evt.getButton() == evt.BUTTON1){
             flyFromTextbox.setText("Dallas");
-           
+        }
     }//GEN-LAST:event_DallasMouseClicked
 
     private void LasVegasMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LasVegasMouseEntered
@@ -796,7 +794,6 @@ public class BookFlightPage extends javax.swing.JFrame {
                    
     }//GEN-LAST:event_LasVegasMouseClicked
 
->>>>>>> Stashed changes
     /*    */
     /**
      * @param args the command line arguments

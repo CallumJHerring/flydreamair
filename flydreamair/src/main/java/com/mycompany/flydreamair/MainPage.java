@@ -188,14 +188,7 @@ public class MainPage extends javax.swing.JFrame {
             new BookFlightPage().setVisible(true);
         }
     }//GEN-LAST:event_bookFlightLabelMouseClicked
-    
-    private void openAccountCreation() {
-        accountCreationFrame = new AccountCreation();
-        accountCreationFrame.setSize(700,600);
-        accountCreationFrame.setBackground(Color.gray);
-        accountCreationFrame.setVisible(true);
-    }
- 
+
     /**
      * @param args the command line arguments
      */
