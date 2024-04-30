@@ -6,8 +6,6 @@ import java.time.LocalDateTime;
 import java.time.format.*;
 
 public class MainPage extends javax.swing.JFrame {
-    private static JFrame bookFlightFrame;
-    private static JFrame accountCreationFrame;
 
     /**
      * Creates new form MainPage

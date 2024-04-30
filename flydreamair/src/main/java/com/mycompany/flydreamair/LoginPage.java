@@ -113,17 +113,9 @@ public class LoginPage extends javax.swing.JFrame {
                 passwordLoginFocusLost(evt);
             }
         });
-<<<<<<< Updated upstream
-        userPassword.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                userPasswordActionPerformed(evt);
-            }
-        });
-        jPanel1.add(userPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 410, 240, 50));
-=======
+
         jPanel1.add(passwordLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 410, 240, 50));
         jPanel1.add(emailField, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 500, 240, 40));
->>>>>>> Stashed changes
 
         LoginPanel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/LoginImage.png"))); // NOI18N
         LoginPanel.setText("C");
@@ -187,23 +179,6 @@ public class LoginPage extends javax.swing.JFrame {
         //openMainPage();
    
     }//GEN-LAST:event_loginButtonActionPerformed
-    
-<<<<<<< Updated upstream
-    private void openAccountCreation() {
-        accountCreationFrame = new AccountCreation();
-        accountCreationFrame.setSize(700,600);
-        accountCreationFrame.setBackground(Color.gray);
-        accountCreationFrame.setVisible(true);
-    }
-    
-    private void accountCreationButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_accountCreationButtonMouseClicked
-        openAccountCreation();
-    }//GEN-LAST:event_accountCreationButtonMouseClicked
-
-    private void userPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userPasswordActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_userPasswordActionPerformed
-=======
     private void signupButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_signupButtonMouseClicked
         //openAccountCreation();
         signupButton.setVisible(false);
@@ -240,7 +215,6 @@ public class LoginPage extends javax.swing.JFrame {
        emailField.setVisible(false);
        signupButton.setVisible(true);
     }//GEN-LAST:event_createButtonMouseClicked
->>>>>>> Stashed changes
     
     /**
      * @param args the command line arguments
