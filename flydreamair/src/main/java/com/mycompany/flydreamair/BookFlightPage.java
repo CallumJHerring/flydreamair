@@ -22,33 +22,6 @@ public class BookFlightPage extends javax.swing.JFrame {
     public BookFlightPage() {
         initComponents();
         jPanel2.requestFocusInWindow();
-        
-        /* // [Callum] Not working yet, trying to create Array
-        labels[0] = jLabel7;
-        
-        LabelMouseListener listener = new LabelMouseListener(textField);
-        
-        for (JLabel label : labels) {
-            label.addMouseListener(listener);
-        }
-        */
-        
-        
-        /*
-        for (int i = 0; i<labels.length; i++) {
-            jLabel7.add
-            labels[i].addMouseListener(listener);
-        }
-        */
-        
-        /*
-        String aus1 = "Sydney";
-        travel.add(aus1);
-        
-        String[] initialItems = {"Sydney (SYD)", "Brisbane (BNE)"};
-        jComboBox1.setModel(new DefaultComboBoxModel<>(initialItems));
-        */
-  
     }
 
     /**
@@ -108,18 +81,19 @@ public class BookFlightPage extends javax.swing.JFrame {
         jLabel37 = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
         Atlanta = new javax.swing.JLabel();
-        jLabel23 = new javax.swing.JLabel();
+        jLabel38 = new javax.swing.JLabel();
         Austin = new javax.swing.JLabel();
-        jLabel22 = new javax.swing.JLabel();
+        jLabel39 = new javax.swing.JLabel();
         Boston = new javax.swing.JLabel();
         Chicago = new javax.swing.JLabel();
-        jLabel29 = new javax.swing.JLabel();
-        jLabel28 = new javax.swing.JLabel();
+        jLabel40 = new javax.swing.JLabel();
+        jLabel41 = new javax.swing.JLabel();
+        jLabel42 = new javax.swing.JLabel();
         Cleverland = new javax.swing.JLabel();
         Columbus = new javax.swing.JLabel();
-        jLabel31 = new javax.swing.JLabel();
+        jLabel43 = new javax.swing.JLabel();
         Dallas = new javax.swing.JLabel();
-        jLabel32 = new javax.swing.JLabel();
+        jLabel44 = new javax.swing.JLabel();
         LasVegas = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -287,6 +261,9 @@ public class BookFlightPage extends javax.swing.JFrame {
         jLabel28.setText("H");
         jPanel5.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, -1, -1));
 
+        jLabel29.setFont(new java.awt.Font("Georgia", 0, 13)); // NOI18N
+        jLabel29.setForeground(new java.awt.Color(204, 204, 204));
+        jLabel29.setText("Hiroshima");
         jPanel5.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, -1, -1));
 
         jLabel31.setFont(new java.awt.Font("Georgia", 0, 13)); // NOI18N
@@ -358,9 +335,9 @@ public class BookFlightPage extends javax.swing.JFrame {
         });
         jPanel6.add(Atlanta, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, -1, -1));
 
-        jLabel23.setFont(new java.awt.Font("Georgia", 1, 14)); // NOI18N
-        jLabel23.setText("A");
-        jPanel6.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
+        jLabel38.setFont(new java.awt.Font("Georgia", 1, 14)); // NOI18N
+        jLabel38.setText("A");
+        jPanel6.add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
 
         Austin.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
         Austin.setText("Austin (AUS)");
@@ -377,9 +354,9 @@ public class BookFlightPage extends javax.swing.JFrame {
         });
         jPanel6.add(Austin, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, -1, -1));
 
-        jLabel22.setFont(new java.awt.Font("Georgia", 1, 14)); // NOI18N
-        jLabel22.setText("B");
-        jPanel6.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, -1, -1));
+        jLabel39.setFont(new java.awt.Font("Georgia", 1, 14)); // NOI18N
+        jLabel39.setText("B");
+        jPanel6.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, -1, -1));
 
         Boston.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
         Boston.setText("Boston (BOS)");
@@ -410,11 +387,12 @@ public class BookFlightPage extends javax.swing.JFrame {
             }
         });
         jPanel6.add(Chicago, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, -1, -1));
-        jPanel6.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, -1, -1));
+        jPanel6.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, -1, -1));
+        jPanel6.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, -1, -1));
 
-        jLabel28.setFont(new java.awt.Font("Georgia", 1, 14)); // NOI18N
-        jLabel28.setText("C");
-        jPanel6.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, -1, -1));
+        jLabel42.setFont(new java.awt.Font("Georgia", 1, 14)); // NOI18N
+        jLabel42.setText("C");
+        jPanel6.add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, -1, -1));
 
         Cleverland.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
         Cleverland.setText("Cleverland (CLE)");
@@ -446,9 +424,9 @@ public class BookFlightPage extends javax.swing.JFrame {
         });
         jPanel6.add(Columbus, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, -1, -1));
 
-        jLabel31.setFont(new java.awt.Font("Georgia", 1, 14)); // NOI18N
-        jLabel31.setText("D");
-        jPanel6.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 20, -1, -1));
+        jLabel43.setFont(new java.awt.Font("Georgia", 1, 14)); // NOI18N
+        jLabel43.setText("D");
+        jPanel6.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 20, -1, -1));
 
         Dallas.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
         Dallas.setText("Dallas/Fort Worth (DFW)");
@@ -465,9 +443,9 @@ public class BookFlightPage extends javax.swing.JFrame {
         });
         jPanel6.add(Dallas, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 40, -1, -1));
 
-        jLabel32.setFont(new java.awt.Font("Georgia", 1, 14)); // NOI18N
-        jLabel32.setText("L");
-        jPanel6.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 100, -1, -1));
+        jLabel44.setFont(new java.awt.Font("Georgia", 1, 14)); // NOI18N
+        jLabel44.setText("L");
+        jPanel6.add(jLabel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 100, -1, -1));
 
         LasVegas.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
         LasVegas.setText("Las Vegas (LAS)");
@@ -832,7 +810,14 @@ public class BookFlightPage extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel35;
     private javax.swing.JLabel jLabel36;
     private javax.swing.JLabel jLabel37;
+    private javax.swing.JLabel jLabel38;
+    private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel40;
+    private javax.swing.JLabel jLabel41;
+    private javax.swing.JLabel jLabel42;
+    private javax.swing.JLabel jLabel43;
+    private javax.swing.JLabel jLabel44;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;

@@ -8,6 +8,12 @@ public class User {
     private String email;
     private ArrayList<Ticket> tickets;
     
+    public User() {
+        username = "";
+        password = "";
+        email = "";
+    }
+    
     public User(String username, String password, String email) {
         this.username = username;
         this.password = password;
@@ -52,6 +58,10 @@ public class User {
         return false;
     }
     
+    public void writeData(Formatter formatter) {
+        formatter.format("%s\n", toString());
+    }
+    
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
@@ -60,4 +70,5 @@ public class User {
         sb.append("Email: ").append(this.email).append("\n");
         return sb.toString();
     }
+    
 }
