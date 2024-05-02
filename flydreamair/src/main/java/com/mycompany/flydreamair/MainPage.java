@@ -41,7 +41,8 @@ public class MainPage extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
         jMenuBar1 = new javax.swing.JMenuBar();
         logoutButton = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
@@ -131,10 +132,17 @@ public class MainPage extends javax.swing.JFrame {
         jPanel3.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(977, 42, -1, -1));
 
         jLabel3.setText("About Us");
+        jLabel3.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         jPanel3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, 440, 20));
 
-        jLabel7.setText("jLabel7");
-        jPanel3.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 110, -1, -1));
+        jTextArea1.setColumns(20);
+        jTextArea1.setLineWrap(true);
+        jTextArea1.setRows(5);
+        jTextArea1.setText("At Fly Dream Air, we believe in elevating experiences and connecting people through our defined services encouraging the beginning to endless possibilities. Established with a vision to enhance air travel, Fly Dream Air brings together a team passionate in providing comfort, safety and ease of use to our customers. We aim to bring next level modern user interface with our software providing customers the ability to easily navigate through our services.");
+        jTextArea1.setWrapStyleWord(true);
+        jScrollPane1.setViewportView(jTextArea1);
+
+        jPanel3.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 180, 330, 170));
 
         jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 1460, -1));
 
@@ -231,12 +239,13 @@ public class MainPage extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JMenu logoutButton;
     // End of variables declaration//GEN-END:variables
 }
