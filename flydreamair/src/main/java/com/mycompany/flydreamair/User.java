@@ -2,7 +2,7 @@ package com.mycompany.flydreamair;
 
 import java.util.*;
 
-public class User {
+public class User implements CompanyFileIO {
     private String username;
     private String password;
     private String email;
@@ -58,6 +58,7 @@ public class User {
         return false;
     }
     
+    @Override
     public void writeData(Formatter formatter) {
         formatter.format("%s\n", toString());
     }

@@ -22,6 +22,7 @@ public class BookFlightPage extends javax.swing.JFrame {
     public BookFlightPage() {
         initComponents();
         jPanel2.requestFocusInWindow();
+        loadFlights();
     }
 
     /**
@@ -38,7 +39,7 @@ public class BookFlightPage extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         departureCity = new javax.swing.JTextField();
-        nextButton = new javax.swing.JButton();
+        createBooking = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         arrivalCity = new javax.swing.JTextField();
@@ -91,10 +92,12 @@ public class BookFlightPage extends javax.swing.JFrame {
         jLabel44 = new javax.swing.JLabel();
         LasVegas = new javax.swing.JLabel();
         jLabel30 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        departureDate = new javax.swing.JTextField();
         jLabel45 = new javax.swing.JLabel();
         jLabel46 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        arrivalDate = new javax.swing.JTextField();
+        jLabel10 = new javax.swing.JLabel();
+        seating = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -121,15 +124,15 @@ public class BookFlightPage extends javax.swing.JFrame {
         departureCity.setBorder(null);
         jPanel2.add(departureCity, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 270, 49));
 
-        nextButton.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
-        nextButton.setForeground(new java.awt.Color(102, 102, 102));
-        nextButton.setText("Next ");
-        nextButton.addMouseListener(new java.awt.event.MouseAdapter() {
+        createBooking.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
+        createBooking.setForeground(new java.awt.Color(255, 255, 255));
+        createBooking.setText("Create booking");
+        createBooking.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                nextButtonMouseClicked(evt);
+                createBookingMouseClicked(evt);
             }
         });
-        jPanel2.add(nextButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(835, 583, -1, 33));
+        jPanel2.add(createBooking, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 580, -1, 33));
 
         jLabel4.setBackground(new java.awt.Color(255, 255, 255));
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
@@ -443,13 +446,15 @@ public class BookFlightPage extends javax.swing.JFrame {
 
         jPanel2.add(countryTravel, new org.netbeans.lib.awtextra.AbsoluteConstraints(102, 140, 744, 311));
 
+        jLabel30.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
+        jLabel30.setForeground(new java.awt.Color(255, 255, 255));
         jLabel30.setText("Date");
-        jPanel2.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 40, -1, -1));
+        jPanel2.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 40, -1, -1));
 
-        jTextField1.setBackground(new java.awt.Color(0, 153, 204));
-        jTextField1.setText("DD/MM/YYYY");
-        jTextField1.setBorder(null);
-        jPanel2.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 63, 110, 40));
+        departureDate.setBackground(new java.awt.Color(0, 153, 204));
+        departureDate.setText("DD/MM/YYYY");
+        departureDate.setBorder(null);
+        jPanel2.add(departureDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 63, 110, 40));
 
         jLabel45.setBackground(new java.awt.Color(255, 255, 255));
         jLabel45.setFont(new java.awt.Font("Helvetica Neue", 0, 36)); // NOI18N
@@ -457,15 +462,25 @@ public class BookFlightPage extends javax.swing.JFrame {
         jLabel45.setText("⮕");
         jPanel2.add(jLabel45, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 50, 40, 60));
 
+        jLabel46.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
+        jLabel46.setForeground(new java.awt.Color(255, 255, 255));
         jLabel46.setText("Date");
         jPanel2.add(jLabel46, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 30, -1, -1));
 
-        jTextField2.setBackground(new java.awt.Color(0, 153, 204));
-        jTextField2.setText("DD/MM/YYY");
-        jTextField2.setBorder(null);
-        jPanel2.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 63, 90, 40));
+        arrivalDate.setBackground(new java.awt.Color(0, 153, 204));
+        arrivalDate.setText("DD/MM/YYY");
+        arrivalDate.setBorder(null);
+        jPanel2.add(arrivalDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 60, 90, 40));
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 63, 950, 640));
+        jLabel10.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel10.setText("Seating");
+        jPanel2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 20, -1, -1));
+
+        seating.setText("Select seat (A2)");
+        jPanel2.add(seating, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 60, -1, 40));
+
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 63, 1350, 640));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -482,17 +497,85 @@ public class BookFlightPage extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     
-    private void nextButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nextButtonMouseClicked
+    private void createBookingMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_createBookingMouseClicked
         try {
-            
+            newFlight();
+            JOptionPane.showMessageDialog(null, "Flight created successfully");
         } catch (Exception e) {
             
         } 
-        
-    }//GEN-LAST:event_nextButtonMouseClicked
+    }//GEN-LAST:event_createBookingMouseClicked
 
-    // [CH] Mouse functions, lots to do
+    public void loadFlights() {
+        try {
+            Scanner file = new Scanner(new File("/Users/callum/Desktop/flights.txt"));
+            while (file.hasNextLine()) {
+                String line = file.nextLine();
+                Flight flight = parseFlights(line);
+                flights.add(flight);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
     
+    public Flight parseFlights(String line) {
+        try {
+            String[] parts = line.split(",");
+            String departureCity = parts[0].trim();
+            String departureDate = parts[1].trim();
+            String arrivalCity = parts[2].trim();
+            String arrivalDate = parts[3].trim();
+            String price = parts[4].trim();
+            String seat = parts[5].trim();
+            return new Flight(departureCity, departureDate, arrivalCity, arrivalDate, price, seat);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+    
+    public void displayFlights() {
+        for (Flight f: flights) {
+            System.out.println(f);
+        }
+    }
+    
+    public void newFlight() {
+        try {
+            String depCity = departureCity.getText();
+            String depDate = departureDate.getText();
+            String arrCity = arrivalCity.getText();
+            String arrDate = arrivalDate.getText();
+            String price = "TBD";
+            String seat = seating.getText();
+            
+            Flight newFlight = new Flight(depCity, depDate, arrCity, arrDate, price, seat);
+            flights.add(newFlight);
+            
+            if (newFlight != null) {
+                writeFlights();
+            }
+            
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    
+    public void writeFlights() {
+        String fileName = "/Users/callum/Desktop/flights.txt";
+        try {
+            Formatter fout = new Formatter(fileName);
+            for (Flight f: flights) {
+                f.writeData(fout);
+            }
+            fout.close();
+        } catch (Exception e) {
+            
+        }
+    }
+    
+    // [CH] Mouse functions, lots to do
     // Sydney (SYD)
     private void sydneyMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_sydneyMouseClicked
         if (evt.getButton() == evt.BUTTON1) {
@@ -704,9 +787,13 @@ public class BookFlightPage extends javax.swing.JFrame {
     private javax.swing.JLabel Dallas;
     private javax.swing.JLabel LasVegas;
     private javax.swing.JTextField arrivalCity;
+    private javax.swing.JTextField arrivalDate;
     private javax.swing.JTabbedPane countryTravel;
+    private javax.swing.JButton createBooking;
     private javax.swing.JTextField departureCity;
+    private javax.swing.JTextField departureDate;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
@@ -752,10 +839,8 @@ public class BookFlightPage extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JButton nextButton;
     private javax.swing.JLabel sAusLabel;
+    private javax.swing.JTextField seating;
     private javax.swing.JLabel sydney;
     // End of variables declaration//GEN-END:variables
 }

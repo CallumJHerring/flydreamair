@@ -2,20 +2,30 @@ package com.mycompany.flydreamair;
 
 import java.time.*;
 import java.io.*;
+import java.util.*;
 
-public class Flight {
+public class Flight implements CompanyFileIO {
     
     public String departureCity;
-    public String arrivalCity;
     public String departureDate;
     public String arrivalDate;
-    public double price;
+    public String arrivalCity;
+    public String price;
     private String seat;
     
-    public Flight(String departureCity, String arrivalCity, String departureDate, String arrivalDate, double price, String seat) {
+    public Flight() {
+        departureCity = "";
+        departureDate = "";
+        arrivalCity = "";
+        arrivalDate = "";
+        price = "";
+        seat = "";
+    }
+    
+    public Flight(String departureCity, String departureDate, String arrivalCity, String arrivalDate, String price, String seat) {
         this.departureCity = departureCity;
-        this.arrivalCity = arrivalCity;
         this.departureDate = departureDate;
+        this.arrivalCity = arrivalCity;
         this.arrivalDate = arrivalDate;
         this.price = price;
         this.seat = seat;
@@ -55,11 +65,11 @@ public class Flight {
     }
     
     
-    public void setPrice(double price) {
+    public void setPrice(String price) {
         this.price = price;
     }
     
-    public double getPrice() {
+    public String getPrice() {
         return this.price;
     }
     
@@ -70,14 +80,20 @@ public class Flight {
     public String getSeat() {
         return this.seat;
     }
+    
+    @Override
+    public void writeData(Formatter formatter) {
+        formatter.format("%s\n", toString());
+    }
             
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("Airport Departing: ").append(this.departureCity).append("\n");
-        sb.append("Airport Destination: ").append(this.arrivalCity).append("\n");
         sb.append("Departure Date: ").append(this.departureDate.toString()).append("\n");
+        sb.append("Airport Destination: ").append(this.arrivalCity).append("\n");
         sb.append("Arrival Date: ").append(this.arrivalDate.toString()).append("\n");
+        sb.append("Price: ").append(this.price).append("\n");
         sb.append("Seating: ").append(this.seat).append("\n");
         return sb.toString();
     }
