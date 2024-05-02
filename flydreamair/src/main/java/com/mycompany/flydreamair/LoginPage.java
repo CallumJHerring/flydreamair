@@ -4,11 +4,13 @@ import java.awt.*;
 import java.awt.event.*;
 import java.util.ArrayList;
 import javax.swing.*;
+import java.io.*;
+import java.util.*;
 
 public class LoginPage extends javax.swing.JFrame {
     private static JFrame mainFrame;
     private static JFrame accountCreationFrame;
-    private ArrayList<User> customers;
+    private ArrayList<User> users;
     
     /**
      * Creates new form LoginPage
@@ -18,14 +20,15 @@ public class LoginPage extends javax.swing.JFrame {
 
         this.setLocationRelativeTo(null); // [CH] Center window
         LoginPanel.requestFocusInWindow(); // [CH] Take mouse focus off inputs (show placeholders)
-        createButton.setVisible(false);
-        emailField.setVisible(false);
+        users = new ArrayList<>(); 
         
-        customers = new ArrayList<>(); 
+        email.setVisible(false);
+        create.setVisible(false);
+        loadUsers();
     }
     
     public ArrayList<User> getCustomers() {
-        return customers;
+        return users;
     }
 
     /**
@@ -38,14 +41,15 @@ public class LoginPage extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        createButton = new javax.swing.JButton();
-        signupButton = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
-        loginButton = new javax.swing.JButton();
+        login = new javax.swing.JButton();
         usernameLogin = new javax.swing.JTextField();
+        email = new javax.swing.JTextField();
         passwordLogin = new javax.swing.JPasswordField();
-        emailField = new javax.swing.JTextField();
+        createAccount = new javax.swing.JButton();
+        create = new javax.swing.JButton();
         LoginPanel = new javax.swing.JLabel();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -55,36 +59,14 @@ public class LoginPage extends javax.swing.JFrame {
         jPanel1.setSize(new java.awt.Dimension(720, 500));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        createButton.setText("Create account");
-        createButton.addMouseListener(new java.awt.event.MouseAdapter() {
+        login.setBackground(new java.awt.Color(110, 102, 153));
+        login.setText("Login");
+        login.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                createButtonMouseClicked(evt);
+                loginMouseClicked(evt);
             }
         });
-        jPanel1.add(createButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 640, -1, -1));
-
-        signupButton.setText("Sign up");
-        signupButton.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                signupButtonMouseClicked(evt);
-            }
-        });
-        jPanel1.add(signupButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 570, -1, -1));
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-70, 0, 220, 160));
-
-        loginButton.setBackground(new java.awt.Color(110, 102, 153));
-        loginButton.setText("Login");
-        loginButton.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                loginButtonMouseClicked(evt);
-            }
-        });
-        loginButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                loginButtonActionPerformed(evt);
-            }
-        });
-        jPanel1.add(loginButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 500, 110, 40));
+        jPanel1.add(login, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 500, 110, 40));
 
         usernameLogin.setForeground(new java.awt.Color(102, 102, 102));
         usernameLogin.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -101,6 +83,9 @@ public class LoginPage extends javax.swing.JFrame {
         });
         jPanel1.add(usernameLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 330, 240, 50));
 
+        email.setText("Email");
+        jPanel1.add(email, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 500, 240, 50));
+
         passwordLogin.setForeground(new java.awt.Color(102, 102, 102));
         passwordLogin.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         passwordLogin.setText("Password");
@@ -113,13 +98,37 @@ public class LoginPage extends javax.swing.JFrame {
                 passwordLoginFocusLost(evt);
             }
         });
-
         jPanel1.add(passwordLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 410, 240, 50));
-        jPanel1.add(emailField, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 500, 240, 40));
+
+        createAccount.setText("Create account");
+        createAccount.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                createAccountMouseClicked(evt);
+            }
+        });
+        jPanel1.add(createAccount, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 570, -1, -1));
+
+        create.setText("Create");
+        create.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                createMouseClicked(evt);
+            }
+        });
+        jPanel1.add(create, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 620, -1, -1));
 
         LoginPanel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/LoginImage.png"))); // NOI18N
         LoginPanel.setText("C");
         jPanel1.add(LoginPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1030, -1));
+
+        jMenu1.setText("Help?");
+        jMenu1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenu1MouseClicked(evt);
+            }
+        });
+        jMenuBar1.add(jMenu1);
+
+        setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -134,7 +143,75 @@ public class LoginPage extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-   
+    
+    // read text
+    public void loadUsers() {
+        try {
+            Scanner file = new Scanner(new File("/Users/callum/Desktop/users.txt"));
+            while (file.hasNextLine()) {
+                String line = file.nextLine();
+                User user = parseUsers(line);
+                users.add(user);
+            }
+        } catch (Exception e) {
+            
+        }
+        
+    }
+    
+    public User parseUsers(String line) {
+        try {
+            String[] parts = line.split(",");
+            String username = parts[0].trim();
+            String password = parts[1].trim();
+            String email = parts[2].trim();
+            return new User(username, password, email);
+        } catch (Exception e) {
+            
+        }
+        return null;
+    }
+    
+    public void displayUsers() {
+        for (User u: users) {
+            System.out.println(u);
+        }
+    }
+    
+    public void newUser() {
+        try {
+            
+            String username = usernameLogin.getText();
+            String password = passwordLogin.getText();
+            String newEmail = email.getText();
+            
+            User newUser = new User(username, password, newEmail);
+            users.add(newUser);
+            System.out.println(newUser);
+            
+            if (newUser != null) {
+                writeUsers();
+            }
+            
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+      
+    }
+    
+    public void writeUsers() {
+        String fileName = "/Users/callum/Desktop/users.txt";
+        try {
+            Formatter fout = new Formatter(fileName);
+            for (User u: users) {
+                u.writeData(fout);
+            }
+            fout.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    
     private void usernameLoginFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_usernameLoginFocusGained
         if (usernameLogin.getText().equals("Username")) {
             usernameLogin.setText("");
@@ -162,60 +239,38 @@ public class LoginPage extends javax.swing.JFrame {
             passwordLogin.setForeground(new Color(153, 153, 153));
         }
     }//GEN-LAST:event_passwordLoginFocusLost
-    // [CH] will change to saved users later
-    private void loginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginButtonActionPerformed
-        /* [CH] sick of typing credentials in 
-        if (usernameLogin.getText().equals("")) {
-            JOptionPane.showMessageDialog(null, "Please enter username");
-        } else if (userPassword.getText().equals("")) {
-            JOptionPane.showMessageDialog(null, "Please enter password");
-        } else if (usernameLogin.getText().equals("user") && userPassword.getText().equals("password")) {
-            //JOptionPane.showMessageDialog(null, "Login Success!");
-            openMainPage();
-        } else {
-            JOptionPane.showMessageDialog(null, "Incorrect login details!","System Error",JOptionPane.ERROR_MESSAGE);
-        }
-        */
-        //openMainPage();
-   
-    }//GEN-LAST:event_loginButtonActionPerformed
-    private void signupButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_signupButtonMouseClicked
-        //openAccountCreation();
-        signupButton.setVisible(false);
-        loginButton.setVisible(false);
-        createButton.setVisible(true);
-        emailField.setVisible(true);
-    }//GEN-LAST:event_signupButtonMouseClicked
 
-    private void loginButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_loginButtonMouseClicked
-        loginButton.setVisible(false);
-        
+    private void loginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_loginMouseClicked
+        openMainPage();
+    }//GEN-LAST:event_loginMouseClicked
+
+    private void createAccountMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_createAccountMouseClicked
         if (evt.getButton() == evt.BUTTON1) {
-            String username = usernameLogin.getText();
-            String password = passwordLogin.getText();
-
-            boolean loginSuccess = true;
-            for (User user : customers) {
-                if (user.getUsername().equals(username) && user.getPassword().equals(password)) {
-                    loginSuccess = true;
-                    break;
-                }
-            }
-
-            if (loginSuccess) {
-                openMainPage();
-            } else {
-                JOptionPane.showMessageDialog(this, "Invalid username or password!");
-            }
+            email.setVisible(true);
+            login.setVisible(false);
+            create.setVisible(true);
+            createAccount.setVisible(false);
         }
-    }//GEN-LAST:event_loginButtonMouseClicked
+    }//GEN-LAST:event_createAccountMouseClicked
 
-    private void createButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_createButtonMouseClicked
-       loginButton.setVisible(true);
-       emailField.setVisible(false);
-       signupButton.setVisible(true);
-    }//GEN-LAST:event_createButtonMouseClicked
+    private void createMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_createMouseClicked
+        if (evt.getButton() == evt.BUTTON1) {
+            email.setVisible(false);
+            login.setVisible(true);
+            create.setVisible(false);
+            createAccount.setVisible(true);
+            newUser();
     
+        }
+    }//GEN-LAST:event_createMouseClicked
+
+    private void jMenu1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu1MouseClicked
+        if (evt.getButton() == evt.BUTTON1) {
+            //JOptionPane.showMessageDialog(null, "Contact flydreamair@support.com for account issues!");
+            JOptionPane.showMessageDialog(null, "Contact flydreamair@support.com for account issues!", "Support", 0);
+        }
+    }//GEN-LAST:event_jMenu1MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -266,13 +321,14 @@ public class LoginPage extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel LoginPanel;
-    private javax.swing.JButton createButton;
-    private javax.swing.JTextField emailField;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JButton create;
+    private javax.swing.JButton createAccount;
+    private javax.swing.JTextField email;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JButton loginButton;
+    private javax.swing.JButton login;
     private javax.swing.JPasswordField passwordLogin;
-    private javax.swing.JButton signupButton;
     private javax.swing.JTextField usernameLogin;
     // End of variables declaration//GEN-END:variables
 }

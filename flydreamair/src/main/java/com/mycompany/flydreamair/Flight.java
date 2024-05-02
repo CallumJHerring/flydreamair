@@ -7,12 +7,12 @@ public class Flight {
     
     public String departureCity;
     public String arrivalCity;
-    public LocalDateTime departureDate;
-    public LocalDateTime arrivalDate;
+    public String departureDate;
+    public String arrivalDate;
     public double price;
     private String seat;
     
-    public Flight(String departureCity, String arrivalCity, LocalDateTime departureDate, LocalDateTime arrivalDate, double price, String seat) {
+    public Flight(String departureCity, String arrivalCity, String departureDate, String arrivalDate, double price, String seat) {
         this.departureCity = departureCity;
         this.arrivalCity = arrivalCity;
         this.departureDate = departureDate;
@@ -28,7 +28,7 @@ public class Flight {
     public String getDepartureCity() {
         return this.departureCity;
     }
-    
+
     public void setArrivalCity(String arrivalCity) {
         this.arrivalCity = arrivalCity;
     }
@@ -37,21 +37,23 @@ public class Flight {
         return this.arrivalCity;
     }
     
-    public void setDepartureDate(LocalDateTime departureDate) {
+    public void setDepartureDate(String departureDate) {
         this.departureDate = departureDate;
     }
     
-    public LocalDateTime getDepartureDate() {
+    public String getDepartureDate() {
         return this.departureDate;
     }
     
-    public void setArrivalDate(LocalDateTime arrivalDate) {
+        
+    public void setArrivalDate(String arrivalDate) {
         this.arrivalDate = arrivalDate;
     }
     
-    public LocalDateTime getArrivalDate() {
+    public String getArrivalDate() {
         return this.arrivalDate;
     }
+    
     
     public void setPrice(double price) {
         this.price = price;
