@@ -133,7 +133,7 @@ public class MainPage extends javax.swing.JFrame {
 
         jLabel3.setText("About Us");
         jLabel3.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-        jPanel3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, 440, 20));
+        jPanel3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, 440, 20));
 
         jTextArea1.setColumns(20);
         jTextArea1.setLineWrap(true);
