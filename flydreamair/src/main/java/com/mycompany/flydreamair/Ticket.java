@@ -7,6 +7,12 @@ public class Ticket {
     private Flight flight;
     private String ticketID;
     
+    public Ticket() {
+        user = new User();
+        flight = new Flight();
+        ticketID = "";
+    }
+    
     public Ticket(User user, Flight flight) {
         this.user = user;
         this.flight = flight;

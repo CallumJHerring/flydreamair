@@ -3,7 +3,6 @@ package com.mycompany.flydreamair;
 import java.awt.Color;
 import java.util.*;
 import java.io.*;
-import java.time.*;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -11,10 +10,6 @@ import java.awt.event.*;
 public class BookFlightPage extends javax.swing.JFrame {
     private ArrayList<Flight> flights = new ArrayList<>();
     private static JFrame bookFlightFrame;
-    private ArrayList<String> travel = new ArrayList<>();
-    
-    private JTextField textField;
-    private JLabel[] labels = new JLabel[40];
     
     /**
      * Creates new form BookFlightPage
@@ -122,6 +117,11 @@ public class BookFlightPage extends javax.swing.JFrame {
         departureCity.setFont(new java.awt.Font("Georgia", 0, 36)); // NOI18N
         departureCity.setText("Airport/city");
         departureCity.setBorder(null);
+        departureCity.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                departureCityFocusGained(evt);
+            }
+        });
         jPanel2.add(departureCity, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 270, 49));
 
         createBooking.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
@@ -477,7 +477,10 @@ public class BookFlightPage extends javax.swing.JFrame {
         jLabel10.setText("Seating");
         jPanel2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 20, -1, -1));
 
+        seating.setBackground(new java.awt.Color(0, 153, 204));
+        seating.setForeground(new java.awt.Color(204, 204, 204));
         seating.setText("Select seat (A2)");
+        seating.setBorder(null);
         jPanel2.add(seating, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 60, -1, 40));
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 63, 1350, 640));
@@ -741,6 +744,13 @@ public class BookFlightPage extends javax.swing.JFrame {
         }
            
     }//GEN-LAST:event_DallasMouseClicked
+    public void change() {
+       
+    }
+    
+    private void departureCityFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_departureCityFocusGained
+        change();
+    }//GEN-LAST:event_departureCityFocusGained
     /*    */
     /**
      * @param args the command line arguments

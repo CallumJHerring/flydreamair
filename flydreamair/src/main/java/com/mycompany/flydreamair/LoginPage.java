@@ -11,6 +11,7 @@ public class LoginPage extends javax.swing.JFrame {
     private static JFrame mainFrame;
     private static JFrame accountCreationFrame;
     private ArrayList<User> users;
+    private JFrame loginFrame;
     
     /**
      * Creates new form LoginPage
@@ -25,6 +26,8 @@ public class LoginPage extends javax.swing.JFrame {
         email.setVisible(false);
         create.setVisible(false);
         loadUsers();
+        
+        fdaLogo.setSize(100,100);
     }
     
     public ArrayList<User> getCustomers() {
@@ -41,6 +44,7 @@ public class LoginPage extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        fdaLogo = new javax.swing.JLabel();
         login = new javax.swing.JButton();
         usernameLogin = new javax.swing.JTextField();
         email = new javax.swing.JTextField();
@@ -49,7 +53,7 @@ public class LoginPage extends javax.swing.JFrame {
         create = new javax.swing.JButton();
         LoginPanel = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
+        helpButton = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -59,14 +63,20 @@ public class LoginPage extends javax.swing.JFrame {
         jPanel1.setSize(new java.awt.Dimension(720, 500));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        fdaLogo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        fdaLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Fly Dream Air_transparent.png"))); // NOI18N
+        fdaLogo.setPreferredSize(new java.awt.Dimension(120, 120));
+        jPanel1.add(fdaLogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 10, 380, 290));
+
         login.setBackground(new java.awt.Color(110, 102, 153));
+        login.setFont(new java.awt.Font("Georgia", 0, 18)); // NOI18N
         login.setText("Login");
         login.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 loginMouseClicked(evt);
             }
         });
-        jPanel1.add(login, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 500, 110, 40));
+        jPanel1.add(login, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 370, 170, 40));
 
         usernameLogin.setForeground(new java.awt.Color(102, 102, 102));
         usernameLogin.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -81,10 +91,21 @@ public class LoginPage extends javax.swing.JFrame {
                 usernameLoginFocusLost(evt);
             }
         });
-        jPanel1.add(usernameLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 330, 240, 50));
+        jPanel1.add(usernameLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 230, 240, 50));
 
+        email.setForeground(new java.awt.Color(102, 102, 102));
+        email.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         email.setText("Email");
-        jPanel1.add(email, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 500, 240, 50));
+        email.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 1, true));
+        email.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                emailFocusGained(evt);
+            }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                emailFocusLost(evt);
+            }
+        });
+        jPanel1.add(email, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 370, 240, 50));
 
         passwordLogin.setForeground(new java.awt.Color(102, 102, 102));
         passwordLogin.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -98,35 +119,34 @@ public class LoginPage extends javax.swing.JFrame {
                 passwordLoginFocusLost(evt);
             }
         });
-        jPanel1.add(passwordLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 410, 240, 50));
+        jPanel1.add(passwordLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 300, 240, 50));
 
-        createAccount.setText("Create account");
+        createAccount.setText("Create Account");
         createAccount.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 createAccountMouseClicked(evt);
             }
         });
-        jPanel1.add(createAccount, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 570, -1, -1));
+        jPanel1.add(createAccount, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 430, -1, -1));
 
-        create.setText("Create");
+        create.setText("Sign up");
         create.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 createMouseClicked(evt);
             }
         });
-        jPanel1.add(create, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 620, -1, -1));
+        jPanel1.add(create, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 440, -1, -1));
 
-        LoginPanel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/LoginImage.png"))); // NOI18N
-        LoginPanel.setText("C");
-        jPanel1.add(LoginPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1030, -1));
+        LoginPanel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bg1.jpeg"))); // NOI18N
+        jPanel1.add(LoginPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
-        jMenu1.setText("Help?");
-        jMenu1.addMouseListener(new java.awt.event.MouseAdapter() {
+        helpButton.setText("Help?");
+        helpButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jMenu1MouseClicked(evt);
+                helpButtonMouseClicked(evt);
             }
         });
-        jMenuBar1.add(jMenu1);
+        jMenuBar1.add(helpButton);
 
         setJMenuBar(jMenuBar1);
 
@@ -134,11 +154,11 @@ public class LoginPage extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1024, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 850, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1024, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 532, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -191,6 +211,8 @@ public class LoginPage extends javax.swing.JFrame {
             
             if (newUser != null) {
                 writeUsers();
+               
+                JOptionPane.showMessageDialog(null, "Account Successfully created \nWelcome to FlyDreamAir!", "Account Creation", JOptionPane.INFORMATION_MESSAGE);
             }
             
         } catch (Exception e) {
@@ -264,12 +286,26 @@ public class LoginPage extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_createMouseClicked
 
-    private void jMenu1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu1MouseClicked
+    private void helpButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_helpButtonMouseClicked
         if (evt.getButton() == evt.BUTTON1) {
             //JOptionPane.showMessageDialog(null, "Contact flydreamair@support.com for account issues!");
             JOptionPane.showMessageDialog(null, "Contact flydreamair@support.com for account issues!", "Support", 0);
         }
-    }//GEN-LAST:event_jMenu1MouseClicked
+    }//GEN-LAST:event_helpButtonMouseClicked
+
+    private void emailFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_emailFocusGained
+        if (email.getText().equals("Email")) {
+            email.setText("");
+            email.setForeground(new Color(153, 153, 153));
+        }
+    }//GEN-LAST:event_emailFocusGained
+
+    private void emailFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_emailFocusLost
+        if (email.getText().equals("")) {
+            email.setText("Email");
+            email.setForeground(new Color(153, 153, 153));
+        }
+    }//GEN-LAST:event_emailFocusLost
 
     /**
      * @param args the command line arguments
@@ -304,7 +340,6 @@ public class LoginPage extends javax.swing.JFrame {
             public void run() {
                 new LoginPage().setVisible(true);
                 
-                
             }
         });
     }
@@ -324,7 +359,8 @@ public class LoginPage extends javax.swing.JFrame {
     private javax.swing.JButton create;
     private javax.swing.JButton createAccount;
     private javax.swing.JTextField email;
-    private javax.swing.JMenu jMenu1;
+    private javax.swing.JLabel fdaLogo;
+    private javax.swing.JMenu helpButton;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JButton login;
