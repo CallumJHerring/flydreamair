@@ -105,7 +105,7 @@ public class LoginPage extends javax.swing.JFrame {
                 emailFocusLost(evt);
             }
         });
-        jPanel1.add(email, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 370, 240, 50));
+        jPanel1.add(email, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 370, 240, 40));
 
         passwordLogin.setForeground(new java.awt.Color(102, 102, 102));
         passwordLogin.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -127,7 +127,7 @@ public class LoginPage extends javax.swing.JFrame {
                 createAccountMouseClicked(evt);
             }
         });
-        jPanel1.add(createAccount, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 430, -1, -1));
+        jPanel1.add(createAccount, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 430, -1, -1));
 
         create.setText("Sign up");
         create.addMouseListener(new java.awt.event.MouseAdapter() {

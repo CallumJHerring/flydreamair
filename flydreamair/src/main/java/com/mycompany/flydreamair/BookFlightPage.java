@@ -29,6 +29,7 @@ public class BookFlightPage extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jMenu3 = new javax.swing.JMenu();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
@@ -93,6 +94,11 @@ public class BookFlightPage extends javax.swing.JFrame {
         arrivalDate = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
         seating = new javax.swing.JTextField();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        jMenu2 = new javax.swing.JMenu();
+
+        jMenu3.setText("jMenu3");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -117,13 +123,9 @@ public class BookFlightPage extends javax.swing.JFrame {
         departureCity.setFont(new java.awt.Font("Georgia", 0, 36)); // NOI18N
         departureCity.setText("Airport/city");
         departureCity.setBorder(null);
-        departureCity.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                departureCityFocusGained(evt);
-            }
-        });
         jPanel2.add(departureCity, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 270, 49));
 
+        createBooking.setBackground(new java.awt.Color(102, 102, 102));
         createBooking.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
         createBooking.setForeground(new java.awt.Color(255, 255, 255));
         createBooking.setText("Create booking");
@@ -444,7 +446,7 @@ public class BookFlightPage extends javax.swing.JFrame {
 
         countryTravel.addTab("North America", jPanel6);
 
-        jPanel2.add(countryTravel, new org.netbeans.lib.awtextra.AbsoluteConstraints(102, 140, 744, 311));
+        jPanel2.add(countryTravel, new org.netbeans.lib.awtextra.AbsoluteConstraints(102, 140, 740, 311));
 
         jLabel30.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
         jLabel30.setForeground(new java.awt.Color(255, 255, 255));
@@ -483,7 +485,25 @@ public class BookFlightPage extends javax.swing.JFrame {
         seating.setBorder(null);
         jPanel2.add(seating, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 60, -1, 40));
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 63, 1350, 640));
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 63, 1350, 840));
+
+        jMenu1.setText("Logout");
+        jMenu1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenu1MouseClicked(evt);
+            }
+        });
+        jMenuBar1.add(jMenu1);
+
+        jMenu2.setText("Account");
+        jMenu2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenu2MouseClicked(evt);
+            }
+        });
+        jMenuBar1.add(jMenu2);
+
+        setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -493,7 +513,9 @@ public class BookFlightPage extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -744,13 +766,19 @@ public class BookFlightPage extends javax.swing.JFrame {
         }
            
     }//GEN-LAST:event_DallasMouseClicked
-    public void change() {
-       
-    }
-    
-    private void departureCityFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_departureCityFocusGained
-        change();
-    }//GEN-LAST:event_departureCityFocusGained
+
+    private void jMenu1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu1MouseClicked
+        if (evt.getButton() == evt.BUTTON1) {
+            dispose();
+            new MainPage().setVisible(true);
+        }
+    }//GEN-LAST:event_jMenu1MouseClicked
+
+    private void jMenu2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu2MouseClicked
+        if (evt.getButton() == evt.BUTTON1) {
+            new AccountInformation().setVisible(true);
+        }
+    }//GEN-LAST:event_jMenu2MouseClicked
     /*    */
     /**
      * @param args the command line arguments
@@ -844,6 +872,10 @@ public class BookFlightPage extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenu jMenu3;
+    private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;

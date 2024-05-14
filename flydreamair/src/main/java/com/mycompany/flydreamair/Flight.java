@@ -1,7 +1,5 @@
 package com.mycompany.flydreamair;
 
-import java.time.*;
-import java.io.*;
 import java.util.*;
 
 public class Flight implements CompanyFileIO {
