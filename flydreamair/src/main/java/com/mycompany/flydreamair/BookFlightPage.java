@@ -19,12 +19,36 @@ public class BookFlightPage extends javax.swing.JFrame {
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         jPanel2.requestFocusInWindow();
         datePanel.setEnabledAt(0, true);
-        //datePanel.setEnabledAt(1, true);
         
         //loadFlights();
         
         // Seating
-        //jTextField8.setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
+        //A1.setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
+        //A1.setCaretColor(new Color(0, 0, 0, 0));
+        seatingCursors();
+    }
+    
+    public void seatingCursors() {
+        A1.setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
+        A1.setCaretColor(new Color(0, 0, 0, 0));
+        A2.setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
+        A2.setCaretColor(new Color(0, 0, 0, 0));
+        A3.setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
+        A3.setCaretColor(new Color(0, 0, 0, 0));
+        A4.setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
+        A4.setCaretColor(new Color(0, 0, 0, 0));
+        A5.setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
+        A5.setCaretColor(new Color(0, 0, 0, 0));
+        A6.setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
+        A6.setCaretColor(new Color(0, 0, 0, 0));
+        A7.setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
+        A7.setCaretColor(new Color(0, 0, 0, 0));
+        A8.setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
+        A8.setCaretColor(new Color(0, 0, 0, 0));
+        A9.setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
+        A9.setCaretColor(new Color(0, 0, 0, 0));
+        A10.setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
+        A10.setCaretColor(new Color(0, 0, 0, 0));
     }
 
     /**
@@ -64,7 +88,6 @@ public class BookFlightPage extends javax.swing.JFrame {
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         jLabel26 = new javax.swing.JLabel();
-        jLabel72 = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
         jLabel16 = new javax.swing.JLabel();
         jLabel22 = new javax.swing.JLabel();
@@ -106,12 +129,7 @@ public class BookFlightPage extends javax.swing.JFrame {
         janPanel = new javax.swing.JPanel();
         jLabel27 = new javax.swing.JLabel();
         jLabel47 = new javax.swing.JLabel();
-        jLabel48 = new javax.swing.JLabel();
         janTuesdayOne = new javax.swing.JLabel();
-        jLabel50 = new javax.swing.JLabel();
-        jLabel51 = new javax.swing.JLabel();
-        jLabel52 = new javax.swing.JLabel();
-        jLabel53 = new javax.swing.JLabel();
         jLabel62 = new javax.swing.JLabel();
         jLabel63 = new javax.swing.JLabel();
         jLabel64 = new javax.swing.JLabel();
@@ -119,36 +137,96 @@ public class BookFlightPage extends javax.swing.JFrame {
         jLabel66 = new javax.swing.JLabel();
         janMondayOne = new javax.swing.JLabel();
         janWednesdayOne = new javax.swing.JLabel();
-        jLabel69 = new javax.swing.JLabel();
-        jLabel70 = new javax.swing.JLabel();
-        jLabel71 = new javax.swing.JLabel();
-        jLabel67 = new javax.swing.JLabel();
-        jLabel83 = new javax.swing.JLabel();
-        jLabel68 = new javax.swing.JLabel();
-        jLabel114 = new javax.swing.JLabel();
-        jLabel115 = new javax.swing.JLabel();
-        jLabel116 = new javax.swing.JLabel();
-        jLabel117 = new javax.swing.JLabel();
         jLabel118 = new javax.swing.JLabel();
-        jLabel119 = new javax.swing.JLabel();
-        jLabel120 = new javax.swing.JLabel();
-        jLabel121 = new javax.swing.JLabel();
-        jLabel122 = new javax.swing.JLabel();
-        jLabel123 = new javax.swing.JLabel();
-        jLabel124 = new javax.swing.JLabel();
         jLabel125 = new javax.swing.JLabel();
         jLabel126 = new javax.swing.JLabel();
         jLabel127 = new javax.swing.JLabel();
         jLabel128 = new javax.swing.JLabel();
+        jLabel136 = new javax.swing.JLabel();
+        jLabel137 = new javax.swing.JLabel();
+        jLabel139 = new javax.swing.JLabel();
+        jLabel140 = new javax.swing.JLabel();
+        jLabel141 = new javax.swing.JLabel();
+        jLabel142 = new javax.swing.JLabel();
+        jLabel143 = new javax.swing.JLabel();
+        jLabel144 = new javax.swing.JLabel();
+        jLabel145 = new javax.swing.JLabel();
+        jLabel146 = new javax.swing.JLabel();
+        jLabel147 = new javax.swing.JLabel();
+        jLabel148 = new javax.swing.JLabel();
+        jLabel149 = new javax.swing.JLabel();
+        jLabel150 = new javax.swing.JLabel();
+        jLabel151 = new javax.swing.JLabel();
+        jLabel152 = new javax.swing.JLabel();
+        jLabel153 = new javax.swing.JLabel();
+        jLabel154 = new javax.swing.JLabel();
+        jLabel155 = new javax.swing.JLabel();
+        jLabel156 = new javax.swing.JLabel();
+        jLabel157 = new javax.swing.JLabel();
+        jLabel48 = new javax.swing.JLabel();
+        jLabel50 = new javax.swing.JLabel();
+        jLabel52 = new javax.swing.JLabel();
+        jLabel53 = new javax.swing.JLabel();
+        jLabel67 = new javax.swing.JLabel();
+        jLabel83 = new javax.swing.JLabel();
+        jLabel51 = new javax.swing.JLabel();
+        jLabel70 = new javax.swing.JLabel();
+        jLabel68 = new javax.swing.JLabel();
+        jLabel121 = new javax.swing.JLabel();
+        jLabel124 = new javax.swing.JLabel();
+        jLabel122 = new javax.swing.JLabel();
+        jLabel131 = new javax.swing.JLabel();
         jLabel129 = new javax.swing.JLabel();
         jLabel130 = new javax.swing.JLabel();
-        jLabel131 = new javax.swing.JLabel();
         jLabel132 = new javax.swing.JLabel();
         jLabel133 = new javax.swing.JLabel();
         jLabel134 = new javax.swing.JLabel();
+        jLabel123 = new javax.swing.JLabel();
+        jLabel158 = new javax.swing.JLabel();
+        jLabel159 = new javax.swing.JLabel();
+        jLabel160 = new javax.swing.JLabel();
+        jLabel161 = new javax.swing.JLabel();
+        jLabel162 = new javax.swing.JLabel();
         jLabel135 = new javax.swing.JLabel();
-        jLabel136 = new javax.swing.JLabel();
-        jLabel137 = new javax.swing.JLabel();
+        jLabel164 = new javax.swing.JLabel();
+        jLabel165 = new javax.swing.JLabel();
+        jLabel166 = new javax.swing.JLabel();
+        jLabel167 = new javax.swing.JLabel();
+        jLabel168 = new javax.swing.JLabel();
+        jLabel169 = new javax.swing.JLabel();
+        jLabel170 = new javax.swing.JLabel();
+        jLabel171 = new javax.swing.JLabel();
+        jLabel173 = new javax.swing.JLabel();
+        jLabel172 = new javax.swing.JLabel();
+        jLabel174 = new javax.swing.JLabel();
+        jLabel163 = new javax.swing.JLabel();
+        jLabel116 = new javax.swing.JLabel();
+        jLabel69 = new javax.swing.JLabel();
+        jLabel114 = new javax.swing.JLabel();
+        jLabel71 = new javax.swing.JLabel();
+        jLabel117 = new javax.swing.JLabel();
+        jLabel178 = new javax.swing.JLabel();
+        jLabel177 = new javax.swing.JLabel();
+        jLabel182 = new javax.swing.JLabel();
+        jLabel176 = new javax.swing.JLabel();
+        jLabel120 = new javax.swing.JLabel();
+        jLabel119 = new javax.swing.JLabel();
+        jLabel184 = new javax.swing.JLabel();
+        jLabel187 = new javax.swing.JLabel();
+        jLabel115 = new javax.swing.JLabel();
+        jLabel185 = new javax.swing.JLabel();
+        jLabel186 = new javax.swing.JLabel();
+        jLabel188 = new javax.swing.JLabel();
+        jLabel189 = new javax.swing.JLabel();
+        jLabel196 = new javax.swing.JLabel();
+        jLabel191 = new javax.swing.JLabel();
+        jLabel192 = new javax.swing.JLabel();
+        jLabel193 = new javax.swing.JLabel();
+        jLabel194 = new javax.swing.JLabel();
+        jLabel183 = new javax.swing.JLabel();
+        jLabel195 = new javax.swing.JLabel();
+        jLabel197 = new javax.swing.JLabel();
+        jLabel198 = new javax.swing.JLabel();
         jPanel7 = new javax.swing.JPanel();
         jPanel8 = new javax.swing.JPanel();
         jLabel54 = new javax.swing.JLabel();
@@ -170,55 +248,58 @@ public class BookFlightPage extends javax.swing.JFrame {
         jPanel17 = new javax.swing.JPanel();
         jPanel18 = new javax.swing.JPanel();
         jPanel19 = new javax.swing.JPanel();
-        jLabel73 = new javax.swing.JLabel();
-        jLabel75 = new javax.swing.JLabel();
-        jLabel76 = new javax.swing.JLabel();
-        jLabel77 = new javax.swing.JLabel();
-        jLabel78 = new javax.swing.JLabel();
-        jLabel79 = new javax.swing.JLabel();
-        jLabel80 = new javax.swing.JLabel();
-        jLabel81 = new javax.swing.JLabel();
-        jLabel82 = new javax.swing.JLabel();
-        jLabel84 = new javax.swing.JLabel();
-        jLabel85 = new javax.swing.JLabel();
-        jLabel86 = new javax.swing.JLabel();
-        jLabel87 = new javax.swing.JLabel();
-        jLabel88 = new javax.swing.JLabel();
-        jLabel89 = new javax.swing.JLabel();
-        jLabel90 = new javax.swing.JLabel();
-        jLabel91 = new javax.swing.JLabel();
-        jLabel92 = new javax.swing.JLabel();
-        jLabel93 = new javax.swing.JLabel();
-        jLabel94 = new javax.swing.JLabel();
-        jLabel95 = new javax.swing.JLabel();
-        jLabel96 = new javax.swing.JLabel();
-        jLabel97 = new javax.swing.JLabel();
-        jLabel98 = new javax.swing.JLabel();
-        jLabel99 = new javax.swing.JLabel();
-        jLabel100 = new javax.swing.JLabel();
-        jLabel101 = new javax.swing.JLabel();
-        jLabel102 = new javax.swing.JLabel();
-        jLabel103 = new javax.swing.JLabel();
-        jLabel104 = new javax.swing.JLabel();
-        jLabel105 = new javax.swing.JLabel();
-        jLabel106 = new javax.swing.JLabel();
-        jLabel107 = new javax.swing.JLabel();
-        jLabel108 = new javax.swing.JLabel();
-        jLabel109 = new javax.swing.JLabel();
-        jLabel110 = new javax.swing.JLabel();
-        jLabel111 = new javax.swing.JLabel();
-        jLabel112 = new javax.swing.JLabel();
         jTextField2 = new javax.swing.JTextField();
-        jTextField7 = new javax.swing.JTextField();
-        jTextField8 = new javax.swing.JTextField();
+        A6 = new javax.swing.JTextField();
+        A1 = new javax.swing.JTextField();
+        A9 = new javax.swing.JTextField();
+        A4 = new javax.swing.JTextField();
+        A5 = new javax.swing.JTextField();
+        A7 = new javax.swing.JTextField();
+        A8 = new javax.swing.JTextField();
+        A2 = new javax.swing.JTextField();
+        A10 = new javax.swing.JTextField();
+        A3 = new javax.swing.JTextField();
+        B1 = new javax.swing.JTextField();
+        B2 = new javax.swing.JTextField();
+        B3 = new javax.swing.JTextField();
+        B4 = new javax.swing.JTextField();
+        B5 = new javax.swing.JTextField();
+        B6 = new javax.swing.JTextField();
+        B7 = new javax.swing.JTextField();
+        jTextField9 = new javax.swing.JTextField();
+        B9 = new javax.swing.JTextField();
+        B10 = new javax.swing.JTextField();
+        B8 = new javax.swing.JTextField();
+        C10 = new javax.swing.JTextField();
+        D10 = new javax.swing.JTextField();
+        C2 = new javax.swing.JTextField();
+        C3 = new javax.swing.JTextField();
+        C4 = new javax.swing.JTextField();
+        C5 = new javax.swing.JTextField();
+        C6 = new javax.swing.JTextField();
+        C7 = new javax.swing.JTextField();
+        C8 = new javax.swing.JTextField();
+        C9 = new javax.swing.JTextField();
+        C1 = new javax.swing.JTextField();
+        D1 = new javax.swing.JTextField();
+        D2 = new javax.swing.JTextField();
+        D3 = new javax.swing.JTextField();
+        D4 = new javax.swing.JTextField();
+        D5 = new javax.swing.JTextField();
+        D6 = new javax.swing.JTextField();
+        D7 = new javax.swing.JTextField();
+        D8 = new javax.swing.JTextField();
+        D9 = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
         jLabel49 = new javax.swing.JLabel();
         yearComboBox = new javax.swing.JComboBox<>();
         seating = new javax.swing.JTextField();
+        jLabel138 = new javax.swing.JLabel();
+        jLabel175 = new javax.swing.JLabel();
+        jLabel190 = new javax.swing.JLabel();
+        jLabel199 = new javax.swing.JLabel();
         jLabel113 = new javax.swing.JLabel();
         jTextField4 = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
         jLabel74 = new javax.swing.JLabel();
         backBooking = new javax.swing.JLabel();
         createBooking = new javax.swing.JButton();
@@ -235,8 +316,8 @@ public class BookFlightPage extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Georgia", 0, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("FlyDreamAir Flights");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 20, -1, -1));
+        jLabel1.setText("Book your dream holiday");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 10, -1, -1));
 
         jPanel2.setBackground(new java.awt.Color(0, 153, 204));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -244,34 +325,34 @@ public class BookFlightPage extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Georgia", 0, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Fly from");
-        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, -1, -1));
+        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, -1, -1));
 
         departureCity.setBackground(new java.awt.Color(0, 153, 204));
         departureCity.setFont(new java.awt.Font("Georgia", 0, 36)); // NOI18N
         departureCity.setText("Airport/city");
         departureCity.setBorder(null);
-        jPanel2.add(departureCity, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, 270, 49));
+        jPanel2.add(departureCity, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 40, 270, 49));
 
         jLabel4.setBackground(new java.awt.Color(255, 255, 255));
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
-        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, 370, -1));
+        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, 370, -1));
 
         jLabel3.setFont(new java.awt.Font("Georgia", 0, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Fly to");
-        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 40, -1, -1));
+        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 20, -1, -1));
 
         arrivalCity.setBackground(new java.awt.Color(0, 153, 204));
         arrivalCity.setFont(new java.awt.Font("Georgia", 0, 36)); // NOI18N
         arrivalCity.setText("somewhere");
         arrivalCity.setBorder(null);
-        jPanel2.add(arrivalCity, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 50, 280, 49));
+        jPanel2.add(arrivalCity, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 40, 280, 49));
 
         jLabel5.setBackground(new java.awt.Color(255, 255, 255));
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
-        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 100, 370, -1));
+        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 90, 370, -1));
 
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -349,10 +430,6 @@ public class BookFlightPage extends javax.swing.JFrame {
         jLabel26.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
         jLabel26.setText("Wollongong (WOL)");
         jPanel3.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 110, -1, -1));
-
-        jLabel72.setFont(new java.awt.Font("Helvetica Neue", 3, 24)); // NOI18N
-        jLabel72.setText("Change out all seating labels for textfields");
-        jPanel3.add(jLabel72, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 70, -1, 30));
 
         countryTravel.addTab("Australia", jPanel3);
 
@@ -560,33 +637,33 @@ public class BookFlightPage extends javax.swing.JFrame {
 
         countryTravel.addTab("North America", jPanel6);
 
-        jPanel2.add(countryTravel, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, 980, 260));
+        jPanel2.add(countryTravel, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 980, 260));
 
         jLabel30.setFont(new java.awt.Font("Georgia", 0, 18)); // NOI18N
         jLabel30.setForeground(new java.awt.Color(255, 255, 255));
         jLabel30.setText("Date");
-        jPanel2.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 40, -1, -1));
+        jPanel2.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 20, -1, -1));
 
         departureDate.setBackground(new java.awt.Color(0, 153, 204));
         departureDate.setText("DD/MM/YYYY");
         departureDate.setBorder(null);
-        jPanel2.add(departureDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 60, 110, 40));
+        jPanel2.add(departureDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 50, 110, 40));
 
         jLabel45.setBackground(new java.awt.Color(255, 255, 255));
         jLabel45.setFont(new java.awt.Font("Helvetica Neue", 0, 36)); // NOI18N
         jLabel45.setForeground(new java.awt.Color(255, 255, 255));
         jLabel45.setText("⮕");
-        jPanel2.add(jLabel45, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 50, 40, 60));
+        jPanel2.add(jLabel45, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 30, 40, 60));
 
         jLabel46.setFont(new java.awt.Font("Georgia", 0, 18)); // NOI18N
         jLabel46.setForeground(new java.awt.Color(255, 255, 255));
         jLabel46.setText("Date");
-        jPanel2.add(jLabel46, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 40, -1, -1));
+        jPanel2.add(jLabel46, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 20, -1, -1));
 
         arrivalDate.setBackground(new java.awt.Color(0, 153, 204));
         arrivalDate.setText("DD/MM/YYY");
         arrivalDate.setBorder(null);
-        jPanel2.add(arrivalDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 60, 90, 40));
+        jPanel2.add(arrivalDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 50, 90, 40));
 
         frontOfPlane.setBackground(new java.awt.Color(0, 153, 204));
         frontOfPlane.setFont(new java.awt.Font("Helvetica Neue", 2, 13)); // NOI18N
@@ -598,13 +675,10 @@ public class BookFlightPage extends javax.swing.JFrame {
         janPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel27.setText("Mon");
-        janPanel.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 10, -1, -1));
+        janPanel.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 10, -1, -1));
 
         jLabel47.setText("Tue");
-        janPanel.add(jLabel47, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 10, -1, -1));
-
-        jLabel48.setText("from $136*");
-        janPanel.add(jLabel48, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, -1, 30));
+        janPanel.add(jLabel47, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 10, -1, -1));
 
         janTuesdayOne.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         janTuesdayOne.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
@@ -613,35 +687,22 @@ public class BookFlightPage extends javax.swing.JFrame {
                 janTuesdayOneMouseClicked(evt);
             }
         });
-        janPanel.add(janTuesdayOne, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 40, 80, 70));
-
-        jLabel50.setText("1");
-        janPanel.add(jLabel50, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 40, -1, -1));
-
-        jLabel51.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel51.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
-        janPanel.add(jLabel51, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 200, 80, 70));
-
-        jLabel52.setText("from $99*");
-        janPanel.add(jLabel52, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 90, -1, -1));
-
-        jLabel53.setText("2");
-        janPanel.add(jLabel53, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 40, -1, -1));
+        janPanel.add(janTuesdayOne, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 40, 60, 50));
 
         jLabel62.setText("Wed");
-        janPanel.add(jLabel62, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 10, -1, -1));
+        janPanel.add(jLabel62, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 10, -1, -1));
 
         jLabel63.setText("Thu");
-        janPanel.add(jLabel63, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 10, -1, -1));
+        janPanel.add(jLabel63, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 10, -1, -1));
 
         jLabel64.setText("Fri");
-        janPanel.add(jLabel64, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 10, -1, -1));
+        janPanel.add(jLabel64, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 10, -1, -1));
 
         jLabel65.setText("Sat");
-        janPanel.add(jLabel65, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 10, -1, -1));
+        janPanel.add(jLabel65, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 10, -1, -1));
 
         jLabel66.setText("Sun");
-        janPanel.add(jLabel66, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 10, -1, -1));
+        janPanel.add(jLabel66, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 10, -1, -1));
 
         janMondayOne.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         janMondayOne.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
@@ -650,7 +711,7 @@ public class BookFlightPage extends javax.swing.JFrame {
                 janMondayOneMouseClicked(evt);
             }
         });
-        janPanel.add(janMondayOne, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 80, 70));
+        janPanel.add(janMondayOne, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 40, 60, 50));
 
         janWednesdayOne.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         janWednesdayOne.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
@@ -659,125 +720,367 @@ public class BookFlightPage extends javax.swing.JFrame {
                 janWednesdayOneMouseClicked(evt);
             }
         });
-        janPanel.add(janWednesdayOne, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 40, 80, 70));
-
-        jLabel69.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel69.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
-        janPanel.add(jLabel69, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 40, 80, 70));
-
-        jLabel70.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel70.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
-        janPanel.add(jLabel70, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 40, 80, 70));
-
-        jLabel71.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel71.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
-        janPanel.add(jLabel71, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 40, 80, 70));
-
-        jLabel67.setText("3");
-        janPanel.add(jLabel67, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 40, -1, -1));
-
-        jLabel83.setText("from $80*");
-        janPanel.add(jLabel83, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 90, -1, -1));
-
-        jLabel68.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel68.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
-        janPanel.add(jLabel68, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 40, 80, 70));
-
-        jLabel114.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel114.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
-        janPanel.add(jLabel114, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 40, 80, 70));
-
-        jLabel115.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel115.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
-        janPanel.add(jLabel115, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 40, 80, 70));
-
-        jLabel116.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel116.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
-        janPanel.add(jLabel116, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 40, 80, 70));
-
-        jLabel117.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel117.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
-        janPanel.add(jLabel117, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 40, 80, 70));
+        janPanel.add(janWednesdayOne, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 40, 60, 50));
 
         jLabel118.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel118.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
-        janPanel.add(jLabel118, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, 80, 70));
-
-        jLabel119.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel119.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
-        janPanel.add(jLabel119, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 120, 80, 70));
-
-        jLabel120.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel120.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
-        janPanel.add(jLabel120, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 120, 80, 70));
-
-        jLabel121.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel121.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
-        janPanel.add(jLabel121, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 120, 80, 70));
-
-        jLabel122.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel122.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
-        janPanel.add(jLabel122, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 120, 80, 70));
-
-        jLabel123.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel123.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
-        janPanel.add(jLabel123, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 120, 80, 70));
-
-        jLabel124.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel124.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
-        janPanel.add(jLabel124, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 120, 80, 70));
+        janPanel.add(jLabel118, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 220, 60, 50));
 
         jLabel125.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel125.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
-        janPanel.add(jLabel125, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 120, 80, 70));
+        janPanel.add(jLabel125, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 100, 60, 50));
 
         jLabel126.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel126.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
-        janPanel.add(jLabel126, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 120, 80, 70));
+        janPanel.add(jLabel126, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 160, 60, 50));
 
         jLabel127.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel127.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
-        janPanel.add(jLabel127, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 120, 80, 70));
+        janPanel.add(jLabel127, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 220, 60, 50));
 
         jLabel128.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel128.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
-        janPanel.add(jLabel128, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 120, 80, 70));
-
-        jLabel129.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel129.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
-        janPanel.add(jLabel129, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 200, 80, 70));
-
-        jLabel130.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel130.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
-        janPanel.add(jLabel130, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 200, 80, 70));
-
-        jLabel131.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel131.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
-        janPanel.add(jLabel131, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 200, 80, 70));
-
-        jLabel132.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel132.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
-        janPanel.add(jLabel132, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 200, 80, 70));
-
-        jLabel133.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel133.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
-        janPanel.add(jLabel133, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 200, 80, 70));
-
-        jLabel134.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel134.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
-        janPanel.add(jLabel134, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 200, 80, 70));
-
-        jLabel135.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel135.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
-        janPanel.add(jLabel135, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 200, 80, 70));
+        janPanel.add(jLabel128, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 40, 60, 50));
 
         jLabel136.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel136.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
-        janPanel.add(jLabel136, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 200, 80, 70));
+        janPanel.add(jLabel136, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 40, 60, 50));
 
         jLabel137.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel137.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
-        janPanel.add(jLabel137, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 200, 80, 70));
+        janPanel.add(jLabel137, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 40, 60, 50));
+
+        jLabel139.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel139.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
+        janPanel.add(jLabel139, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 40, 60, 50));
+
+        jLabel140.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel140.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
+        janPanel.add(jLabel140, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 280, 60, 50));
+
+        jLabel141.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel141.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
+        janPanel.add(jLabel141, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 100, 60, 50));
+
+        jLabel142.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel142.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
+        janPanel.add(jLabel142, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 100, 60, 50));
+
+        jLabel143.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel143.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
+        janPanel.add(jLabel143, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 100, 60, 50));
+
+        jLabel144.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel144.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
+        janPanel.add(jLabel144, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 100, 60, 50));
+
+        jLabel145.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel145.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
+        janPanel.add(jLabel145, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 100, 60, 50));
+
+        jLabel146.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel146.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
+        janPanel.add(jLabel146, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 100, 60, 50));
+
+        jLabel147.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel147.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
+        janPanel.add(jLabel147, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 160, 60, 50));
+
+        jLabel148.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel148.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
+        janPanel.add(jLabel148, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 160, 60, 50));
+
+        jLabel149.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel149.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
+        janPanel.add(jLabel149, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 160, 60, 50));
+
+        jLabel150.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel150.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
+        janPanel.add(jLabel150, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 160, 60, 50));
+
+        jLabel151.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel151.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
+        janPanel.add(jLabel151, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 160, 60, 50));
+
+        jLabel152.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel152.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
+        janPanel.add(jLabel152, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 160, 60, 50));
+
+        jLabel153.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel153.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
+        janPanel.add(jLabel153, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 220, 60, 50));
+
+        jLabel154.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel154.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
+        janPanel.add(jLabel154, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 220, 60, 50));
+
+        jLabel155.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel155.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
+        janPanel.add(jLabel155, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 220, 60, 50));
+
+        jLabel156.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel156.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
+        janPanel.add(jLabel156, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 220, 60, 50));
+
+        jLabel157.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel157.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
+        janPanel.add(jLabel157, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 220, 60, 50));
+
+        jLabel48.setFont(new java.awt.Font("Helvetica Neue", 0, 9)); // NOI18N
+        jLabel48.setText("from $136*");
+        janPanel.add(jLabel48, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 60, -1, 30));
+
+        jLabel50.setFont(new java.awt.Font("Helvetica Neue", 0, 11)); // NOI18N
+        jLabel50.setText("1");
+        janPanel.add(jLabel50, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 40, 10, -1));
+
+        jLabel52.setFont(new java.awt.Font("Helvetica Neue", 0, 9)); // NOI18N
+        jLabel52.setText("from $99*");
+        janPanel.add(jLabel52, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 70, -1, -1));
+
+        jLabel53.setFont(new java.awt.Font("Helvetica Neue", 0, 11)); // NOI18N
+        jLabel53.setText("2");
+        janPanel.add(jLabel53, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 40, 10, -1));
+
+        jLabel67.setFont(new java.awt.Font("Helvetica Neue", 0, 11)); // NOI18N
+        jLabel67.setText("3");
+        janPanel.add(jLabel67, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 40, 10, -1));
+
+        jLabel83.setFont(new java.awt.Font("Helvetica Neue", 0, 9)); // NOI18N
+        jLabel83.setText("from $80*");
+        janPanel.add(jLabel83, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 70, -1, -1));
+
+        jLabel51.setFont(new java.awt.Font("Helvetica Neue", 0, 11)); // NOI18N
+        jLabel51.setText("4");
+        janPanel.add(jLabel51, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 40, 20, -1));
+
+        jLabel70.setFont(new java.awt.Font("Helvetica Neue", 0, 9)); // NOI18N
+        jLabel70.setText("from $90*");
+        janPanel.add(jLabel70, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 70, -1, -1));
+
+        jLabel68.setFont(new java.awt.Font("Helvetica Neue", 0, 11)); // NOI18N
+        jLabel68.setText("5");
+        janPanel.add(jLabel68, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 40, 20, -1));
+
+        jLabel121.setFont(new java.awt.Font("Helvetica Neue", 0, 11)); // NOI18N
+        jLabel121.setText("6");
+        janPanel.add(jLabel121, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 40, 20, -1));
+
+        jLabel124.setFont(new java.awt.Font("Helvetica Neue", 0, 11)); // NOI18N
+        jLabel124.setText("7");
+        janPanel.add(jLabel124, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 40, 20, -1));
+
+        jLabel122.setFont(new java.awt.Font("Helvetica Neue", 0, 11)); // NOI18N
+        jLabel122.setText("8");
+        janPanel.add(jLabel122, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 100, 20, -1));
+
+        jLabel131.setFont(new java.awt.Font("Helvetica Neue", 0, 11)); // NOI18N
+        jLabel131.setText("9");
+        janPanel.add(jLabel131, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 100, 20, -1));
+
+        jLabel129.setFont(new java.awt.Font("Helvetica Neue", 0, 11)); // NOI18N
+        jLabel129.setText("10");
+        janPanel.add(jLabel129, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 100, 20, -1));
+
+        jLabel130.setFont(new java.awt.Font("Helvetica Neue", 0, 11)); // NOI18N
+        jLabel130.setText("11");
+        janPanel.add(jLabel130, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 100, 20, -1));
+
+        jLabel132.setFont(new java.awt.Font("Helvetica Neue", 0, 11)); // NOI18N
+        jLabel132.setText("12");
+        janPanel.add(jLabel132, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 100, 20, -1));
+
+        jLabel133.setFont(new java.awt.Font("Helvetica Neue", 0, 11)); // NOI18N
+        jLabel133.setText("13");
+        janPanel.add(jLabel133, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 100, 20, -1));
+
+        jLabel134.setFont(new java.awt.Font("Helvetica Neue", 0, 11)); // NOI18N
+        jLabel134.setText("14");
+        janPanel.add(jLabel134, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 100, 20, -1));
+
+        jLabel123.setFont(new java.awt.Font("Helvetica Neue", 0, 11)); // NOI18N
+        jLabel123.setText("15");
+        janPanel.add(jLabel123, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 160, 20, -1));
+
+        jLabel158.setFont(new java.awt.Font("Helvetica Neue", 0, 11)); // NOI18N
+        jLabel158.setText("16");
+        janPanel.add(jLabel158, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 160, 20, -1));
+
+        jLabel159.setFont(new java.awt.Font("Helvetica Neue", 0, 11)); // NOI18N
+        jLabel159.setText("17");
+        janPanel.add(jLabel159, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 160, 20, -1));
+
+        jLabel160.setFont(new java.awt.Font("Helvetica Neue", 0, 11)); // NOI18N
+        jLabel160.setText("18");
+        janPanel.add(jLabel160, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 160, 20, -1));
+
+        jLabel161.setFont(new java.awt.Font("Helvetica Neue", 0, 11)); // NOI18N
+        jLabel161.setText("19");
+        janPanel.add(jLabel161, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 160, 20, -1));
+
+        jLabel162.setFont(new java.awt.Font("Helvetica Neue", 0, 11)); // NOI18N
+        jLabel162.setText("20");
+        janPanel.add(jLabel162, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 160, 20, -1));
+
+        jLabel135.setFont(new java.awt.Font("Helvetica Neue", 0, 11)); // NOI18N
+        jLabel135.setText("21");
+        janPanel.add(jLabel135, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 160, 20, -1));
+
+        jLabel164.setFont(new java.awt.Font("Helvetica Neue", 0, 11)); // NOI18N
+        jLabel164.setText("22");
+        janPanel.add(jLabel164, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 220, 20, -1));
+
+        jLabel165.setFont(new java.awt.Font("Helvetica Neue", 0, 11)); // NOI18N
+        jLabel165.setText("23");
+        janPanel.add(jLabel165, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 220, 20, -1));
+
+        jLabel166.setFont(new java.awt.Font("Helvetica Neue", 0, 11)); // NOI18N
+        jLabel166.setText("24");
+        janPanel.add(jLabel166, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 220, 20, -1));
+
+        jLabel167.setFont(new java.awt.Font("Helvetica Neue", 0, 11)); // NOI18N
+        jLabel167.setText("25");
+        janPanel.add(jLabel167, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 220, 20, -1));
+
+        jLabel168.setFont(new java.awt.Font("Helvetica Neue", 0, 11)); // NOI18N
+        jLabel168.setText("26");
+        janPanel.add(jLabel168, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 220, 20, -1));
+
+        jLabel169.setFont(new java.awt.Font("Helvetica Neue", 0, 11)); // NOI18N
+        jLabel169.setText("27");
+        janPanel.add(jLabel169, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 220, 20, -1));
+
+        jLabel170.setFont(new java.awt.Font("Helvetica Neue", 0, 11)); // NOI18N
+        jLabel170.setText("28");
+        janPanel.add(jLabel170, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 220, 20, -1));
+
+        jLabel171.setFont(new java.awt.Font("Helvetica Neue", 0, 11)); // NOI18N
+        jLabel171.setText("29");
+        janPanel.add(jLabel171, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 280, 20, -1));
+
+        jLabel173.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel173.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
+        janPanel.add(jLabel173, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 280, 60, 50));
+
+        jLabel172.setFont(new java.awt.Font("Helvetica Neue", 0, 11)); // NOI18N
+        jLabel172.setText("30");
+        janPanel.add(jLabel172, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 280, 20, -1));
+
+        jLabel174.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel174.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
+        janPanel.add(jLabel174, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 280, 60, 50));
+
+        jLabel163.setFont(new java.awt.Font("Helvetica Neue", 0, 11)); // NOI18N
+        jLabel163.setText("31");
+        janPanel.add(jLabel163, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 280, 20, -1));
+
+        jLabel116.setFont(new java.awt.Font("Helvetica Neue", 0, 9)); // NOI18N
+        jLabel116.setText("from $85*");
+        janPanel.add(jLabel116, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 70, -1, -1));
+
+        jLabel69.setFont(new java.awt.Font("Helvetica Neue", 0, 9)); // NOI18N
+        jLabel69.setText("from $90*");
+        janPanel.add(jLabel69, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 70, -1, -1));
+
+        jLabel114.setFont(new java.awt.Font("Helvetica Neue", 0, 9)); // NOI18N
+        jLabel114.setText("from $92*");
+        janPanel.add(jLabel114, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 70, -1, -1));
+
+        jLabel71.setFont(new java.awt.Font("Helvetica Neue", 0, 9)); // NOI18N
+        jLabel71.setText("from $82*");
+        janPanel.add(jLabel71, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 130, -1, -1));
+
+        jLabel117.setFont(new java.awt.Font("Helvetica Neue", 0, 9)); // NOI18N
+        jLabel117.setText("from $98*");
+        janPanel.add(jLabel117, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 130, -1, -1));
+
+        jLabel178.setFont(new java.awt.Font("Helvetica Neue", 0, 9)); // NOI18N
+        jLabel178.setText("from $90*");
+        janPanel.add(jLabel178, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 130, -1, -1));
+
+        jLabel177.setFont(new java.awt.Font("Helvetica Neue", 0, 9)); // NOI18N
+        jLabel177.setText("from $84*");
+        janPanel.add(jLabel177, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 130, -1, -1));
+
+        jLabel182.setFont(new java.awt.Font("Helvetica Neue", 0, 9)); // NOI18N
+        jLabel182.setText("from $84*");
+        janPanel.add(jLabel182, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 130, -1, -1));
+
+        jLabel176.setFont(new java.awt.Font("Helvetica Neue", 0, 9)); // NOI18N
+        jLabel176.setText("from $92*");
+        janPanel.add(jLabel176, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 130, -1, -1));
+
+        jLabel120.setFont(new java.awt.Font("Helvetica Neue", 0, 9)); // NOI18N
+        jLabel120.setText("from $79*");
+        janPanel.add(jLabel120, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 130, -1, -1));
+
+        jLabel119.setFont(new java.awt.Font("Helvetica Neue", 0, 9)); // NOI18N
+        jLabel119.setText("from $74*");
+        janPanel.add(jLabel119, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 190, -1, -1));
+
+        jLabel184.setFont(new java.awt.Font("Helvetica Neue", 0, 9)); // NOI18N
+        jLabel184.setText("from $130*");
+        janPanel.add(jLabel184, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 190, -1, -1));
+
+        jLabel187.setFont(new java.awt.Font("Helvetica Neue", 0, 9)); // NOI18N
+        jLabel187.setText("from $98*");
+        janPanel.add(jLabel187, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 190, -1, -1));
+
+        jLabel115.setFont(new java.awt.Font("Helvetica Neue", 0, 9)); // NOI18N
+        jLabel115.setText("from $102*");
+        janPanel.add(jLabel115, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 250, -1, -1));
+
+        jLabel185.setFont(new java.awt.Font("Helvetica Neue", 0, 9)); // NOI18N
+        jLabel185.setText("from $80*");
+        janPanel.add(jLabel185, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 190, -1, -1));
+
+        jLabel186.setFont(new java.awt.Font("Helvetica Neue", 0, 9)); // NOI18N
+        jLabel186.setText("from $77*");
+        janPanel.add(jLabel186, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 190, -1, -1));
+
+        jLabel188.setFont(new java.awt.Font("Helvetica Neue", 0, 9)); // NOI18N
+        jLabel188.setText("from $89*");
+        janPanel.add(jLabel188, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 190, -1, -1));
+
+        jLabel189.setFont(new java.awt.Font("Helvetica Neue", 0, 9)); // NOI18N
+        jLabel189.setText("from $87*");
+        janPanel.add(jLabel189, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 190, -1, -1));
+
+        jLabel196.setFont(new java.awt.Font("Helvetica Neue", 0, 9)); // NOI18N
+        jLabel196.setText("from $120*");
+        janPanel.add(jLabel196, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 250, -1, -1));
+
+        jLabel191.setFont(new java.awt.Font("Helvetica Neue", 0, 9)); // NOI18N
+        jLabel191.setText("from $105*");
+        janPanel.add(jLabel191, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 250, -1, -1));
+
+        jLabel192.setFont(new java.awt.Font("Helvetica Neue", 0, 9)); // NOI18N
+        jLabel192.setText("from $89*");
+        janPanel.add(jLabel192, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 250, -1, -1));
+
+        jLabel193.setFont(new java.awt.Font("Helvetica Neue", 0, 9)); // NOI18N
+        jLabel193.setText("from $70*");
+        janPanel.add(jLabel193, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 250, -1, -1));
+
+        jLabel194.setFont(new java.awt.Font("Helvetica Neue", 0, 9)); // NOI18N
+        jLabel194.setText("from $60*");
+        janPanel.add(jLabel194, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 250, -1, -1));
+
+        jLabel183.setFont(new java.awt.Font("Helvetica Neue", 0, 9)); // NOI18N
+        jLabel183.setText("from $78*");
+        janPanel.add(jLabel183, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 250, -1, -1));
+
+        jLabel195.setFont(new java.awt.Font("Helvetica Neue", 0, 9)); // NOI18N
+        jLabel195.setText("from $89*");
+        janPanel.add(jLabel195, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 310, -1, -1));
+
+        jLabel197.setFont(new java.awt.Font("Helvetica Neue", 0, 9)); // NOI18N
+        jLabel197.setText("from $98*");
+        janPanel.add(jLabel197, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 310, -1, -1));
+
+        jLabel198.setFont(new java.awt.Font("Helvetica Neue", 0, 9)); // NOI18N
+        jLabel198.setText("from $88*");
+        janPanel.add(jLabel198, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 310, -1, -1));
 
         datePanel.addTab("January", janPanel);
 
@@ -813,7 +1116,7 @@ public class BookFlightPage extends javax.swing.JFrame {
         jPanel7.setLayout(jPanel7Layout);
         jPanel7Layout.setHorizontalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1040, Short.MAX_VALUE)
+            .addGap(0, 900, Short.MAX_VALUE)
             .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel7Layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -836,7 +1139,7 @@ public class BookFlightPage extends javax.swing.JFrame {
         jPanel9.setLayout(jPanel9Layout);
         jPanel9Layout.setHorizontalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1040, Short.MAX_VALUE)
+            .addGap(0, 840, Short.MAX_VALUE)
         );
         jPanel9Layout.setVerticalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -849,7 +1152,7 @@ public class BookFlightPage extends javax.swing.JFrame {
         jPanel10.setLayout(jPanel10Layout);
         jPanel10Layout.setHorizontalGroup(
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1040, Short.MAX_VALUE)
+            .addGap(0, 840, Short.MAX_VALUE)
         );
         jPanel10Layout.setVerticalGroup(
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -862,7 +1165,7 @@ public class BookFlightPage extends javax.swing.JFrame {
         jPanel11.setLayout(jPanel11Layout);
         jPanel11Layout.setHorizontalGroup(
             jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1040, Short.MAX_VALUE)
+            .addGap(0, 840, Short.MAX_VALUE)
         );
         jPanel11Layout.setVerticalGroup(
             jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -875,7 +1178,7 @@ public class BookFlightPage extends javax.swing.JFrame {
         jPanel12.setLayout(jPanel12Layout);
         jPanel12Layout.setHorizontalGroup(
             jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1040, Short.MAX_VALUE)
+            .addGap(0, 840, Short.MAX_VALUE)
         );
         jPanel12Layout.setVerticalGroup(
             jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -888,7 +1191,7 @@ public class BookFlightPage extends javax.swing.JFrame {
         jPanel13.setLayout(jPanel13Layout);
         jPanel13Layout.setHorizontalGroup(
             jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1040, Short.MAX_VALUE)
+            .addGap(0, 840, Short.MAX_VALUE)
         );
         jPanel13Layout.setVerticalGroup(
             jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -901,7 +1204,7 @@ public class BookFlightPage extends javax.swing.JFrame {
         jPanel14.setLayout(jPanel14Layout);
         jPanel14Layout.setHorizontalGroup(
             jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1040, Short.MAX_VALUE)
+            .addGap(0, 840, Short.MAX_VALUE)
         );
         jPanel14Layout.setVerticalGroup(
             jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -914,7 +1217,7 @@ public class BookFlightPage extends javax.swing.JFrame {
         jPanel15.setLayout(jPanel15Layout);
         jPanel15Layout.setHorizontalGroup(
             jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1040, Short.MAX_VALUE)
+            .addGap(0, 840, Short.MAX_VALUE)
         );
         jPanel15Layout.setVerticalGroup(
             jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -927,7 +1230,7 @@ public class BookFlightPage extends javax.swing.JFrame {
         jPanel16.setLayout(jPanel16Layout);
         jPanel16Layout.setHorizontalGroup(
             jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1040, Short.MAX_VALUE)
+            .addGap(0, 840, Short.MAX_VALUE)
         );
         jPanel16Layout.setVerticalGroup(
             jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -940,7 +1243,7 @@ public class BookFlightPage extends javax.swing.JFrame {
         jPanel17.setLayout(jPanel17Layout);
         jPanel17Layout.setHorizontalGroup(
             jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1040, Short.MAX_VALUE)
+            .addGap(0, 840, Short.MAX_VALUE)
         );
         jPanel17Layout.setVerticalGroup(
             jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -953,7 +1256,7 @@ public class BookFlightPage extends javax.swing.JFrame {
         jPanel18.setLayout(jPanel18Layout);
         jPanel18Layout.setHorizontalGroup(
             jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1040, Short.MAX_VALUE)
+            .addGap(0, 840, Short.MAX_VALUE)
         );
         jPanel18Layout.setVerticalGroup(
             jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -962,221 +1265,452 @@ public class BookFlightPage extends javax.swing.JFrame {
 
         datePanel.addTab("December", jPanel18);
 
-        jPanel2.add(datePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 400, 1040, 380));
+        jPanel2.add(datePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 400, 840, 380));
 
         jPanel19.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel73.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel73.setText("D2");
-        jLabel73.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
-        jPanel19.add(jLabel73, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 80, 50, 40));
-
-        jLabel75.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel75.setText("B1");
-        jLabel75.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
-        jPanel19.add(jLabel75, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 20, 50, 40));
-
-        jLabel76.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel76.setText("D1");
-        jLabel76.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
-        jPanel19.add(jLabel76, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 20, 50, 40));
-
-        jLabel77.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel77.setText("C1");
-        jLabel77.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
-        jPanel19.add(jLabel77, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 20, 50, 40));
-
-        jLabel78.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel78.setText("A2");
-        jLabel78.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
-        jPanel19.add(jLabel78, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 50, 40));
-
-        jLabel79.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel79.setText("B2");
-        jLabel79.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
-        jPanel19.add(jLabel79, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 80, 50, 40));
-
-        jLabel80.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel80.setText("A3");
-        jLabel80.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
-        jPanel19.add(jLabel80, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, 50, 40));
-
-        jLabel81.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel81.setText("A4");
-        jLabel81.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
-        jPanel19.add(jLabel81, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 200, 50, 40));
-
-        jLabel82.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel82.setText("A5");
-        jLabel82.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
-        jPanel19.add(jLabel82, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 260, 50, 40));
-
-        jLabel84.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel84.setText("A7");
-        jLabel84.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
-        jPanel19.add(jLabel84, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 380, 50, 40));
-
-        jLabel85.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel85.setText("B3");
-        jLabel85.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
-        jPanel19.add(jLabel85, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 140, 50, 40));
-
-        jLabel86.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel86.setText("B4");
-        jLabel86.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
-        jPanel19.add(jLabel86, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 200, 50, 40));
-
-        jLabel87.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel87.setText("B5");
-        jLabel87.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
-        jPanel19.add(jLabel87, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 260, 50, 40));
-
-        jLabel88.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel88.setText("B6");
-        jLabel88.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
-        jPanel19.add(jLabel88, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 320, 50, 40));
-
-        jLabel89.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel89.setText("B7");
-        jLabel89.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
-        jPanel19.add(jLabel89, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 380, 50, 40));
-
-        jLabel90.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel90.setText("A8");
-        jLabel90.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
-        jPanel19.add(jLabel90, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 440, 50, 40));
-
-        jLabel91.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel91.setText("A9");
-        jLabel91.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
-        jPanel19.add(jLabel91, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 500, 50, 40));
-
-        jLabel92.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel92.setText("A10");
-        jLabel92.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
-        jPanel19.add(jLabel92, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 560, 50, 40));
-
-        jLabel93.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel93.setText("B8");
-        jLabel93.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
-        jPanel19.add(jLabel93, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 440, 50, 40));
-
-        jLabel94.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel94.setText("B9");
-        jLabel94.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
-        jPanel19.add(jLabel94, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 500, 50, 40));
-
-        jLabel95.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel95.setText("B10");
-        jLabel95.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
-        jPanel19.add(jLabel95, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 560, 50, 40));
-
-        jLabel96.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel96.setText("C2");
-        jLabel96.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
-        jPanel19.add(jLabel96, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 80, 50, 40));
-
-        jLabel97.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel97.setText("D3");
-        jLabel97.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
-        jPanel19.add(jLabel97, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 140, 50, 40));
-
-        jLabel98.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel98.setText("D10");
-        jLabel98.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
-        jPanel19.add(jLabel98, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 560, 50, 40));
-
-        jLabel99.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel99.setText("D4");
-        jLabel99.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
-        jPanel19.add(jLabel99, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 200, 50, 40));
-
-        jLabel100.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel100.setText("C3");
-        jLabel100.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
-        jPanel19.add(jLabel100, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 140, 50, 40));
-
-        jLabel101.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel101.setText("D5");
-        jLabel101.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
-        jPanel19.add(jLabel101, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 260, 50, 40));
-
-        jLabel102.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel102.setText("C6");
-        jLabel102.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
-        jPanel19.add(jLabel102, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 320, 50, 40));
-
-        jLabel103.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel103.setText("D6");
-        jLabel103.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
-        jPanel19.add(jLabel103, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 320, 50, 40));
-
-        jLabel104.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel104.setText("C7");
-        jLabel104.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
-        jPanel19.add(jLabel104, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 380, 50, 40));
-
-        jLabel105.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel105.setText("D7");
-        jLabel105.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
-        jPanel19.add(jLabel105, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 380, 50, 40));
-
-        jLabel106.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel106.setText("C8");
-        jLabel106.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
-        jPanel19.add(jLabel106, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 440, 50, 40));
-
-        jLabel107.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel107.setText("D8");
-        jLabel107.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
-        jPanel19.add(jLabel107, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 440, 50, 40));
-
-        jLabel108.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel108.setText("C9");
-        jLabel108.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
-        jPanel19.add(jLabel108, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 500, 50, 40));
-
-        jLabel109.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel109.setText("D9");
-        jLabel109.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
-        jPanel19.add(jLabel109, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 500, 50, 40));
-
-        jLabel110.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel110.setText("C10");
-        jLabel110.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
-        jPanel19.add(jLabel110, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 560, 50, 40));
-
-        jLabel111.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel111.setText("C4");
-        jLabel111.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
-        jPanel19.add(jLabel111, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 200, 50, 40));
-
-        jLabel112.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel112.setText("C5");
-        jLabel112.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
-        jPanel19.add(jLabel112, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 260, 50, 40));
 
         jTextField2.setBackground(new java.awt.Color(255, 153, 0));
         jPanel19.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 20, 50, 40));
 
-        jTextField7.setEditable(false);
-        jTextField7.setBackground(new java.awt.Color(255, 153, 0));
-        jTextField7.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField7.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextField7.setText("A6");
-        jTextField7.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
-        jPanel19.add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 320, 50, 40));
-
-        jTextField8.setEditable(false);
-        jTextField8.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextField8.setText("A1");
-        jTextField8.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
-        jTextField8.addMouseListener(new java.awt.event.MouseAdapter() {
+        A6.setEditable(false);
+        A6.setBackground(new java.awt.Color(255, 153, 0));
+        A6.setForeground(new java.awt.Color(255, 255, 255));
+        A6.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        A6.setText("A6");
+        A6.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
+        A6.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jTextField8MouseClicked(evt);
+                A6MouseClicked(evt);
             }
         });
-        jPanel19.add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 50, 40));
+        jPanel19.add(A6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 320, 50, 40));
+
+        A1.setEditable(false);
+        A1.setBackground(new java.awt.Color(255, 255, 255));
+        A1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        A1.setText("A1");
+        A1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
+        A1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                A1MouseClicked(evt);
+            }
+        });
+        jPanel19.add(A1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 50, 40));
+
+        A9.setEditable(false);
+        A9.setBackground(new java.awt.Color(255, 255, 255));
+        A9.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        A9.setText("A9");
+        A9.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
+        A9.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                A9MouseClicked(evt);
+            }
+        });
+        jPanel19.add(A9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 500, 50, 40));
+
+        A4.setEditable(false);
+        A4.setBackground(new java.awt.Color(255, 255, 255));
+        A4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        A4.setText("A4");
+        A4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
+        A4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                A4MouseClicked(evt);
+            }
+        });
+        jPanel19.add(A4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 200, 50, 40));
+
+        A5.setEditable(false);
+        A5.setBackground(new java.awt.Color(255, 255, 255));
+        A5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        A5.setText("A5");
+        A5.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
+        A5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                A5MouseClicked(evt);
+            }
+        });
+        jPanel19.add(A5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 260, 50, 40));
+
+        A7.setEditable(false);
+        A7.setBackground(new java.awt.Color(255, 255, 255));
+        A7.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        A7.setText("A7");
+        A7.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
+        A7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                A7MouseClicked(evt);
+            }
+        });
+        jPanel19.add(A7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 380, 50, 40));
+
+        A8.setEditable(false);
+        A8.setBackground(new java.awt.Color(255, 255, 255));
+        A8.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        A8.setText("A8");
+        A8.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
+        A8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                A8MouseClicked(evt);
+            }
+        });
+        jPanel19.add(A8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 440, 50, 40));
+
+        A2.setEditable(false);
+        A2.setBackground(new java.awt.Color(255, 255, 255));
+        A2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        A2.setText("A2");
+        A2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
+        A2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                A2MouseClicked(evt);
+            }
+        });
+        jPanel19.add(A2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 50, 40));
+
+        A10.setEditable(false);
+        A10.setBackground(new java.awt.Color(255, 255, 255));
+        A10.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        A10.setText("A10");
+        A10.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
+        A10.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                A10MouseClicked(evt);
+            }
+        });
+        jPanel19.add(A10, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 560, 50, 40));
+
+        A3.setEditable(false);
+        A3.setBackground(new java.awt.Color(255, 255, 255));
+        A3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        A3.setText("A3");
+        A3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
+        A3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                A3MouseClicked(evt);
+            }
+        });
+        jPanel19.add(A3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, 50, 40));
+
+        B1.setEditable(false);
+        B1.setBackground(new java.awt.Color(255, 255, 255));
+        B1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        B1.setText("B1");
+        B1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
+        B1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                B1MouseClicked(evt);
+            }
+        });
+        jPanel19.add(B1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 20, 50, 40));
+
+        B2.setEditable(false);
+        B2.setBackground(new java.awt.Color(255, 255, 255));
+        B2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        B2.setText("B2");
+        B2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
+        B2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                B2MouseClicked(evt);
+            }
+        });
+        jPanel19.add(B2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 80, 50, 40));
+
+        B3.setEditable(false);
+        B3.setBackground(new java.awt.Color(255, 255, 255));
+        B3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        B3.setText("B3");
+        B3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
+        B3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                B3MouseClicked(evt);
+            }
+        });
+        jPanel19.add(B3, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 140, 50, 40));
+
+        B4.setEditable(false);
+        B4.setBackground(new java.awt.Color(255, 255, 255));
+        B4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        B4.setText("B4");
+        B4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
+        B4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                B4MouseClicked(evt);
+            }
+        });
+        jPanel19.add(B4, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 200, 50, 40));
+
+        B5.setEditable(false);
+        B5.setBackground(new java.awt.Color(255, 255, 255));
+        B5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        B5.setText("B5");
+        B5.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
+        B5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                B5MouseClicked(evt);
+            }
+        });
+        jPanel19.add(B5, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 260, 50, 40));
+
+        B6.setEditable(false);
+        B6.setBackground(new java.awt.Color(255, 153, 0));
+        B6.setForeground(new java.awt.Color(255, 255, 255));
+        B6.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        B6.setText("B6");
+        B6.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
+        B6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                B6MouseClicked(evt);
+            }
+        });
+        jPanel19.add(B6, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 320, 50, 40));
+
+        B7.setEditable(false);
+        B7.setBackground(new java.awt.Color(255, 255, 255));
+        B7.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        B7.setText("B7");
+        B7.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
+        B7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                B7MouseClicked(evt);
+            }
+        });
+        jPanel19.add(B7, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 380, 50, 40));
+
+        jTextField9.setEditable(false);
+        jTextField9.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField9.setText("A1");
+        jTextField9.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
+        jPanel19.add(jTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 10, 50, 40));
+
+        B9.setEditable(false);
+        B9.setBackground(new java.awt.Color(255, 255, 255));
+        B9.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        B9.setText("B9");
+        B9.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
+        B9.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                B9MouseClicked(evt);
+            }
+        });
+        jPanel19.add(B9, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 500, 50, 40));
+
+        B10.setEditable(false);
+        B10.setBackground(new java.awt.Color(255, 255, 255));
+        B10.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        B10.setText("B10");
+        B10.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
+        B10.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                B10MouseClicked(evt);
+            }
+        });
+        jPanel19.add(B10, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 560, 50, 40));
+
+        B8.setEditable(false);
+        B8.setBackground(new java.awt.Color(255, 255, 255));
+        B8.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        B8.setText("B8");
+        B8.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
+        B8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                B8MouseClicked(evt);
+            }
+        });
+        jPanel19.add(B8, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 440, 50, 40));
+
+        C10.setEditable(false);
+        C10.setBackground(new java.awt.Color(255, 255, 255));
+        C10.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        C10.setText("C10");
+        C10.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
+        C10.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                C10MouseClicked(evt);
+            }
+        });
+        jPanel19.add(C10, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 560, 50, 40));
+
+        D10.setEditable(false);
+        D10.setBackground(new java.awt.Color(255, 255, 255));
+        D10.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        D10.setText("D10");
+        D10.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
+        jPanel19.add(D10, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 560, 50, 40));
+
+        C2.setEditable(false);
+        C2.setBackground(new java.awt.Color(255, 255, 255));
+        C2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        C2.setText("C2");
+        C2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
+        C2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                C2MouseClicked(evt);
+            }
+        });
+        jPanel19.add(C2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 80, 50, 40));
+
+        C3.setEditable(false);
+        C3.setBackground(new java.awt.Color(255, 255, 255));
+        C3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        C3.setText("C3");
+        C3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
+        C3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                C3MouseClicked(evt);
+            }
+        });
+        jPanel19.add(C3, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 140, 50, 40));
+
+        C4.setEditable(false);
+        C4.setBackground(new java.awt.Color(255, 255, 255));
+        C4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        C4.setText("C4");
+        C4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
+        C4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                C4MouseClicked(evt);
+            }
+        });
+        jPanel19.add(C4, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 200, 50, 40));
+
+        C5.setEditable(false);
+        C5.setBackground(new java.awt.Color(255, 255, 255));
+        C5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        C5.setText("C5");
+        C5.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
+        C5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                C5MouseClicked(evt);
+            }
+        });
+        jPanel19.add(C5, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 260, 50, 40));
+
+        C6.setEditable(false);
+        C6.setBackground(new java.awt.Color(255, 153, 0));
+        C6.setForeground(new java.awt.Color(255, 255, 255));
+        C6.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        C6.setText("C6");
+        C6.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
+        C6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                C6MouseClicked(evt);
+            }
+        });
+        jPanel19.add(C6, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 320, 50, 40));
+
+        C7.setEditable(false);
+        C7.setBackground(new java.awt.Color(255, 255, 255));
+        C7.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        C7.setText("C7");
+        C7.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
+        C7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                C7MouseClicked(evt);
+            }
+        });
+        jPanel19.add(C7, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 380, 50, 40));
+
+        C8.setEditable(false);
+        C8.setBackground(new java.awt.Color(255, 255, 255));
+        C8.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        C8.setText("C8");
+        C8.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
+        C8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                C8MouseClicked(evt);
+            }
+        });
+        jPanel19.add(C8, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 440, 50, 40));
+
+        C9.setEditable(false);
+        C9.setBackground(new java.awt.Color(255, 255, 255));
+        C9.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        C9.setText("C9");
+        C9.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
+        C9.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                C9MouseClicked(evt);
+            }
+        });
+        jPanel19.add(C9, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 500, 50, 40));
+
+        C1.setEditable(false);
+        C1.setBackground(new java.awt.Color(255, 255, 255));
+        C1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        C1.setText("C1");
+        C1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
+        C1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                C1MouseClicked(evt);
+            }
+        });
+        jPanel19.add(C1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 20, 50, 40));
+
+        D1.setEditable(false);
+        D1.setBackground(new java.awt.Color(255, 255, 255));
+        D1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        D1.setText("D1");
+        D1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
+        jPanel19.add(D1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 20, 50, 40));
+
+        D2.setEditable(false);
+        D2.setBackground(new java.awt.Color(255, 255, 255));
+        D2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        D2.setText("D2");
+        D2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
+        jPanel19.add(D2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 80, 50, 40));
+
+        D3.setEditable(false);
+        D3.setBackground(new java.awt.Color(255, 255, 255));
+        D3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        D3.setText("D3");
+        D3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
+        jPanel19.add(D3, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 140, 50, 40));
+
+        D4.setEditable(false);
+        D4.setBackground(new java.awt.Color(255, 255, 255));
+        D4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        D4.setText("D4");
+        D4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
+        jPanel19.add(D4, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 200, 50, 40));
+
+        D5.setEditable(false);
+        D5.setBackground(new java.awt.Color(255, 255, 255));
+        D5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        D5.setText("D5");
+        D5.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
+        jPanel19.add(D5, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 260, 50, 40));
+
+        D6.setEditable(false);
+        D6.setBackground(new java.awt.Color(255, 153, 0));
+        D6.setForeground(new java.awt.Color(255, 255, 255));
+        D6.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        D6.setText("D6");
+        D6.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
+        jPanel19.add(D6, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 320, 50, 40));
+
+        D7.setEditable(false);
+        D7.setBackground(new java.awt.Color(255, 255, 255));
+        D7.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        D7.setText("D7");
+        D7.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
+        jPanel19.add(D7, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 380, 50, 40));
+
+        D8.setEditable(false);
+        D8.setBackground(new java.awt.Color(255, 255, 255));
+        D8.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        D8.setText("D8");
+        D8.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
+        jPanel19.add(D8, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 440, 50, 40));
+
+        D9.setEditable(false);
+        D9.setBackground(new java.awt.Color(255, 255, 255));
+        D9.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        D9.setText("D9");
+        D9.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
+        jPanel19.add(D9, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 500, 50, 40));
 
         jPanel2.add(jPanel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 70, 290, 620));
 
@@ -1189,12 +1723,31 @@ public class BookFlightPage extends javax.swing.JFrame {
         jPanel2.add(jLabel49, new org.netbeans.lib.awtextra.AbsoluteConstraints(1120, 700, 290, 90));
 
         yearComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "2024", "2025", "2026", " " }));
-        jPanel2.add(yearComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 380, -1, -1));
+        jPanel2.add(yearComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 480, -1, -1));
 
-        seating.setForeground(new java.awt.Color(255, 255, 255));
-        jPanel2.add(seating, new org.netbeans.lib.awtextra.AbsoluteConstraints(1010, 23, 90, 60));
+        seating.setBackground(new java.awt.Color(255, 255, 255));
+        seating.setForeground(new java.awt.Color(0, 0, 0));
+        seating.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jPanel2.add(seating, new org.netbeans.lib.awtextra.AbsoluteConstraints(1080, 10, 60, 50));
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 63, 1440, 790));
+        jLabel138.setFont(new java.awt.Font("Georgia", 0, 18)); // NOI18N
+        jLabel138.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel138.setText("Select yearly calender");
+        jPanel2.add(jLabel138, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 440, -1, -1));
+
+        jLabel175.setFont(new java.awt.Font("Helvetica Neue", 0, 11)); // NOI18N
+        jLabel175.setText("4");
+        jPanel2.add(jLabel175, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 380, 20, -1));
+
+        jLabel190.setFont(new java.awt.Font("Helvetica Neue", 0, 9)); // NOI18N
+        jLabel190.setText("from $*");
+        jPanel2.add(jLabel190, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 380, -1, -1));
+
+        jLabel199.setFont(new java.awt.Font("Georgia", 2, 18)); // NOI18N
+        jLabel199.setText("(Final prices TBD)");
+        jPanel2.add(jLabel199, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 380, -1, -1));
+
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 63, 1440, 830));
 
         jLabel113.setFont(new java.awt.Font("Georgia", 0, 16)); // NOI18N
         jLabel113.setForeground(new java.awt.Color(255, 255, 255));
@@ -1203,21 +1756,6 @@ public class BookFlightPage extends javax.swing.JFrame {
 
         jTextField4.setBackground(new java.awt.Color(255, 153, 0));
         jPanel1.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1150, 10, 40, 30));
-
-        jTextField6.setEditable(false);
-        jTextField6.setBackground(new java.awt.Color(255, 153, 0));
-        jTextField6.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField6.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextField6.setText("A6");
-        jTextField6.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
-        jPanel1.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(1060, 10, 50, 40));
-
-        jTextField5.setEditable(false);
-        jTextField5.setBackground(new java.awt.Color(60, 63, 65));
-        jTextField5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextField5.setText("A1");
-        jTextField5.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
-        jPanel1.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 10, 50, 40));
 
         jLabel74.setBackground(new java.awt.Color(255, 255, 255));
         jLabel74.setForeground(new java.awt.Color(255, 255, 255));
@@ -1249,7 +1787,7 @@ public class BookFlightPage extends javax.swing.JFrame {
                 createBookingMouseClicked(evt);
             }
         });
-        jPanel1.add(createBooking, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 20, -1, 33));
+        jPanel1.add(createBooking, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 20, -1, 33));
 
         jMenu1.setText("Logout");
         jMenu1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1530,7 +2068,9 @@ public class BookFlightPage extends javax.swing.JFrame {
     private void backBookingMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backBookingMouseExited
         backBooking.setForeground(Color.BLACK);
     }//GEN-LAST:event_backBookingMouseExited
-
+    
+    // JANUARY
+    // MONDAY 1
     private void janMondayOneMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_janMondayOneMouseClicked
         if (evt.getButton() == evt.BUTTON1) {
             String selectedItem = (String) yearComboBox.getSelectedItem();
@@ -1543,6 +2083,7 @@ public class BookFlightPage extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_janMondayOneMouseClicked
 
+    // TUESDAY 2
     private void janTuesdayOneMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_janTuesdayOneMouseClicked
         if (evt.getButton() == evt.BUTTON1) {
             String selectedItem = (String) yearComboBox.getSelectedItem();
@@ -1555,6 +2096,7 @@ public class BookFlightPage extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_janTuesdayOneMouseClicked
 
+    // WEDNESDAY 3
     private void janWednesdayOneMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_janWednesdayOneMouseClicked
         if (evt.getButton() == evt.BUTTON1) {
             String selectedItem = (String) yearComboBox.getSelectedItem();
@@ -1566,12 +2108,187 @@ public class BookFlightPage extends javax.swing.JFrame {
             
         }
     }//GEN-LAST:event_janWednesdayOneMouseClicked
-
-    private void jTextField8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField8MouseClicked
-        if (evt.getButton() == evt.BUTTON1) {
+    
+    // Seating
+    private void A1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_A1MouseClicked
+        if (evt.getButton() == MouseEvent.BUTTON1) {
             seating.setText("A1");
         }
-    }//GEN-LAST:event_jTextField8MouseClicked
+    }//GEN-LAST:event_A1MouseClicked
+
+    private void A2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_A2MouseClicked
+        if (evt.getButton() == MouseEvent.BUTTON1) {
+            seating.setText("A2");
+        }
+    }//GEN-LAST:event_A2MouseClicked
+
+    private void A3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_A3MouseClicked
+        if (evt.getButton() == MouseEvent.BUTTON1) {
+            seating.setText("A3");
+        }
+    }//GEN-LAST:event_A3MouseClicked
+
+    private void A4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_A4MouseClicked
+        if (evt.getButton() == MouseEvent.BUTTON1) {
+            seating.setText("A4");
+        }
+    }//GEN-LAST:event_A4MouseClicked
+
+    private void A5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_A5MouseClicked
+        if (evt.getButton() == MouseEvent.BUTTON1) {
+            seating.setText("A5");
+        }
+    }//GEN-LAST:event_A5MouseClicked
+
+    private void A6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_A6MouseClicked
+        if (evt.getButton() == MouseEvent.BUTTON1) {
+            seating.setText("A6");
+        }
+    }//GEN-LAST:event_A6MouseClicked
+
+    private void A7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_A7MouseClicked
+        if (evt.getButton() == MouseEvent.BUTTON1) {
+            seating.setText("A7");
+        }
+    }//GEN-LAST:event_A7MouseClicked
+
+    private void A8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_A8MouseClicked
+        if (evt.getButton() == MouseEvent.BUTTON1) {
+            seating.setText("A8");
+        }
+    }//GEN-LAST:event_A8MouseClicked
+
+    private void A9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_A9MouseClicked
+       if (evt.getButton() == MouseEvent.BUTTON1) {
+            seating.setText("A9");
+        }
+    }//GEN-LAST:event_A9MouseClicked
+
+    private void A10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_A10MouseClicked
+        if (evt.getButton() == MouseEvent.BUTTON1) {
+            seating.setText("A10");
+        }
+    }//GEN-LAST:event_A10MouseClicked
+
+    private void B1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_B1MouseClicked
+        if (evt.getButton() == MouseEvent.BUTTON1) {
+            seating.setText("B1");
+        }
+    }//GEN-LAST:event_B1MouseClicked
+
+    private void B2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_B2MouseClicked
+        if (evt.getButton() == MouseEvent.BUTTON1) {
+            seating.setText("B2");
+        }
+    }//GEN-LAST:event_B2MouseClicked
+
+    private void B3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_B3MouseClicked
+        if (evt.getButton() == MouseEvent.BUTTON1) {
+            seating.setText("B3");
+        }
+    }//GEN-LAST:event_B3MouseClicked
+
+    private void B4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_B4MouseClicked
+        if (evt.getButton() == MouseEvent.BUTTON1) {
+            seating.setText("B4");
+        }
+    }//GEN-LAST:event_B4MouseClicked
+
+    private void B5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_B5MouseClicked
+        if (evt.getButton() == MouseEvent.BUTTON1) {
+            seating.setText("B5");
+        }
+    }//GEN-LAST:event_B5MouseClicked
+
+    private void B6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_B6MouseClicked
+       if (evt.getButton() == MouseEvent.BUTTON1) {
+            seating.setText("B6");
+        }
+    }//GEN-LAST:event_B6MouseClicked
+
+    private void B7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_B7MouseClicked
+        if (evt.getButton() == MouseEvent.BUTTON1) {
+            seating.setText("B7");
+        }
+    }//GEN-LAST:event_B7MouseClicked
+
+    private void B8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_B8MouseClicked
+        if (evt.getButton() == MouseEvent.BUTTON1) {
+            seating.setText("B8");
+        }
+    }//GEN-LAST:event_B8MouseClicked
+
+    private void B9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_B9MouseClicked
+        if (evt.getButton() == MouseEvent.BUTTON1) {
+            seating.setText("B9");
+        }
+    }//GEN-LAST:event_B9MouseClicked
+
+    private void B10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_B10MouseClicked
+        if (evt.getButton() == MouseEvent.BUTTON1) {
+            seating.setText("B10");
+        }
+    }//GEN-LAST:event_B10MouseClicked
+
+    private void C1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_C1MouseClicked
+        if (evt.getButton() == MouseEvent.BUTTON1) {
+            seating.setText("C1");
+        }
+    }//GEN-LAST:event_C1MouseClicked
+
+    private void C2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_C2MouseClicked
+        if (evt.getButton() == MouseEvent.BUTTON1) {
+            seating.setText("C2");
+        }
+    }//GEN-LAST:event_C2MouseClicked
+
+    private void C3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_C3MouseClicked
+        if (evt.getButton() == MouseEvent.BUTTON1) {
+            seating.setText("C3");
+        }
+    }//GEN-LAST:event_C3MouseClicked
+
+    private void C4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_C4MouseClicked
+        if (evt.getButton() == MouseEvent.BUTTON1) {
+            seating.setText("C4");
+        }
+    }//GEN-LAST:event_C4MouseClicked
+
+    private void C5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_C5MouseClicked
+        if (evt.getButton() == MouseEvent.BUTTON1) {
+            seating.setText("C5");
+        }
+    }//GEN-LAST:event_C5MouseClicked
+
+    private void C6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_C6MouseClicked
+        if (evt.getButton() == MouseEvent.BUTTON1) {
+            seating.setText("C6");
+        }
+    }//GEN-LAST:event_C6MouseClicked
+
+    private void C7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_C7MouseClicked
+        if (evt.getButton() == MouseEvent.BUTTON1) {
+            seating.setText("C7");
+        }
+    }//GEN-LAST:event_C7MouseClicked
+
+    private void C8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_C8MouseClicked
+       if (evt.getButton() == MouseEvent.BUTTON1) {
+            seating.setText("C8");
+        }
+    }//GEN-LAST:event_C8MouseClicked
+
+    private void C9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_C9MouseClicked
+        if (evt.getButton() == MouseEvent.BUTTON1) {
+            seating.setText("C9");
+        }
+    }//GEN-LAST:event_C9MouseClicked
+
+    private void C10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_C10MouseClicked
+       if (evt.getButton() == MouseEvent.BUTTON1) {
+            seating.setText("C10");
+        }
+    }//GEN-LAST:event_C10MouseClicked
     /*    */
     /**
      * @param args the command line arguments
@@ -1609,11 +2326,51 @@ public class BookFlightPage extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField A1;
+    private javax.swing.JTextField A10;
+    private javax.swing.JTextField A2;
+    private javax.swing.JTextField A3;
+    private javax.swing.JTextField A4;
+    private javax.swing.JTextField A5;
+    private javax.swing.JTextField A6;
+    private javax.swing.JTextField A7;
+    private javax.swing.JTextField A8;
+    private javax.swing.JTextField A9;
     private javax.swing.JLabel Atlanta;
     private javax.swing.JLabel Austin;
+    private javax.swing.JTextField B1;
+    private javax.swing.JTextField B10;
+    private javax.swing.JTextField B2;
+    private javax.swing.JTextField B3;
+    private javax.swing.JTextField B4;
+    private javax.swing.JTextField B5;
+    private javax.swing.JTextField B6;
+    private javax.swing.JTextField B7;
+    private javax.swing.JTextField B8;
+    private javax.swing.JTextField B9;
     private javax.swing.JLabel Boston;
+    private javax.swing.JTextField C1;
+    private javax.swing.JTextField C10;
+    private javax.swing.JTextField C2;
+    private javax.swing.JTextField C3;
+    private javax.swing.JTextField C4;
+    private javax.swing.JTextField C5;
+    private javax.swing.JTextField C6;
+    private javax.swing.JTextField C7;
+    private javax.swing.JTextField C8;
+    private javax.swing.JTextField C9;
     private javax.swing.JLabel Chicago;
     private javax.swing.JLabel Columbus;
+    private javax.swing.JTextField D1;
+    private javax.swing.JTextField D10;
+    private javax.swing.JTextField D2;
+    private javax.swing.JTextField D3;
+    private javax.swing.JTextField D4;
+    private javax.swing.JTextField D5;
+    private javax.swing.JTextField D6;
+    private javax.swing.JTextField D7;
+    private javax.swing.JTextField D8;
+    private javax.swing.JTextField D9;
     private javax.swing.JLabel Dallas;
     private javax.swing.JLabel LasVegas;
     private javax.swing.JTextField arrivalCity;
@@ -1627,20 +2384,7 @@ public class BookFlightPage extends javax.swing.JFrame {
     private javax.swing.JTextField frontOfPlane;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel100;
-    private javax.swing.JLabel jLabel101;
-    private javax.swing.JLabel jLabel102;
-    private javax.swing.JLabel jLabel103;
-    private javax.swing.JLabel jLabel104;
-    private javax.swing.JLabel jLabel105;
-    private javax.swing.JLabel jLabel106;
-    private javax.swing.JLabel jLabel107;
-    private javax.swing.JLabel jLabel108;
-    private javax.swing.JLabel jLabel109;
     private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel110;
-    private javax.swing.JLabel jLabel111;
-    private javax.swing.JLabel jLabel112;
     private javax.swing.JLabel jLabel113;
     private javax.swing.JLabel jLabel114;
     private javax.swing.JLabel jLabel115;
@@ -1668,12 +2412,71 @@ public class BookFlightPage extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel135;
     private javax.swing.JLabel jLabel136;
     private javax.swing.JLabel jLabel137;
+    private javax.swing.JLabel jLabel138;
+    private javax.swing.JLabel jLabel139;
     private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel140;
+    private javax.swing.JLabel jLabel141;
+    private javax.swing.JLabel jLabel142;
+    private javax.swing.JLabel jLabel143;
+    private javax.swing.JLabel jLabel144;
+    private javax.swing.JLabel jLabel145;
+    private javax.swing.JLabel jLabel146;
+    private javax.swing.JLabel jLabel147;
+    private javax.swing.JLabel jLabel148;
+    private javax.swing.JLabel jLabel149;
     private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel150;
+    private javax.swing.JLabel jLabel151;
+    private javax.swing.JLabel jLabel152;
+    private javax.swing.JLabel jLabel153;
+    private javax.swing.JLabel jLabel154;
+    private javax.swing.JLabel jLabel155;
+    private javax.swing.JLabel jLabel156;
+    private javax.swing.JLabel jLabel157;
+    private javax.swing.JLabel jLabel158;
+    private javax.swing.JLabel jLabel159;
     private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel160;
+    private javax.swing.JLabel jLabel161;
+    private javax.swing.JLabel jLabel162;
+    private javax.swing.JLabel jLabel163;
+    private javax.swing.JLabel jLabel164;
+    private javax.swing.JLabel jLabel165;
+    private javax.swing.JLabel jLabel166;
+    private javax.swing.JLabel jLabel167;
+    private javax.swing.JLabel jLabel168;
+    private javax.swing.JLabel jLabel169;
     private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel170;
+    private javax.swing.JLabel jLabel171;
+    private javax.swing.JLabel jLabel172;
+    private javax.swing.JLabel jLabel173;
+    private javax.swing.JLabel jLabel174;
+    private javax.swing.JLabel jLabel175;
+    private javax.swing.JLabel jLabel176;
+    private javax.swing.JLabel jLabel177;
+    private javax.swing.JLabel jLabel178;
     private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel182;
+    private javax.swing.JLabel jLabel183;
+    private javax.swing.JLabel jLabel184;
+    private javax.swing.JLabel jLabel185;
+    private javax.swing.JLabel jLabel186;
+    private javax.swing.JLabel jLabel187;
+    private javax.swing.JLabel jLabel188;
+    private javax.swing.JLabel jLabel189;
     private javax.swing.JLabel jLabel19;
+    private javax.swing.JLabel jLabel190;
+    private javax.swing.JLabel jLabel191;
+    private javax.swing.JLabel jLabel192;
+    private javax.swing.JLabel jLabel193;
+    private javax.swing.JLabel jLabel194;
+    private javax.swing.JLabel jLabel195;
+    private javax.swing.JLabel jLabel196;
+    private javax.swing.JLabel jLabel197;
+    private javax.swing.JLabel jLabel198;
+    private javax.swing.JLabel jLabel199;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
@@ -1732,36 +2535,10 @@ public class BookFlightPage extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel70;
     private javax.swing.JLabel jLabel71;
-    private javax.swing.JLabel jLabel72;
-    private javax.swing.JLabel jLabel73;
     private javax.swing.JLabel jLabel74;
-    private javax.swing.JLabel jLabel75;
-    private javax.swing.JLabel jLabel76;
-    private javax.swing.JLabel jLabel77;
-    private javax.swing.JLabel jLabel78;
-    private javax.swing.JLabel jLabel79;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel80;
-    private javax.swing.JLabel jLabel81;
-    private javax.swing.JLabel jLabel82;
     private javax.swing.JLabel jLabel83;
-    private javax.swing.JLabel jLabel84;
-    private javax.swing.JLabel jLabel85;
-    private javax.swing.JLabel jLabel86;
-    private javax.swing.JLabel jLabel87;
-    private javax.swing.JLabel jLabel88;
-    private javax.swing.JLabel jLabel89;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JLabel jLabel90;
-    private javax.swing.JLabel jLabel91;
-    private javax.swing.JLabel jLabel92;
-    private javax.swing.JLabel jLabel93;
-    private javax.swing.JLabel jLabel94;
-    private javax.swing.JLabel jLabel95;
-    private javax.swing.JLabel jLabel96;
-    private javax.swing.JLabel jLabel97;
-    private javax.swing.JLabel jLabel98;
-    private javax.swing.JLabel jLabel99;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenuBar jMenuBar1;
@@ -1785,10 +2562,7 @@ public class BookFlightPage extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel9;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
+    private javax.swing.JTextField jTextField9;
     private javax.swing.JLabel janMondayOne;
     private javax.swing.JPanel janPanel;
     private javax.swing.JLabel janTuesdayOne;
