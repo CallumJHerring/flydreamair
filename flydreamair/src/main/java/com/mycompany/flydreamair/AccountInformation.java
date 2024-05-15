@@ -10,7 +10,7 @@ public class AccountInformation extends javax.swing.JFrame {
      */
     public AccountInformation() {
         initComponents();
-        
+        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
     }
 
     /**
@@ -35,7 +35,6 @@ public class AccountInformation extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
         jTextField2 = new javax.swing.JTextField();
-        jLabel8 = new javax.swing.JLabel();
         jTextField3 = new javax.swing.JTextField();
         jLabel21 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
@@ -47,19 +46,43 @@ public class AccountInformation extends javax.swing.JFrame {
         jTextField7 = new javax.swing.JTextField();
         jPanel9 = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
+        jTextField8 = new javax.swing.JTextField();
+        jLabel23 = new javax.swing.JLabel();
+        jTextField9 = new javax.swing.JTextField();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel37 = new javax.swing.JLabel();
+        jLabel38 = new javax.swing.JLabel();
+        jLabel39 = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
+        jPanel5 = new javax.swing.JPanel();
+        jLabel24 = new javax.swing.JLabel();
+        jLabel26 = new javax.swing.JLabel();
+        jLabel27 = new javax.swing.JLabel();
+        jTextField10 = new javax.swing.JTextField();
+        jTextField11 = new javax.swing.JTextField();
+        jTextField12 = new javax.swing.JTextField();
+        jLabel33 = new javax.swing.JLabel();
+        jTextField17 = new javax.swing.JTextField();
+        jLabel34 = new javax.swing.JLabel();
+        jTextField18 = new javax.swing.JTextField();
+        jLabel35 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
+        jLabel28 = new javax.swing.JLabel();
+        jLabel29 = new javax.swing.JLabel();
+        jLabel30 = new javax.swing.JLabel();
+        jLabel31 = new javax.swing.JLabel();
+        jLabel32 = new javax.swing.JLabel();
+        jLabel36 = new javax.swing.JLabel();
         jPanel7 = new javax.swing.JPanel();
         jPanel8 = new javax.swing.JPanel();
         jLabel17 = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
         jLabel20 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        backLabel = new javax.swing.JLabel();
+        jLabel25 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu2 = new javax.swing.JMenu();
         jMenu3 = new javax.swing.JMenu();
@@ -78,7 +101,7 @@ public class AccountInformation extends javax.swing.JFrame {
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/smallLogo.png"))); // NOI18N
-        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-80, 10, 170, 230));
+        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-80, 10, 250, 230));
 
         jLabel1.setFont(new java.awt.Font("Georgia", 0, 48)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 0, 0));
@@ -100,14 +123,14 @@ public class AccountInformation extends javax.swing.JFrame {
         jLabel4.setText("Password");
         jPanel4.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, 110, -1));
 
-        jLabel6.setFont(new java.awt.Font("Georgia", 0, 36)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Georgia", 0, 24)); // NOI18N
         jLabel6.setText("Address");
-        jPanel4.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 10, -1, -1));
+        jPanel4.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 80, -1, -1));
 
         jLabel7.setFont(new java.awt.Font("Georgia", 0, 36)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(0, 0, 0));
         jLabel7.setText("Login details");
-        jPanel4.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
+        jPanel4.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
 
         jTextField1.setText("username");
         jPanel4.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, 250, 40));
@@ -115,12 +138,8 @@ public class AccountInformation extends javax.swing.JFrame {
         jTextField2.setText("password");
         jPanel4.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, 250, 40));
 
-        jLabel8.setFont(new java.awt.Font("Georgia", 0, 24)); // NOI18N
-        jLabel8.setText("Current address");
-        jPanel4.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 70, -1, -1));
-
         jTextField3.setText("street address");
-        jPanel4.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 110, 510, 40));
+        jPanel4.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 120, 510, 40));
 
         jLabel21.setFont(new java.awt.Font("Georgia", 0, 36)); // NOI18N
         jLabel21.setForeground(new java.awt.Color(0, 0, 0));
@@ -157,34 +176,131 @@ public class AccountInformation extends javax.swing.JFrame {
         jPanel9.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
         jPanel9.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel11.setFont(new java.awt.Font("Georgia", 0, 18)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(0, 0, 0));
         jLabel11.setText("Return");
         jPanel9.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, -1, -1));
 
         jPanel4.add(jPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 510, 770, 100));
 
+        jLabel22.setFont(new java.awt.Font("Georgia", 0, 24)); // NOI18N
+        jLabel22.setText("Last name");
+        jPanel4.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 180, -1, -1));
+
+        jTextField8.setText("firstname");
+        jPanel4.add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 120, 230, 40));
+
+        jLabel23.setFont(new java.awt.Font("Georgia", 0, 24)); // NOI18N
+        jLabel23.setText("First name");
+        jPanel4.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 80, -1, -1));
+
+        jTextField9.setText("lastname");
+        jPanel4.add(jTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 220, 230, 40));
+
+        jLabel8.setFont(new java.awt.Font("Georgia", 0, 24)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel8.setText("Payment method");
+        jPanel4.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 180, -1, -1));
+
+        jLabel37.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        jLabel37.setForeground(new java.awt.Color(255, 51, 51));
+        jLabel37.setText("*");
+        jPanel4.add(jLabel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 80, 10, -1));
+
+        jLabel38.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        jLabel38.setForeground(new java.awt.Color(255, 51, 51));
+        jLabel38.setText("*");
+        jPanel4.add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 180, 10, -1));
+
+        jLabel39.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        jLabel39.setForeground(new java.awt.Color(255, 51, 51));
+        jLabel39.setText("*");
+        jPanel4.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 70, 10, -1));
+
         jTabbedPane1.addTab("My Account", jPanel4);
 
         jPanel6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel24.setFont(new java.awt.Font("Georgia", 0, 24)); // NOI18N
+        jLabel24.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel24.setText("Username");
+        jPanel5.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, 110, -1));
+
+        jLabel26.setFont(new java.awt.Font("Georgia", 0, 24)); // NOI18N
+        jLabel26.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel26.setText("Password");
+        jPanel5.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, 110, -1));
+
+        jLabel27.setFont(new java.awt.Font("Georgia", 0, 24)); // NOI18N
+        jLabel27.setText("Address");
+        jPanel5.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 80, -1, -1));
+
+        jTextField10.setText("username");
+        jPanel5.add(jTextField10, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, 250, 40));
+
+        jTextField11.setText("password");
+        jPanel5.add(jTextField11, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, 250, 40));
+
+        jTextField12.setText("street address");
+        jPanel5.add(jTextField12, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 120, 510, 40));
+
+        jLabel33.setFont(new java.awt.Font("Georgia", 0, 24)); // NOI18N
+        jLabel33.setText("Last name");
+        jPanel5.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 180, -1, -1));
+
+        jTextField17.setText("firstname");
+        jPanel5.add(jTextField17, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 120, 230, 40));
+
+        jLabel34.setFont(new java.awt.Font("Georgia", 0, 24)); // NOI18N
+        jLabel34.setText("First name");
+        jPanel5.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 80, -1, -1));
+
+        jTextField18.setText("lastname");
+        jPanel5.add(jTextField18, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 220, 230, 40));
+
+        jLabel35.setFont(new java.awt.Font("Georgia", 0, 24)); // NOI18N
+        jLabel35.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel35.setText("Payment method");
+        jPanel5.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 180, -1, -1));
+
         jLabel5.setFont(new java.awt.Font("Georgia", 0, 32)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setText("Edit Account Information");
-        jPanel6.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
+        jPanel5.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, -1, -1));
 
-        jLabel12.setText("Username");
-        jPanel6.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, -1, -1));
+        jLabel28.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        jLabel28.setForeground(new java.awt.Color(255, 51, 51));
+        jLabel28.setText("*");
+        jPanel5.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 180, 10, -1));
 
-        jLabel13.setText("Password");
-        jPanel6.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, -1, -1));
+        jLabel29.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        jLabel29.setForeground(new java.awt.Color(255, 51, 51));
+        jLabel29.setText("*");
+        jPanel5.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 80, 20, -1));
 
-        jLabel14.setText("First name");
-        jPanel6.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, -1, -1));
+        jLabel30.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        jLabel30.setForeground(new java.awt.Color(255, 51, 51));
+        jLabel30.setText("*");
+        jPanel5.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 180, 20, -1));
 
-        jLabel15.setText("Last name");
-        jPanel6.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 260, -1, -1));
+        jLabel31.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        jLabel31.setForeground(new java.awt.Color(255, 51, 51));
+        jLabel31.setText("*");
+        jPanel5.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 80, 20, -1));
 
-        jLabel16.setText("Middle name (optional)");
-        jPanel6.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 230, -1, -1));
+        jLabel32.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        jLabel32.setForeground(new java.awt.Color(255, 51, 51));
+        jLabel32.setText("*");
+        jPanel5.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 180, 10, -1));
+
+        jLabel36.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        jLabel36.setForeground(new java.awt.Color(255, 51, 51));
+        jLabel36.setText("*");
+        jPanel5.add(jLabel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 80, 10, -1));
+
+        jPanel6.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1260, 620));
 
         jTabbedPane1.addTab("Account Information", jPanel6);
 
@@ -217,9 +333,31 @@ public class AccountInformation extends javax.swing.JFrame {
         jLabel20.setText("CCV");
         jPanel8.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 230, -1, -1));
 
+        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pay1-removebg-preview (1).png"))); // NOI18N
+        jPanel8.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 500, -1, -1));
+
         jTabbedPane1.addTab("Payment Method", jPanel8);
 
         jPanel2.add(jTabbedPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 170, 1260, 660));
+
+        backLabel.setFont(new java.awt.Font("Georgia", 0, 24)); // NOI18N
+        backLabel.setForeground(new java.awt.Color(0, 0, 0));
+        backLabel.setText("Back");
+        backLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                backLabelMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                backLabelMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                backLabelMouseExited(evt);
+            }
+        });
+        jPanel2.add(backLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 100, -1, -1));
+
+        jLabel25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/back3-removebg-preview 2 (1).png"))); // NOI18N
+        jPanel2.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 90, -1, -1));
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1450, 880));
 
@@ -231,6 +369,20 @@ public class AccountInformation extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void backLabelMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backLabelMouseEntered
+        backLabel.setForeground(new Color(128, 0, 0));
+    }//GEN-LAST:event_backLabelMouseEntered
+
+    private void backLabelMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backLabelMouseExited
+        backLabel.setForeground(Color.BLACK);
+    }//GEN-LAST:event_backLabelMouseExited
+
+    private void backLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backLabelMouseClicked
+        if (evt.getButton() == evt.BUTTON1) {
+            dispose();
+        }
+    }//GEN-LAST:event_backLabelMouseClicked
 
     /**
      * @param args the command line arguments
@@ -268,21 +420,36 @@ public class AccountInformation extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel backLabel;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel32;
+    private javax.swing.JLabel jLabel33;
+    private javax.swing.JLabel jLabel34;
+    private javax.swing.JLabel jLabel35;
+    private javax.swing.JLabel jLabel36;
+    private javax.swing.JLabel jLabel37;
+    private javax.swing.JLabel jLabel38;
+    private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -297,17 +464,25 @@ public class AccountInformation extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField10;
+    private javax.swing.JTextField jTextField11;
+    private javax.swing.JTextField jTextField12;
+    private javax.swing.JTextField jTextField17;
+    private javax.swing.JTextField jTextField18;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField6;
     private javax.swing.JTextField jTextField7;
+    private javax.swing.JTextField jTextField8;
+    private javax.swing.JTextField jTextField9;
     // End of variables declaration//GEN-END:variables
 }
