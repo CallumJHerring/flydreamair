@@ -1,13 +1,8 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package com.mycompany.flydreamair;
 
-/**
- *
- * @author callum
- */
+import javax.swing.*;
+import java.awt.*;
+
 public class ManageSeating extends javax.swing.JFrame {
 
     /**
@@ -15,6 +10,7 @@ public class ManageSeating extends javax.swing.JFrame {
      */
     public ManageSeating() {
         initComponents();
+        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
     }
 
     /**

@@ -6,6 +6,7 @@ import java.io.*;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.util.UUID;
 
 public class BookFlightPage extends javax.swing.JFrame {
     private ArrayList<Flight> flights = new ArrayList<>();
@@ -20,11 +21,7 @@ public class BookFlightPage extends javax.swing.JFrame {
         jPanel2.requestFocusInWindow();
         datePanel.setEnabledAt(0, true);
         
-        //loadFlights();
-        
-        // Seating
-        //A1.setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
-        //A1.setCaretColor(new Color(0, 0, 0, 0));
+        loadFlights();
         seatingCursors();
     }
     
@@ -227,6 +224,8 @@ public class BookFlightPage extends javax.swing.JFrame {
         jLabel195 = new javax.swing.JLabel();
         jLabel197 = new javax.swing.JLabel();
         jLabel198 = new javax.swing.JLabel();
+        jLabel190 = new javax.swing.JLabel();
+        jLabel175 = new javax.swing.JLabel();
         jPanel7 = new javax.swing.JPanel();
         jPanel8 = new javax.swing.JPanel();
         jLabel54 = new javax.swing.JLabel();
@@ -295,9 +294,10 @@ public class BookFlightPage extends javax.swing.JFrame {
         yearComboBox = new javax.swing.JComboBox<>();
         seating = new javax.swing.JTextField();
         jLabel138 = new javax.swing.JLabel();
-        jLabel175 = new javax.swing.JLabel();
-        jLabel190 = new javax.swing.JLabel();
         jLabel199 = new javax.swing.JLabel();
+        referenceDisplay = new javax.swing.JTextField();
+        jLabel72 = new javax.swing.JLabel();
+        jLabel73 = new javax.swing.JLabel();
         jLabel113 = new javax.swing.JLabel();
         jTextField4 = new javax.swing.JTextField();
         jLabel74 = new javax.swing.JLabel();
@@ -325,34 +325,34 @@ public class BookFlightPage extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Georgia", 0, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Fly from");
-        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, -1, -1));
+        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
 
         departureCity.setBackground(new java.awt.Color(0, 153, 204));
         departureCity.setFont(new java.awt.Font("Georgia", 0, 36)); // NOI18N
         departureCity.setText("Airport/city");
         departureCity.setBorder(null);
-        jPanel2.add(departureCity, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 40, 270, 49));
+        jPanel2.add(departureCity, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 270, 49));
 
         jLabel4.setBackground(new java.awt.Color(255, 255, 255));
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
-        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, 370, -1));
+        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, 370, -1));
 
         jLabel3.setFont(new java.awt.Font("Georgia", 0, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Fly to");
-        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 20, -1, -1));
+        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 10, -1, -1));
 
         arrivalCity.setBackground(new java.awt.Color(0, 153, 204));
         arrivalCity.setFont(new java.awt.Font("Georgia", 0, 36)); // NOI18N
         arrivalCity.setText("somewhere");
         arrivalCity.setBorder(null);
-        jPanel2.add(arrivalCity, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 40, 280, 49));
+        jPanel2.add(arrivalCity, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 30, 280, 49));
 
         jLabel5.setBackground(new java.awt.Color(255, 255, 255));
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
-        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 90, 370, -1));
+        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 80, 370, -1));
 
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -637,33 +637,33 @@ public class BookFlightPage extends javax.swing.JFrame {
 
         countryTravel.addTab("North America", jPanel6);
 
-        jPanel2.add(countryTravel, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 980, 260));
+        jPanel2.add(countryTravel, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 980, 260));
 
         jLabel30.setFont(new java.awt.Font("Georgia", 0, 18)); // NOI18N
         jLabel30.setForeground(new java.awt.Color(255, 255, 255));
         jLabel30.setText("Date");
-        jPanel2.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 20, -1, -1));
+        jPanel2.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 10, -1, -1));
 
         departureDate.setBackground(new java.awt.Color(0, 153, 204));
         departureDate.setText("DD/MM/YYYY");
         departureDate.setBorder(null);
-        jPanel2.add(departureDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 50, 110, 40));
+        jPanel2.add(departureDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 40, 110, 40));
 
         jLabel45.setBackground(new java.awt.Color(255, 255, 255));
         jLabel45.setFont(new java.awt.Font("Helvetica Neue", 0, 36)); // NOI18N
         jLabel45.setForeground(new java.awt.Color(255, 255, 255));
         jLabel45.setText("⮕");
-        jPanel2.add(jLabel45, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 30, 40, 60));
+        jPanel2.add(jLabel45, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 20, 40, 60));
 
         jLabel46.setFont(new java.awt.Font("Georgia", 0, 18)); // NOI18N
         jLabel46.setForeground(new java.awt.Color(255, 255, 255));
         jLabel46.setText("Date");
-        jPanel2.add(jLabel46, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 20, -1, -1));
+        jPanel2.add(jLabel46, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 10, -1, -1));
 
         arrivalDate.setBackground(new java.awt.Color(0, 153, 204));
         arrivalDate.setText("DD/MM/YYY");
         arrivalDate.setBorder(null);
-        jPanel2.add(arrivalDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 50, 90, 40));
+        jPanel2.add(arrivalDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 40, 90, 40));
 
         frontOfPlane.setBackground(new java.awt.Color(0, 153, 204));
         frontOfPlane.setFont(new java.awt.Font("Helvetica Neue", 2, 13)); // NOI18N
@@ -1082,6 +1082,14 @@ public class BookFlightPage extends javax.swing.JFrame {
         jLabel198.setText("from $88*");
         janPanel.add(jLabel198, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 310, -1, -1));
 
+        jLabel190.setFont(new java.awt.Font("Helvetica Neue", 0, 9)); // NOI18N
+        jLabel190.setText("from $*");
+        janPanel.add(jLabel190, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 80, -1, -1));
+
+        jLabel175.setFont(new java.awt.Font("Helvetica Neue", 0, 11)); // NOI18N
+        jLabel175.setText("4");
+        janPanel.add(jLabel175, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 110, 20, -1));
+
         datePanel.addTab("January", janPanel);
 
         jPanel8.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -1265,7 +1273,7 @@ public class BookFlightPage extends javax.swing.JFrame {
 
         datePanel.addTab("December", jPanel18);
 
-        jPanel2.add(datePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 400, 840, 380));
+        jPanel2.add(datePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 410, 840, 380));
 
         jPanel19.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -1735,17 +1743,20 @@ public class BookFlightPage extends javax.swing.JFrame {
         jLabel138.setText("Select yearly calender");
         jPanel2.add(jLabel138, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 440, -1, -1));
 
-        jLabel175.setFont(new java.awt.Font("Helvetica Neue", 0, 11)); // NOI18N
-        jLabel175.setText("4");
-        jPanel2.add(jLabel175, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 380, 20, -1));
-
-        jLabel190.setFont(new java.awt.Font("Helvetica Neue", 0, 9)); // NOI18N
-        jLabel190.setText("from $*");
-        jPanel2.add(jLabel190, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 380, -1, -1));
-
         jLabel199.setFont(new java.awt.Font("Georgia", 2, 18)); // NOI18N
         jLabel199.setText("(Final prices TBD)");
-        jPanel2.add(jLabel199, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 380, -1, -1));
+        jPanel2.add(jLabel199, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 420, -1, -1));
+        jPanel2.add(referenceDisplay, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 370, 330, 30));
+
+        jLabel72.setFont(new java.awt.Font("Georgia", 2, 18)); // NOI18N
+        jLabel72.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel72.setText("Reference key:");
+        jPanel2.add(jLabel72, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 370, -1, -1));
+
+        jLabel73.setFont(new java.awt.Font("Georgia", 2, 13)); // NOI18N
+        jLabel73.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel73.setText("(Note) Don't forget to write down this key in a safe place!");
+        jPanel2.add(jLabel73, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 377, -1, 20));
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 63, 1440, 830));
 
@@ -1819,13 +1830,13 @@ public class BookFlightPage extends javax.swing.JFrame {
     
     private void createBookingMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_createBookingMouseClicked
         try {
-            //newFlight();
+            newFlight();
             JOptionPane.showMessageDialog(null, "Flight created successfully");
         } catch (Exception e) {
             
         } 
     }//GEN-LAST:event_createBookingMouseClicked
-    /*
+    
     public void loadFlights() {
         try {
             Scanner file = new Scanner(new File("/Users/callum/Desktop/flights.txt"));
@@ -1848,7 +1859,8 @@ public class BookFlightPage extends javax.swing.JFrame {
             String arrivalDate = parts[3].trim();
             String price = parts[4].trim();
             String seat = parts[5].trim();
-            return new Flight(departureCity, departureDate, arrivalCity, arrivalDate, price, seat);
+            String refNum = parts[6].trim();
+            return new Flight(departureCity, departureDate, arrivalCity, arrivalDate, price, seat, refNum);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -1869,12 +1881,13 @@ public class BookFlightPage extends javax.swing.JFrame {
             String arrDate = arrivalDate.getText();
             String price = "TBD";
             String seat = seating.getText();
-            
-            Flight newFlight = new Flight(depCity, depDate, arrCity, arrDate, price, seat);
+            String refNum = UUID.randomUUID().toString();
+            Flight newFlight = new Flight(depCity, depDate, arrCity, arrDate, price, seat, refNum);
             flights.add(newFlight);
-            
+    
             if (newFlight != null) {
                 writeFlights();
+                referenceDisplay.setText(refNum);
             }
             
         } catch (Exception e) {
@@ -1894,7 +1907,7 @@ public class BookFlightPage extends javax.swing.JFrame {
             
         }
     }
-    */
+    
     
     // [CH] Mouse functions, lots to do
     // Sydney (SYD)
@@ -1939,107 +1952,86 @@ public class BookFlightPage extends javax.swing.JFrame {
             departureCity.setText("Phuket");
         }
     }//GEN-LAST:event_jLabel35MouseClicked
-        
-    
+
     private void AtlantaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AtlantaMouseExited
-        // TODO add your handling code here:
         Atlanta.setForeground(Color.BLACK);
     }//GEN-LAST:event_AtlantaMouseExited
 
     private void AtlantaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AtlantaMouseEntered
-        // TODO add your handling code here:
-        Atlanta.setForeground(Color.GREEN);
+         Atlanta.setForeground(Color.GREEN);
     }//GEN-LAST:event_AtlantaMouseEntered
 
     private void AtlantaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AtlantaMouseClicked
-        // TODO add your handling code here:
         if (evt.getButton() == evt.BUTTON1) {
             departureCity.setText("Atlanta");
         }
     }//GEN-LAST:event_AtlantaMouseClicked
 
-    
     private void AustinMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AustinMouseEntered
-        // TODO add your handling code here:
-        Austin.setForeground(Color.GREEN);
-        
+        Austin.setForeground(Color.GREEN);  
     }//GEN-LAST:event_AustinMouseEntered
 
     private void AustinMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AustinMouseExited
-        // TODO add your handling code here:
         Austin.setForeground(Color.BLACK);
     }//GEN-LAST:event_AustinMouseExited
 
     private void AustinMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AustinMouseClicked
-        // TODO add your handling code here:
         if (evt.getButton() == evt.BUTTON1){
             departureCity.setText("Austin");
         }
     }//GEN-LAST:event_AustinMouseClicked
 
     private void BostonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BostonMouseEntered
-        // TODO add your handling code here:
-        Boston.setForeground(Color.GREEN);
+       Boston.setForeground(Color.GREEN);
     }//GEN-LAST:event_BostonMouseEntered
 
     private void BostonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BostonMouseExited
-        // TODO add your handling code here:
         Austin.setForeground(Color.BLACK);
     }//GEN-LAST:event_BostonMouseExited
 
     private void BostonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BostonMouseClicked
-        // TODO add your handling code here:
         if (evt.getButton() == evt.BUTTON1){
             departureCity.setText("Boston");
         }
     }//GEN-LAST:event_BostonMouseClicked
 
     private void ChicagoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ChicagoMouseEntered
-        // TODO add your handling code here:
         Chicago.setForeground (Color.GREEN);
     }//GEN-LAST:event_ChicagoMouseEntered
 
     private void ChicagoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ChicagoMouseExited
-        // TODO add your handling code here:
         Chicago.setForeground(Color.BLACK);
     }//GEN-LAST:event_ChicagoMouseExited
 
     private void ChicagoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ChicagoMouseClicked
-        // TODO add your handling code here:
         if (evt.getButton() == evt.BUTTON1){
             departureCity.setText("Chicago");
         }
     }//GEN-LAST:event_ChicagoMouseClicked
 
     private void ColumbusMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ColumbusMouseEntered
-        // TODO add your handling code here:
         Columbus.setForeground(Color.GREEN);
     }//GEN-LAST:event_ColumbusMouseEntered
 
     private void ColumbusMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ColumbusMouseExited
-        // TODO add your handling code here:
         Columbus.setForeground(Color.BLACK);
     }//GEN-LAST:event_ColumbusMouseExited
 
     private void ColumbusMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ColumbusMouseClicked
-        // TODO add your handling code here:
         if (evt.getButton() == evt.BUTTON1){
             departureCity.setText("Columbus"); 
         }
     }//GEN-LAST:event_ColumbusMouseClicked
 
     private void DallasMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DallasMouseEntered
-        // TODO add your handling code here:
         Dallas.setForeground(Color.GREEN);
     }//GEN-LAST:event_DallasMouseEntered
 
     private void DallasMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DallasMouseExited
-        // TODO add your handling code here:
         Dallas.setForeground(Color.BLACK);
     }//GEN-LAST:event_DallasMouseExited
 
     private void DallasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DallasMouseClicked
-        // TODO add your handling code here:
         if (evt.getButton() == evt.BUTTON1){
             departureCity.setText("Dallas");
         }
@@ -2535,6 +2527,8 @@ public class BookFlightPage extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel70;
     private javax.swing.JLabel jLabel71;
+    private javax.swing.JLabel jLabel72;
+    private javax.swing.JLabel jLabel73;
     private javax.swing.JLabel jLabel74;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel83;
@@ -2567,6 +2561,7 @@ public class BookFlightPage extends javax.swing.JFrame {
     private javax.swing.JPanel janPanel;
     private javax.swing.JLabel janTuesdayOne;
     private javax.swing.JLabel janWednesdayOne;
+    private javax.swing.JTextField referenceDisplay;
     private javax.swing.JLabel sAusLabel;
     private javax.swing.JTextField seating;
     private javax.swing.JLabel sydney;

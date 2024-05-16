@@ -8,6 +8,7 @@ import java.time.format.*;
 public class MainPage extends javax.swing.JFrame {
     private JFrame bookFrame;
     private JFrame accountFrame;
+    private JFrame reservationFrame;
 
     /**
      * Creates new form MainPage
@@ -38,7 +39,7 @@ public class MainPage extends javax.swing.JFrame {
         dateBox = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         bookFlightLabel = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        manageReservation = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
@@ -137,10 +138,21 @@ public class MainPage extends javax.swing.JFrame {
         });
         jPanel3.add(bookFlightLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(348, 42, -1, -1));
 
-        jLabel4.setFont(new java.awt.Font("Georgia", 0, 18)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("Manage Reservation");
-        jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(536, 42, -1, -1));
+        manageReservation.setFont(new java.awt.Font("Georgia", 0, 18)); // NOI18N
+        manageReservation.setForeground(new java.awt.Color(255, 255, 255));
+        manageReservation.setText("Manage Reservation");
+        manageReservation.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                manageReservationMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                manageReservationMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                manageReservationMouseExited(evt);
+            }
+        });
+        jPanel3.add(manageReservation, new org.netbeans.lib.awtextra.AbsoluteConstraints(536, 42, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Georgia", 0, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
@@ -634,16 +646,37 @@ public class MainPage extends javax.swing.JFrame {
          jLabel45.setForeground(Color.WHITE);
     }//GEN-LAST:event_jLabel45MouseExited
     
-    public void openAccount() {
+    public void openManageReservation() {
+        reservationFrame = new ReservationManagement();
+        reservationFrame.setVisible(true);
+        reservationFrame.setSize(1000,800);
+    }
+    
+    public void openAccountPage() {
         accountFrame = new AccountInformation();
         accountFrame.setVisible(true);
         accountFrame.setSize(1920,1080);
     }
+    
     private void jMenu1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu1MouseClicked
        if (evt.getButton() == evt.BUTTON1) {
-            openAccount();
+            openAccountPage();
         }
     }//GEN-LAST:event_jMenu1MouseClicked
+
+    private void manageReservationMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_manageReservationMouseClicked
+        if (evt.getButton() == evt.BUTTON1) {
+            openManageReservation();
+        }
+    }//GEN-LAST:event_manageReservationMouseClicked
+
+    private void manageReservationMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_manageReservationMouseEntered
+        manageReservation.setForeground(Color.BLACK);
+    }//GEN-LAST:event_manageReservationMouseEntered
+
+    private void manageReservationMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_manageReservationMouseExited
+        manageReservation.setForeground(Color.WHITE);
+    }//GEN-LAST:event_manageReservationMouseExited
 
     /**
      * @param args the command line arguments
@@ -718,7 +751,6 @@ public class MainPage extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel37;
     private javax.swing.JLabel jLabel38;
     private javax.swing.JLabel jLabel39;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel40;
     private javax.swing.JLabel jLabel41;
     private javax.swing.JLabel jLabel43;
@@ -741,5 +773,6 @@ public class MainPage extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel4;
     private javax.swing.JLabel linkedIn;
     private javax.swing.JMenu logoutButton;
+    private javax.swing.JLabel manageReservation;
     // End of variables declaration//GEN-END:variables
 }
