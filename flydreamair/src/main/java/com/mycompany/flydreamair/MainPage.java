@@ -649,7 +649,7 @@ public class MainPage extends javax.swing.JFrame {
     public void openManageReservation() {
         reservationFrame = new ReservationManagement();
         reservationFrame.setVisible(true);
-        reservationFrame.setSize(1000,800);
+        reservationFrame.setSize(1920,1080);
     }
     
     public void openAccountPage() {

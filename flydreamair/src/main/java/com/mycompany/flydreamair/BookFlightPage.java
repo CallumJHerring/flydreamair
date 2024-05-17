@@ -25,6 +25,9 @@ public class BookFlightPage extends javax.swing.JFrame {
         seatingCursors();
     }
     
+    public ArrayList<Flight> getFlights() {
+        return this.flights;
+    }
     public void seatingCursors() {
         A1.setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
         A1.setCaretColor(new Color(0, 0, 0, 0));

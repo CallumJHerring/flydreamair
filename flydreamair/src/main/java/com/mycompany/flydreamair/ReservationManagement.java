@@ -1,7 +1,7 @@
 package com.mycompany.flydreamair;
 
+import java.util.*;
 import javax.swing.*;
-import java.awt.*;
 
 public class ReservationManagement extends javax.swing.JFrame {
 
@@ -24,15 +24,8 @@ public class ReservationManagement extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        referenceDisplay = new javax.swing.JTextField();
-        searchRefNumber = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
@@ -42,40 +35,18 @@ public class ReservationManagement extends javax.swing.JFrame {
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setText("Manage your reservations");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
+        jLabel1.setText("Enter reference number");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, -1, -1));
 
-        jLabel2.setText("Enter a valid reference number");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, -1, -1));
+        jTextField1.setText("ref num here");
+        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 300, 40));
 
-        referenceDisplay.setText("reference number here");
-        jPanel1.add(referenceDisplay, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 280, 40));
+        jLabel2.setText("Departure");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, -1, -1));
 
-        searchRefNumber.setText("Search");
-        searchRefNumber.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                searchRefNumberMouseClicked(evt);
-            }
-        });
-        jPanel1.add(searchRefNumber, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 80, -1, -1));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 830, 510));
 
-        jLabel3.setText("Departing Airport");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, -1, -1));
-        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 200, 210, 40));
-
-        jLabel4.setText("Arriving Airport");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 280, -1, -1));
-        jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 310, 220, 40));
-
-        jLabel5.setText("Departing Date");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 170, -1, -1));
-
-        jLabel6.setText("Arrival Date");
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 290, -1, -1));
-
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 560));
-
-        jMenu1.setText("Help");
+        jMenu1.setText("File");
         jMenuBar1.add(jMenu1);
         jMenuBar1.add(jMenu2);
 
@@ -83,24 +54,6 @@ public class ReservationManagement extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void searchRefNumberMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_searchRefNumberMouseClicked
-        if (evt.getButton() == evt.BUTTON1) {
-            /*
-            Flight f = new Flight();
-            User u = new User();
-            u.getFlights();
-            
-            //f.getTicketID();
-            String refNum = f.getTicketID();
-            //referenceDisplay.setText(refNum);
-            
-            referenceDisplay.getText();
-            */
- 
-            
-        }
-    }//GEN-LAST:event_searchRefNumberMouseClicked
 
     /**
      * @param args the command line arguments
@@ -140,17 +93,10 @@ public class ReservationManagement extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField referenceDisplay;
-    private javax.swing.JButton searchRefNumber;
     // End of variables declaration//GEN-END:variables
 }
