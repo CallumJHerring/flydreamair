@@ -9,6 +9,7 @@ public class MainPage extends javax.swing.JFrame {
     private JFrame bookFrame;
     private JFrame accountFrame;
     private JFrame reservationFrame;
+    private JFrame servicesFrame;
 
     /**
      * Creates new form MainPage
@@ -162,6 +163,11 @@ public class MainPage extends javax.swing.JFrame {
         jLabel6.setFont(new java.awt.Font("Georgia", 0, 18)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("In-Flight Services");
+        jLabel6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel6MouseClicked(evt);
+            }
+        });
         jPanel3.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(977, 42, -1, -1));
 
         jLabel16.setForeground(new java.awt.Color(255, 255, 255));
@@ -525,7 +531,6 @@ public class MainPage extends javax.swing.JFrame {
     // [CH] Open BookFlightPage.java
     private void bookFlightLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bookFlightLabelMouseClicked
         if (evt.getButton() == evt.BUTTON1) {
-            //new BookFlightPage().setVisible(true);
             bookFrame = new BookFlightPage();
             bookFrame.setSize(1920,1080);
             bookFrame.setVisible(true);
@@ -678,6 +683,17 @@ public class MainPage extends javax.swing.JFrame {
         manageReservation.setForeground(Color.WHITE);
     }//GEN-LAST:event_manageReservationMouseExited
 
+    private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
+        if (evt.getButton() == evt.BUTTON1) {
+            openServicesMenu();
+        }
+    }//GEN-LAST:event_jLabel6MouseClicked
+
+    public void openServicesMenu() {
+        servicesFrame = new ServicesMenu();
+        servicesFrame.setSize(1920,1080);
+        servicesFrame.setVisible(true);
+    }
     /**
      * @param args the command line arguments
      */

@@ -113,7 +113,7 @@ public class Flight implements CompanyFileIO {
     
     @Override
     public String toString() {
-        return "\nAirport Departing: " + departureCity + ", Departure Date: " + departureDate + ", Airport Destination: " + arrivalCity +
+        return "Airport Departing: " + departureCity + ", Departure Date: " + departureDate + ", Airport Destination: " + arrivalCity +
                 ", Arrival Date: " + arrivalDate + ", Price: " + price + ", Seating: " + seat + ", TicketID: " + ticketID;
     }
     
