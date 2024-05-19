@@ -4,7 +4,6 @@ import java.util.*;
 import javax.swing.*;
 
 public class ReservationManagement extends javax.swing.JFrame {
-
     /**
      * Creates new form ReservationManagement
      */
@@ -26,9 +25,9 @@ public class ReservationManagement extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         enterRef = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
+        searchButton = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         displayFlightInfo = new javax.swing.JTextArea();
-        searchButton = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
@@ -47,12 +46,6 @@ public class ReservationManagement extends javax.swing.JFrame {
         jLabel2.setText("Flight info");
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, -1, -1));
 
-        displayFlightInfo.setColumns(20);
-        displayFlightInfo.setRows(5);
-        jScrollPane1.setViewportView(displayFlightInfo);
-
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 170, 1030, 210));
-
         searchButton.setText("search");
         searchButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -61,7 +54,13 @@ public class ReservationManagement extends javax.swing.JFrame {
         });
         jPanel1.add(searchButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 70, -1, -1));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1090, 510));
+        displayFlightInfo.setColumns(20);
+        displayFlightInfo.setRows(5);
+        jScrollPane1.setViewportView(displayFlightInfo);
+
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, 940, 140));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1090, 740));
 
         jMenu1.setText("File");
         jMenuBar1.add(jMenu1);
@@ -72,13 +71,16 @@ public class ReservationManagement extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
  
+    public void displayRef(Flight flight) {
+        String f = flight.toString();
+        displayFlightInfo.setText(f);
+    }
     
     private void searchButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_searchButtonMouseClicked
         if (evt.getButton() == evt.BUTTON1) {
             BookFlightPage bfp = new BookFlightPage();
             String input = enterRef.getText();
-            
-            bfp.findFlights(input);
+            bfp.findFlight(input, this);
         }
     }//GEN-LAST:event_searchButtonMouseClicked
 

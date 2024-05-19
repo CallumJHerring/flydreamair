@@ -10,7 +10,6 @@ import java.util.UUID;
 
 public class BookFlightPage extends javax.swing.JFrame {
     private ArrayList<Flight> flights = new ArrayList<>();
-    //private ArrayList<Flight> flights;
     private static JFrame bookFlightFrame;
     
     /**
@@ -24,12 +23,28 @@ public class BookFlightPage extends javax.swing.JFrame {
         
         loadFlights();
         seatingCursors();
+        displayFlights();
     }
-    
     
     public ArrayList<Flight> getFlights() {
         return this.flights;
     }
+    
+    public void findFlight(String input, ReservationManagement rm) {
+        String ref = input;
+        
+        for (Flight f: flights) {
+            if (ref.equals(f.getTicketID())) {
+                System.out.println(f.toString());
+                //ReservationManagement rm = new ReservationManagement();
+                rm.setVisible(true);
+                rm.displayRef(f);
+                //rm.dispose();
+                break;
+            }
+        }
+    }
+
     
     
     public void seatingCursors() {
@@ -1961,6 +1976,7 @@ public class BookFlightPage extends javax.swing.JFrame {
                 Flight flight = parseFlights(line);
                 flights.add(flight);
             }
+            file.close();
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -2020,18 +2036,11 @@ public class BookFlightPage extends javax.swing.JFrame {
             }
             fout.close();
         } catch (Exception e) {
-            
+            e.printStackTrace();
         }
     }
     
-    public void findFlights(String input) {
-        
-        
-       
-    }
-    
-    
-    // [CH] Mouse functions, lots to do
+    // [CH] Mouse functions
     // Sydney (SYD)
     private void sydneyMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_sydneyMouseClicked
         if (evt.getButton() == evt.BUTTON1) {

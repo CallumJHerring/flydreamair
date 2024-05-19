@@ -11,7 +11,7 @@ public class Flight implements CompanyFileIO {
     private String arrivalCity;
     private String price;
     private String seat;
-    private String ticketID;
+    private final String ticketID;
     
     public Flight() {
         departureCity = "";
@@ -30,7 +30,7 @@ public class Flight implements CompanyFileIO {
         this.arrivalDate = arrivalDate;
         this.price = price;
         this.seat = seat;
-        this.ticketID = UUID.randomUUID().toString();
+        this.ticketID = ticketID;
     }
     
     public void setDepartureCity(String departureCity) {
@@ -83,20 +83,23 @@ public class Flight implements CompanyFileIO {
         return this.seat;
     }
     
+    /*
     public void setTicketID(String ticketID) {
-        this.ticketID = ticketID;
+        ticketID = ticketID;
     }
+    */
     
     public String getTicketID() {
-        return this.ticketID;
+        return ticketID;
     }
     
+    /*
     @Override
     public void writeData(Formatter formatter) {
-        formatter.format("%s\n", toString());
+        formatter.format("%s\n");
     }
          
-    /*
+    
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
@@ -109,12 +112,24 @@ public class Flight implements CompanyFileIO {
         sb.append("Reference: ").append(this.ticketID).append("");
         return sb.toString();
     }
-    */
+    
     
     @Override
     public String toString() {
         return "Airport Departing: " + departureCity + ", Departure Date: " + departureDate + ", Airport Destination: " + arrivalCity +
                 ", Arrival Date: " + arrivalDate + ", Price: " + price + ", Seating: " + seat + ", TicketID: " + ticketID;
+    }
+    */
+    @Override
+    public void writeData(Formatter formatter) {
+        formatter.format("%s, %s, %s, %s, %s, %s, %s%n",
+                departureCity, departureDate, arrivalCity, arrivalDate, price, seat, ticketID);
+    }
+
+    @Override
+    public String toString() {
+        return String.format("Airport Departing: %s, Departure Date: %s, Airport Destination: %s, Arrival Date: %s, Price: %s, Seating: %s, TicketID: %s",
+                departureCity, departureDate, arrivalCity, arrivalDate, price, seat, ticketID);
     }
     
 }
