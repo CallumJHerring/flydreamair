@@ -10,7 +10,7 @@ import java.util.*;
 public class LoginPage extends javax.swing.JFrame {
     private static JFrame mainFrame;
     private static JFrame accountCreationFrame;
-    private ArrayList<User> users;
+    private ArrayList<User> users = new ArrayList<>();
     private JFrame loginFrame;
     
     /**
@@ -184,9 +184,10 @@ public class LoginPage extends javax.swing.JFrame {
     public User parseUsers(String line) {
         try {
             String[] parts = line.split(",");
-            String username = parts[0].trim();
-            String password = parts[1].trim();
-            String email = parts[2].trim();
+            int customerID = Integer.parseInt(parts[0].trim());
+            String username = parts[1].trim();
+            String password = parts[2].trim();
+            String email = parts[3].trim();
             return new User(username, password, email);
         } catch (Exception e) {
             e.printStackTrace();
@@ -266,9 +267,40 @@ public class LoginPage extends javax.swing.JFrame {
     }//GEN-LAST:event_passwordLoginFocusLost
 
     private void loginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_loginMouseClicked
-        openMainPage();
+        // Uncomment this to disable login requirements
+        //openMainPage();
+        if (evt.getButton() == evt.BUTTON1) {
+            String username = usernameLogin.getText();
+            String password = passwordLogin.getText();
+            login(username,password);
+        }
+ 
     }//GEN-LAST:event_loginMouseClicked
-
+    /////////////// TESTING SAVING CURRENT STATE OF USER LOGIN \\\\\\\\\\\\\\
+    public void login(String username, String password) {
+        System.out.println("Attempting to login with Username: " + username + ", Password: " + password);
+        User user = findCurrentUser(username, password);
+        if (user != null) {
+            UserSession.setCurrentUser(user);
+            // Proceed to the booking page or user dashboard
+             openMainPage();
+        } else {
+            JOptionPane.showMessageDialog(this, "Invalid username or password.", "Login Error", JOptionPane.ERROR_MESSAGE);
+        }
+    }
+    
+    private User findCurrentUser(String username, String password) {
+        for (User user : users) {
+            System.out.println("Checking user: " + user.getUsername() + ", " + user.getPassword());
+            if (user.getUsername().equals(username) && user.getPassword().equals(password)) {
+                //openMainPage();
+                return user;
+            
+            }
+        }
+        return null;
+    }
+    ////////////////////// END OF TESTING \\\\\\\\\\\\\\\\\\\\\\\\\
     private void createAccountMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_createAccountMouseClicked
         if (evt.getButton() == evt.BUTTON1) {
             email.setVisible(true);

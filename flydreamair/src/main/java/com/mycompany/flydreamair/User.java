@@ -8,7 +8,6 @@ public class User implements CompanyFileIO {
     private String username;
     private String password;
     private String email;
-    //private ArrayList<Ticket> tickets;
     private ArrayList<Flight> flights;
     
     public User() {
@@ -22,7 +21,6 @@ public class User implements CompanyFileIO {
         this.username = username;
         this.password = password;
         this.email = email;
-        //this.tickets = tickets;
         this.flights = flights;
     }
     
@@ -54,16 +52,6 @@ public class User implements CompanyFileIO {
         return this.email;
     }
     
-    /*
-    public void setTickets(ArrayList<Ticket> tickets) {
-        this.tickets = tickets;
-    }
-    
-    public ArrayList<Ticket> getTickets() {
-        return this.tickets;
-    }
-    */
-    
     public void setFlights(ArrayList<Flight> flights) {
         this.flights = flights;
     }
@@ -71,21 +59,7 @@ public class User implements CompanyFileIO {
     public ArrayList<Flight> getFlights() {
         return this.flights;
     }
-    
-    /*
-    @Override
-    public void writeData(Formatter formatter) {
-        formatter.format("%s, %s, %s%n",
-                username, password, email);
-    }
-    
-    @Override
-    public String toString() {
-        return String.format("Username: %s, Password: %s, Email: %s",
-                username, password, email);
-    }
-    */
-    
+
     @Override
     public void writeData(Formatter formatter) {
         formatter.format("%d, %s, %s, %s%n", customerID, username, password, email);
