@@ -291,7 +291,6 @@ public class LoginPage extends javax.swing.JFrame {
 
     private void helpButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_helpButtonMouseClicked
         if (evt.getButton() == evt.BUTTON1) {
-            //JOptionPane.showMessageDialog(null, "Contact flydreamair@support.com for account issues!");
             JOptionPane.showMessageDialog(null, "Contact flydreamair@support.com for account issues!", "Support", 0);
         }
     }//GEN-LAST:event_helpButtonMouseClicked

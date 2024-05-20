@@ -3,6 +3,8 @@ package com.mycompany.flydreamair;
 import java.util.*;
 
 public class User implements CompanyFileIO {
+    private static int nextCustomerID = 1;
+    private int customerID;
     private String username;
     private String password;
     private String email;
@@ -16,11 +18,16 @@ public class User implements CompanyFileIO {
     }
     
     public User(String username, String password, String email) {
+        this.customerID = nextCustomerID++;
         this.username = username;
         this.password = password;
         this.email = email;
         //this.tickets = tickets;
         this.flights = flights;
+    }
+    
+    public int getCustomerID() {
+        return this.customerID;
     }
     
     public void setUsername(String username) {
@@ -64,14 +71,8 @@ public class User implements CompanyFileIO {
     public ArrayList<Flight> getFlights() {
         return this.flights;
     }
-   
-    /*
-    @Override
-    public void writeData(Formatter formatter) {
-        formatter.format("%s\n", toString());
-    }
-    */
     
+    /*
     @Override
     public void writeData(Formatter formatter) {
         formatter.format("%s, %s, %s%n",
@@ -83,16 +84,17 @@ public class User implements CompanyFileIO {
         return String.format("Username: %s, Password: %s, Email: %s",
                 username, password, email);
     }
+    */
     
-    /*
+    @Override
+    public void writeData(Formatter formatter) {
+        formatter.format("%d, %s, %s, %s%n", customerID, username, password, email);
+    }
+    
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append("Name: ").append(this.username).append("\n");
-        sb.append("Password: ").append(this.password).append("\n");
-        sb.append("Email: ").append(this.email).append("\n");
-        return sb.toString();
+        return String.format("CustomerID: %d, Username: %s, Password: %s, Email: %s",
+                customerID, username, password, email);
     }
-    */
     
 }
