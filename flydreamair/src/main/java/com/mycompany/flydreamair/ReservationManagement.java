@@ -25,9 +25,19 @@ public class ReservationManagement extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         enterRef = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
         searchButton = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         displayFlightInfo = new javax.swing.JTextArea();
+        jLabel3 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        updateDateOne = new javax.swing.JTextField();
+        updateDateTwo = new javax.swing.JTextField();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        updatedFlightInfo = new javax.swing.JTextArea();
+        jButton2 = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
@@ -37,30 +47,74 @@ public class ReservationManagement extends javax.swing.JFrame {
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel1.setFont(new java.awt.Font("Georgia", 0, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("Enter reference number");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, -1, -1));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 170, -1, -1));
+        jPanel1.add(enterRef, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 200, 360, 40));
 
-        enterRef.setText("ref num here");
-        jPanel1.add(enterRef, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 360, 40));
-
+        jLabel2.setFont(new java.awt.Font("Georgia", 2, 24)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("Flight info");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, -1, -1));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 260, -1, -1));
 
-        searchButton.setText("search");
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/smallLogo.png"))); // NOI18N
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(-90, 10, 240, 210));
+
+        searchButton.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
+        searchButton.setForeground(new java.awt.Color(0, 0, 0));
+        searchButton.setText("Search");
         searchButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 searchButtonMouseClicked(evt);
             }
         });
-        jPanel1.add(searchButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 70, -1, -1));
+        jPanel1.add(searchButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 210, -1, -1));
 
+        displayFlightInfo.setEditable(false);
         displayFlightInfo.setColumns(20);
+        displayFlightInfo.setFont(new java.awt.Font("Georgia", 0, 15)); // NOI18N
         displayFlightInfo.setRows(5);
         jScrollPane1.setViewportView(displayFlightInfo);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, 940, 140));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 290, 1390, 50));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1090, 740));
+        jLabel3.setText("Remove this flight");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 640, -1, -1));
+
+        jButton1.setBackground(new java.awt.Color(255, 51, 51));
+        jButton1.setFont(new java.awt.Font("Georgia", 1, 14)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(0, 0, 0));
+        jButton1.setText("REMOVE THIS FLIGHT FOREVER");
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 670, -1, 40));
+
+        jLabel5.setText("Updated Flight info");
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 470, -1, -1));
+
+        jLabel6.setText("Change dates");
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 360, -1, -1));
+
+        updateDateOne.setText("departureDate");
+        jPanel1.add(updateDateOne, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 390, 100, 40));
+
+        updateDateTwo.setText("arrivalDate");
+        jPanel1.add(updateDateTwo, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 390, 100, 40));
+
+        updatedFlightInfo.setColumns(20);
+        updatedFlightInfo.setRows(5);
+        jScrollPane2.setViewportView(updatedFlightInfo);
+
+        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 500, 1390, 50));
+
+        jButton2.setText("Update flight information");
+        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton2MouseClicked(evt);
+            }
+        });
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 400, -1, 30));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1420, 740));
 
         jMenu1.setText("File");
         jMenuBar1.add(jMenu1);
@@ -83,6 +137,22 @@ public class ReservationManagement extends javax.swing.JFrame {
             bfp.findFlight(input, this);
         }
     }//GEN-LAST:event_searchButtonMouseClicked
+
+    public void updateFlight() {
+        
+    }
+    
+    private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
+        if (evt.getButton() == evt.BUTTON1) {
+            String updateFlight = displayFlightInfo.getText();
+            String updateDepartureDate = updateDateOne.getText();
+            String updateArrivalDate = updateDateTwo.getText();
+            
+            Flight f = new Flight();
+       
+            //updatedFlightInfo.setText(updateFlight);
+        }
+    }//GEN-LAST:event_jButton2MouseClicked
 
     /**
      * @param args the command line arguments
@@ -122,13 +192,23 @@ public class ReservationManagement extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextArea displayFlightInfo;
     private javax.swing.JTextField enterRef;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JButton searchButton;
+    private javax.swing.JTextField updateDateOne;
+    private javax.swing.JTextField updateDateTwo;
+    private javax.swing.JTextArea updatedFlightInfo;
     // End of variables declaration//GEN-END:variables
 }

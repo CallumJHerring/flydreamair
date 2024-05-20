@@ -25,7 +25,7 @@ public class LoginPage extends javax.swing.JFrame {
         
         email.setVisible(false);
         create.setVisible(false);
-        //loadUsers();
+        loadUsers();
         
         fdaLogo.setSize(100,100);
     }
@@ -164,7 +164,7 @@ public class LoginPage extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
     
-    /*
+   
     // read text
     public void loadUsers() {
         try {
@@ -174,6 +174,7 @@ public class LoginPage extends javax.swing.JFrame {
                 User user = parseUsers(line);
                 users.add(user);
             }
+            file.close();
         } catch (Exception e) {
             
         }
@@ -188,7 +189,7 @@ public class LoginPage extends javax.swing.JFrame {
             String email = parts[2].trim();
             return new User(username, password, email);
         } catch (Exception e) {
-            
+            e.printStackTrace();
         }
         return null;
     }
@@ -234,7 +235,7 @@ public class LoginPage extends javax.swing.JFrame {
             e.printStackTrace();
         }
     }
-    */
+    
     
     private void usernameLoginFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_usernameLoginFocusGained
         if (usernameLogin.getText().equals("Username")) {
@@ -283,7 +284,7 @@ public class LoginPage extends javax.swing.JFrame {
             login.setVisible(true);
             create.setVisible(false);
             createAccount.setVisible(true);
-            //newUser();
+            newUser();
     
         }
     }//GEN-LAST:event_createMouseClicked

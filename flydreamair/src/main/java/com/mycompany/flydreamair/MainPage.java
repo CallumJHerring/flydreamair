@@ -10,6 +10,7 @@ public class MainPage extends javax.swing.JFrame {
     private JFrame accountFrame;
     private JFrame reservationFrame;
     private JFrame servicesFrame;
+    private JFrame manageSeatingFrame;
 
     /**
      * Creates new form MainPage
@@ -41,8 +42,8 @@ public class MainPage extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         bookFlightLabel = new javax.swing.JLabel();
         manageReservation = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
+        manageSeating = new javax.swing.JLabel();
+        flightServices = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
         jLabel24 = new javax.swing.JLabel();
         jLabel21 = new javax.swing.JLabel();
@@ -155,20 +156,37 @@ public class MainPage extends javax.swing.JFrame {
         });
         jPanel3.add(manageReservation, new org.netbeans.lib.awtextra.AbsoluteConstraints(536, 42, -1, -1));
 
-        jLabel5.setFont(new java.awt.Font("Georgia", 0, 18)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setText("Manage Seating");
-        jPanel3.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(782, 42, -1, -1));
-
-        jLabel6.setFont(new java.awt.Font("Georgia", 0, 18)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setText("In-Flight Services");
-        jLabel6.addMouseListener(new java.awt.event.MouseAdapter() {
+        manageSeating.setFont(new java.awt.Font("Georgia", 0, 18)); // NOI18N
+        manageSeating.setForeground(new java.awt.Color(255, 255, 255));
+        manageSeating.setText("Manage Seating");
+        manageSeating.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel6MouseClicked(evt);
+                manageSeatingMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                manageSeatingMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                manageSeatingMouseExited(evt);
             }
         });
-        jPanel3.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(977, 42, -1, -1));
+        jPanel3.add(manageSeating, new org.netbeans.lib.awtextra.AbsoluteConstraints(782, 42, -1, -1));
+
+        flightServices.setFont(new java.awt.Font("Georgia", 0, 18)); // NOI18N
+        flightServices.setForeground(new java.awt.Color(255, 255, 255));
+        flightServices.setText("In-Flight Services");
+        flightServices.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                flightServicesMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                flightServicesMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                flightServicesMouseExited(evt);
+            }
+        });
+        jPanel3.add(flightServices, new org.netbeans.lib.awtextra.AbsoluteConstraints(977, 42, -1, -1));
 
         jLabel16.setForeground(new java.awt.Color(255, 255, 255));
         jLabel16.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(51, 51, 51), 1, true));
@@ -533,6 +551,7 @@ public class MainPage extends javax.swing.JFrame {
         if (evt.getButton() == evt.BUTTON1) {
             bookFrame = new BookFlightPage();
             bookFrame.setSize(1920,1080);
+            //bookFrame.setExtendedState(JFrame.MAXIMIZED_BOTH);
             bookFrame.setVisible(true);
         }
     }//GEN-LAST:event_bookFlightLabelMouseClicked
@@ -661,6 +680,7 @@ public class MainPage extends javax.swing.JFrame {
         accountFrame = new AccountInformation();
         accountFrame.setVisible(true);
         accountFrame.setSize(1920,1080);
+        //accountFrame.setExtendedState(JFrame.MAXIMIZED_BOTH);
     }
     
     private void jMenu1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu1MouseClicked
@@ -683,12 +703,40 @@ public class MainPage extends javax.swing.JFrame {
         manageReservation.setForeground(Color.WHITE);
     }//GEN-LAST:event_manageReservationMouseExited
 
-    private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
+    private void flightServicesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_flightServicesMouseClicked
         if (evt.getButton() == evt.BUTTON1) {
             openServicesMenu();
         }
-    }//GEN-LAST:event_jLabel6MouseClicked
+    }//GEN-LAST:event_flightServicesMouseClicked
 
+    private void flightServicesMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_flightServicesMouseEntered
+        flightServices.setForeground(Color.BLACK);
+    }//GEN-LAST:event_flightServicesMouseEntered
+
+    private void flightServicesMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_flightServicesMouseExited
+        flightServices.setForeground(Color.WHITE);
+    }//GEN-LAST:event_flightServicesMouseExited
+
+    private void manageSeatingMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_manageSeatingMouseClicked
+        if (evt.getButton() == evt.BUTTON1) {
+            openManageSeatingPage();
+        }
+    }//GEN-LAST:event_manageSeatingMouseClicked
+
+    private void manageSeatingMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_manageSeatingMouseEntered
+        manageSeating.setForeground(Color.BLACK);
+    }//GEN-LAST:event_manageSeatingMouseEntered
+
+    private void manageSeatingMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_manageSeatingMouseExited
+        manageSeating.setForeground(Color.WHITE);
+    }//GEN-LAST:event_manageSeatingMouseExited
+    
+    public void openManageSeatingPage() {
+        manageSeatingFrame = new ManageSeating();
+        manageSeatingFrame.setSize(1920,1080);
+        manageSeatingFrame.setVisible(true);
+    }
+    
     public void openServicesMenu() {
         servicesFrame = new ServicesMenu();
         servicesFrame.setSize(1920,1080);
@@ -733,6 +781,7 @@ public class MainPage extends javax.swing.JFrame {
     private javax.swing.JLabel bookFlightLabel;
     private javax.swing.JLabel dateBox;
     private javax.swing.JLabel facebook;
+    private javax.swing.JLabel flightServices;
     private javax.swing.JLabel instagram;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -775,8 +824,6 @@ public class MainPage extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel46;
     private javax.swing.JLabel jLabel47;
     private javax.swing.JLabel jLabel48;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
@@ -790,5 +837,6 @@ public class MainPage extends javax.swing.JFrame {
     private javax.swing.JLabel linkedIn;
     private javax.swing.JMenu logoutButton;
     private javax.swing.JLabel manageReservation;
+    private javax.swing.JLabel manageSeating;
     // End of variables declaration//GEN-END:variables
 }

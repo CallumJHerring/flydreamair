@@ -65,11 +65,26 @@ public class User implements CompanyFileIO {
         return this.flights;
     }
    
+    /*
     @Override
     public void writeData(Formatter formatter) {
         formatter.format("%s\n", toString());
     }
+    */
     
+    @Override
+    public void writeData(Formatter formatter) {
+        formatter.format("%s, %s, %s%n",
+                username, password, email);
+    }
+    
+    @Override
+    public String toString() {
+        return String.format("Username: %s, Password: %s, Email: %s",
+                username, password, email);
+    }
+    
+    /*
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
@@ -78,5 +93,6 @@ public class User implements CompanyFileIO {
         sb.append("Email: ").append(this.email).append("\n");
         return sb.toString();
     }
+    */
     
 }
