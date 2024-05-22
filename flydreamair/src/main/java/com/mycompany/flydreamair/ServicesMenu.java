@@ -2,6 +2,7 @@ package com.mycompany.flydreamair;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.Color;
 
 public class ServicesMenu extends javax.swing.JFrame {
 
@@ -23,12 +24,14 @@ public class ServicesMenu extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        backBooking = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         jLabel25 = new javax.swing.JLabel();
         jLabel24 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
         jLabel23 = new javax.swing.JLabel();
+        jLabel74 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
@@ -64,6 +67,22 @@ public class ServicesMenu extends javax.swing.JFrame {
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        backBooking.setFont(new java.awt.Font("Georgia", 0, 24)); // NOI18N
+        backBooking.setForeground(new java.awt.Color(0, 0, 0));
+        backBooking.setText("Back");
+        backBooking.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                backBookingMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                backBookingMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                backBookingMouseExited(evt);
+            }
+        });
+        jPanel1.add(backBooking, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 20, 60, 30));
+
         jLabel12.setFont(new java.awt.Font("Georgia", 2, 18)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(0, 0, 0));
         jLabel12.setText("Jelly");
@@ -93,6 +112,11 @@ public class ServicesMenu extends javax.swing.JFrame {
         jLabel23.setForeground(new java.awt.Color(0, 0, 0));
         jLabel23.setText("Orange Juice");
         jPanel1.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 470, -1, -1));
+
+        jLabel74.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel74.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel74.setIcon(new javax.swing.ImageIcon(getClass().getResource("/back3-removebg-preview 2 (1).png"))); // NOI18N
+        jPanel1.add(jLabel74, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 10, 60, -1));
 
         jLabel17.setFont(new java.awt.Font("Georgia", 0, 18)); // NOI18N
         jLabel17.setForeground(new java.awt.Color(0, 0, 0));
@@ -226,6 +250,20 @@ public class ServicesMenu extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void backBookingMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backBookingMouseClicked
+        if (evt.getButton() == evt.BUTTON1) {
+            dispose();
+        }
+    }//GEN-LAST:event_backBookingMouseClicked
+
+    private void backBookingMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backBookingMouseEntered
+        backBooking.setForeground(new Color(128, 0, 0));
+    }//GEN-LAST:event_backBookingMouseEntered
+
+    private void backBookingMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backBookingMouseExited
+        backBooking.setForeground(Color.BLACK);
+    }//GEN-LAST:event_backBookingMouseExited
+
     /**
      * @param args the command line arguments
      */
@@ -262,6 +300,7 @@ public class ServicesMenu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel backBooking;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -293,6 +332,7 @@ public class ServicesMenu extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel74;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;

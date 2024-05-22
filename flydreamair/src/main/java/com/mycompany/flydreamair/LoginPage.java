@@ -168,7 +168,8 @@ public class LoginPage extends javax.swing.JFrame {
     // read text
     public void loadUsers() {
         try {
-            Scanner file = new Scanner(new File("/Users/callum/Desktop/users.txt"));
+            //Scanner file = new Scanner(new File("/Users/callum/Desktop/users.txt"));
+            Scanner file = new Scanner(new File("users.txt"));
             while (file.hasNextLine()) {
                 String line = file.nextLine();
                 User user = parseUsers(line);
@@ -225,7 +226,8 @@ public class LoginPage extends javax.swing.JFrame {
     }
     
     public void writeUsers() {
-        String fileName = "/Users/callum/Desktop/users.txt";
+        //String fileName = "/Users/callum/Desktop/users.txt";
+        String fileName = "users.txt";
         try {
             Formatter fout = new Formatter(fileName);
             for (User u: users) {
@@ -276,13 +278,12 @@ public class LoginPage extends javax.swing.JFrame {
         }
  
     }//GEN-LAST:event_loginMouseClicked
-    /////////////// TESTING SAVING CURRENT STATE OF USER LOGIN \\\\\\\\\\\\\\
+
     public void login(String username, String password) {
         System.out.println("Attempting to login with Username: " + username + ", Password: " + password);
         User user = findCurrentUser(username, password);
         if (user != null) {
             UserSession.setCurrentUser(user);
-            // Proceed to the booking page or user dashboard
              openMainPage();
         } else {
             JOptionPane.showMessageDialog(this, "Invalid username or password.", "Login Error", JOptionPane.ERROR_MESSAGE);
@@ -293,14 +294,13 @@ public class LoginPage extends javax.swing.JFrame {
         for (User user : users) {
             System.out.println("Checking user: " + user.getUsername() + ", " + user.getPassword());
             if (user.getUsername().equals(username) && user.getPassword().equals(password)) {
-                //openMainPage();
                 return user;
             
             }
         }
         return null;
     }
-    ////////////////////// END OF TESTING \\\\\\\\\\\\\\\\\\\\\\\\\
+
     private void createAccountMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_createAccountMouseClicked
         if (evt.getButton() == evt.BUTTON1) {
             email.setVisible(true);

@@ -20,7 +20,6 @@ public class BookFlightPage extends javax.swing.JFrame {
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         jPanel2.requestFocusInWindow();
         datePanel.setEnabledAt(0, true);
-        
         loadFlights();
         seatingCursors();
         displayFlights();
@@ -47,55 +46,42 @@ public class BookFlightPage extends javax.swing.JFrame {
         
     }
     
-    public void updateFlight(String newDateDep, String newDateArr, ReservationManagement rm) {
-        try {
-            String depCity = departureCity.getText();
-            String depDate = newDateDep;
-            String arrCity = arrivalCity.getText();
-            String arrDate = newDateArr;
-            String price = "TBD";
-            String seat = seating.getText();
-            String refNum = UUID.randomUUID().toString();
-            Flight newFlight = new Flight(depCity, newDateDep, arrCity, newDateArr, price, seat, refNum);
-            flights.add(newFlight);
+    public void findFlight(String input, ManageSeating ms) {
+        String ref = input;
+        
+        for (Flight f: flights) {
+            if (ref.equals(f.getTicketID())) {
+                System.out.println(f.toString());
+                ms.setVisible(true);
+                ms.displayRef(f);
+                
+                ms.updateFlight();
+                break;
+            } 
+        }
+    }
     
-            if (newFlight != null) {
-                writeFlights();
-                rm.setVisible(true);
-                //rm.displayUpdatedRef(newFlight);
-                rm.displayUpdatedRef(newDateDep, newDateArr);
-                //referenceDisplay.setText(refNum);
-            }
-            
+    public void updateFlight(String newDateDep, String newDateArr, ReservationManagement rm) {
+       
+        try {
+            String depDate = newDateDep;
+            String arrDate = newDateArr;
+            rm.setVisible(true);
+            rm.displayUpdatedRef(newDateDep, newDateArr);
+        } catch (Exception e) {
+            e.printStackTrace();
+        } 
+    }
+    
+    public void updateFlight(String newSeat, ManageSeating ms) {
+        try {
+            String updatedSeat = newSeat;
+            ms.setVisible(true);
+            ms.displayUpdatedRef(updatedSeat);
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
-    
-    /*
-    public Flight getFlightByReference(String referenceNumber) {
-        for (Flight flight : flights) {
-            if (flight.getTicketID().equals(referenceNumber)) {
-                return flight;
-            }
-        }
-        return null;
-    }
-    */
-    
-    /*
-    public boolean deleteFlightByReference(String referenceNumber) {
-        Flight flightToDelete = getFlightByReference(referenceNumber);
-        if (flightToDelete != null) {
-            flights.remove(flightToDelete);
-            System.out.println("Flight deleted: " + flightToDelete.toString());
-            
-            writeFlights();
-            return true;
-        }
-        return false;
-    }
-    */
     
     public void seatingCursors() {
         A1.setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
@@ -199,7 +185,6 @@ public class BookFlightPage extends javax.swing.JFrame {
         jLabel40 = new javax.swing.JLabel();
         jLabel41 = new javax.swing.JLabel();
         jLabel42 = new javax.swing.JLabel();
-        Columbus = new javax.swing.JLabel();
         jLabel43 = new javax.swing.JLabel();
         Dallas = new javax.swing.JLabel();
         jLabel44 = new javax.swing.JLabel();
@@ -507,6 +492,14 @@ public class BookFlightPage extends javax.swing.JFrame {
 
         jLabel12.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
         jLabel12.setText("Port Hedland (PHE)");
+        jLabel12.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLabel12MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLabel12MouseExited(evt);
+            }
+        });
         jPanel3.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 50, -1, -1));
 
         jLabel13.setFont(new java.awt.Font("Helvetica Neue", 1, 14)); // NOI18N
@@ -586,6 +579,14 @@ public class BookFlightPage extends javax.swing.JFrame {
 
         jLabel93.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
         jLabel93.setText("Sunshine Coast (MCY)");
+        jLabel93.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLabel93MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLabel93MouseExited(evt);
+            }
+        });
         jPanel3.add(jLabel93, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 110, -1, -1));
 
         jLabel94.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
@@ -594,6 +595,14 @@ public class BookFlightPage extends javax.swing.JFrame {
 
         jLabel95.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
         jLabel95.setText("Perth (PER)");
+        jLabel95.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLabel95MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLabel95MouseExited(evt);
+            }
+        });
         jPanel3.add(jLabel95, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 30, -1, -1));
 
         jLabel96.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
@@ -638,12 +647,12 @@ public class BookFlightPage extends javax.swing.JFrame {
 
         jLabel28.setFont(new java.awt.Font("Georgia", 1, 13)); // NOI18N
         jLabel28.setText("H");
-        jPanel5.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, -1, -1));
+        jPanel5.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, -1, -1));
 
         jLabel29.setFont(new java.awt.Font("Georgia", 0, 13)); // NOI18N
         jLabel29.setForeground(new java.awt.Color(204, 204, 204));
         jLabel29.setText("Hiroshima");
-        jPanel5.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, -1, -1));
+        jPanel5.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, -1, -1));
 
         jLabel31.setFont(new java.awt.Font("Georgia", 0, 13)); // NOI18N
         jLabel31.setText("Singapore");
@@ -651,41 +660,19 @@ public class BookFlightPage extends javax.swing.JFrame {
 
         jLabel32.setFont(new java.awt.Font("Georgia", 1, 13)); // NOI18N
         jLabel32.setText("T");
-        jPanel5.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 10, -1, -1));
+        jPanel5.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 70, -1, -1));
 
         jLabel33.setFont(new java.awt.Font("Georgia", 0, 13)); // NOI18N
         jLabel33.setText("Tokyo (HND)");
-        jLabel33.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel33MouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jLabel33MouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jLabel33MouseExited(evt);
-            }
-        });
-        jPanel5.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 30, -1, -1));
+        jPanel5.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 90, -1, -1));
 
         jLabel34.setFont(new java.awt.Font("Georgia", 1, 13)); // NOI18N
         jLabel34.setText("P");
-        jPanel5.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 100, -1, -1));
+        jPanel5.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 120, -1, -1));
 
         jLabel35.setFont(new java.awt.Font("Georgia", 0, 13)); // NOI18N
         jLabel35.setText("Phuket (HKT)");
-        jLabel35.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel35MouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jLabel35MouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jLabel35MouseExited(evt);
-            }
-        });
-        jPanel5.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 120, -1, -1));
+        jPanel5.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 140, -1, -1));
 
         jLabel36.setFont(new java.awt.Font("Georgia", 0, 13)); // NOI18N
         jLabel36.setText("Beijing");
@@ -699,10 +686,10 @@ public class BookFlightPage extends javax.swing.JFrame {
         jPanel5.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 100, -1, -1));
 
         jLabel18.setText("W");
-        jPanel5.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 160, -1, -1));
+        jPanel5.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 10, -1, -1));
 
         jLabel19.setText("Wuhan");
-        jPanel5.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 180, -1, -1));
+        jPanel5.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 30, -1, -1));
 
         countryTravel.addTab("Asia Pacific", jPanel5);
 
@@ -710,17 +697,6 @@ public class BookFlightPage extends javax.swing.JFrame {
 
         Atlanta.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
         Atlanta.setText("Atlanta (ATL)");
-        Atlanta.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                AtlantaMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                AtlantaMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                AtlantaMouseExited(evt);
-            }
-        });
         jPanel6.add(Atlanta, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, -1, -1));
 
         jLabel38.setFont(new java.awt.Font("Georgia", 1, 14)); // NOI18N
@@ -729,17 +705,6 @@ public class BookFlightPage extends javax.swing.JFrame {
 
         Austin.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
         Austin.setText("Austin (AUS)");
-        Austin.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                AustinMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                AustinMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                AustinMouseExited(evt);
-            }
-        });
         jPanel6.add(Austin, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, -1, -1));
 
         jLabel39.setFont(new java.awt.Font("Georgia", 1, 14)); // NOI18N
@@ -748,32 +713,10 @@ public class BookFlightPage extends javax.swing.JFrame {
 
         Boston.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
         Boston.setText("Boston (BOS)");
-        Boston.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                BostonMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                BostonMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                BostonMouseExited(evt);
-            }
-        });
         jPanel6.add(Boston, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, -1, -1));
 
         Chicago.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
         Chicago.setText("Chicago (ORD)");
-        Chicago.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                ChicagoMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                ChicagoMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                ChicagoMouseExited(evt);
-            }
-        });
         jPanel6.add(Chicago, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, -1, -1));
         jPanel6.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, -1, -1));
         jPanel6.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, -1, -1));
@@ -782,38 +725,12 @@ public class BookFlightPage extends javax.swing.JFrame {
         jLabel42.setText("C");
         jPanel6.add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, -1, -1));
 
-        Columbus.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
-        Columbus.setText("Columbus (CMH)");
-        Columbus.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                ColumbusMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                ColumbusMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                ColumbusMouseExited(evt);
-            }
-        });
-        jPanel6.add(Columbus, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, -1, -1));
-
         jLabel43.setFont(new java.awt.Font("Georgia", 1, 14)); // NOI18N
         jLabel43.setText("D");
         jPanel6.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 20, -1, -1));
 
         Dallas.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
         Dallas.setText("Dallas/Fort Worth (DFW)");
-        Dallas.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                DallasMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                DallasMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                DallasMouseExited(evt);
-            }
-        });
         jPanel6.add(Dallas, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 40, -1, -1));
 
         jLabel44.setFont(new java.awt.Font("Georgia", 1, 14)); // NOI18N
@@ -1950,7 +1867,7 @@ public class BookFlightPage extends javax.swing.JFrame {
         });
         jPanel2.add(createBooking, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 740, -1, 33));
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 63, 1440, 830));
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 63, 1440, 850));
 
         jLabel113.setFont(new java.awt.Font("Georgia", 0, 16)); // NOI18N
         jLabel113.setForeground(new java.awt.Color(255, 255, 255));
@@ -1999,9 +1916,7 @@ public class BookFlightPage extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -2020,7 +1935,8 @@ public class BookFlightPage extends javax.swing.JFrame {
     
     public void loadFlights() {
         try {
-            Scanner file = new Scanner(new File("/Users/callum/Desktop/flights.txt"));
+            //Scanner file = new Scanner(new File("/Users/callum/Desktop/flights.txt"));
+            Scanner file = new Scanner(new File("flights.txt"));
             while (file.hasNextLine()) {
                 String line = file.nextLine();
                 Flight flight = parseFlights(line);
@@ -2078,7 +1994,8 @@ public class BookFlightPage extends javax.swing.JFrame {
     }
     
     public void writeFlights() {
-        String fileName = "/Users/callum/Desktop/flights.txt";
+        //String fileName = "/Users/callum/Desktop/flights.txt";
+        String fileName = "flights.txt";
         try {
             Formatter fout = new Formatter(fileName);
             for (Flight f: flights) {
@@ -2105,119 +2022,6 @@ public class BookFlightPage extends javax.swing.JFrame {
     private void sydneyMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_sydneyMouseExited
         sydney.setForeground(Color.BLACK);
     }//GEN-LAST:event_sydneyMouseExited
-
-    private void jLabel33MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel33MouseEntered
-        jLabel33.setForeground(new Color(128, 0, 0)); //tokyo
-    }//GEN-LAST:event_jLabel33MouseEntered
-
-    private void jLabel33MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel33MouseExited
-        jLabel33.setForeground(Color.BLACK); //tokyo
-    }//GEN-LAST:event_jLabel33MouseExited
-
-    private void jLabel33MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel33MouseClicked
-        if (evt.getButton() == evt.BUTTON1) {
-            departureCity.setText("Tokyo");
-        }
-    }//GEN-LAST:event_jLabel33MouseClicked
-
-    private void jLabel35MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel35MouseEntered
-        jLabel35.setForeground(Color.GREEN); //Phuket
-    }//GEN-LAST:event_jLabel35MouseEntered
-
-    private void jLabel35MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel35MouseExited
-        jLabel35.setForeground(Color.BLACK); //Phuket
-    }//GEN-LAST:event_jLabel35MouseExited
-
-    private void jLabel35MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel35MouseClicked
-        if (evt.getButton() == evt.BUTTON1) {
-            departureCity.setText("Phuket");
-        }
-    }//GEN-LAST:event_jLabel35MouseClicked
-
-    private void AtlantaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AtlantaMouseExited
-        Atlanta.setForeground(Color.BLACK);
-    }//GEN-LAST:event_AtlantaMouseExited
-
-    private void AtlantaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AtlantaMouseEntered
-         Atlanta.setForeground(Color.GREEN);
-    }//GEN-LAST:event_AtlantaMouseEntered
-
-    private void AtlantaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AtlantaMouseClicked
-        if (evt.getButton() == evt.BUTTON1) {
-            departureCity.setText("Atlanta");
-        }
-    }//GEN-LAST:event_AtlantaMouseClicked
-
-    private void AustinMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AustinMouseEntered
-        Austin.setForeground(Color.GREEN);  
-    }//GEN-LAST:event_AustinMouseEntered
-
-    private void AustinMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AustinMouseExited
-        Austin.setForeground(Color.BLACK);
-    }//GEN-LAST:event_AustinMouseExited
-
-    private void AustinMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AustinMouseClicked
-        if (evt.getButton() == evt.BUTTON1){
-            departureCity.setText("Austin");
-        }
-    }//GEN-LAST:event_AustinMouseClicked
-
-    private void BostonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BostonMouseEntered
-       Boston.setForeground(Color.GREEN);
-    }//GEN-LAST:event_BostonMouseEntered
-
-    private void BostonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BostonMouseExited
-        Austin.setForeground(Color.BLACK);
-    }//GEN-LAST:event_BostonMouseExited
-
-    private void BostonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BostonMouseClicked
-        if (evt.getButton() == evt.BUTTON1){
-            departureCity.setText("Boston");
-        }
-    }//GEN-LAST:event_BostonMouseClicked
-
-    private void ChicagoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ChicagoMouseEntered
-        Chicago.setForeground (Color.GREEN);
-    }//GEN-LAST:event_ChicagoMouseEntered
-
-    private void ChicagoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ChicagoMouseExited
-        Chicago.setForeground(Color.BLACK);
-    }//GEN-LAST:event_ChicagoMouseExited
-
-    private void ChicagoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ChicagoMouseClicked
-        if (evt.getButton() == evt.BUTTON1){
-            departureCity.setText("Chicago");
-        }
-    }//GEN-LAST:event_ChicagoMouseClicked
-
-    private void ColumbusMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ColumbusMouseEntered
-        Columbus.setForeground(Color.GREEN);
-    }//GEN-LAST:event_ColumbusMouseEntered
-
-    private void ColumbusMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ColumbusMouseExited
-        Columbus.setForeground(Color.BLACK);
-    }//GEN-LAST:event_ColumbusMouseExited
-
-    private void ColumbusMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ColumbusMouseClicked
-        if (evt.getButton() == evt.BUTTON1){
-            departureCity.setText("Columbus"); 
-        }
-    }//GEN-LAST:event_ColumbusMouseClicked
-
-    private void DallasMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DallasMouseEntered
-        Dallas.setForeground(Color.GREEN);
-    }//GEN-LAST:event_DallasMouseEntered
-
-    private void DallasMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DallasMouseExited
-        Dallas.setForeground(Color.BLACK);
-    }//GEN-LAST:event_DallasMouseExited
-
-    private void DallasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DallasMouseClicked
-        if (evt.getButton() == evt.BUTTON1){
-            departureCity.setText("Dallas");
-        }
-           
-    }//GEN-LAST:event_DallasMouseClicked
     
     // Logout menu cant see it in design for some reason
     private void jMenu1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu1MouseClicked
@@ -2462,6 +2266,30 @@ public class BookFlightPage extends javax.swing.JFrame {
             seating.setText("C10");
         }
     }//GEN-LAST:event_C10MouseClicked
+
+    private void jLabel95MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel95MouseEntered
+        jLabel95.setForeground(new Color(128, 0, 0));
+    }//GEN-LAST:event_jLabel95MouseEntered
+
+    private void jLabel95MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel95MouseExited
+        jLabel95.setForeground(Color.BLACK);
+    }//GEN-LAST:event_jLabel95MouseExited
+
+    private void jLabel12MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel12MouseEntered
+        jLabel12.setForeground(new Color(128, 0, 0));
+    }//GEN-LAST:event_jLabel12MouseEntered
+
+    private void jLabel12MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel12MouseExited
+        jLabel12.setForeground(Color.BLACK);
+    }//GEN-LAST:event_jLabel12MouseExited
+
+    private void jLabel93MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel93MouseEntered
+        jLabel93.setForeground(new Color(128, 0, 0));
+    }//GEN-LAST:event_jLabel93MouseEntered
+
+    private void jLabel93MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel93MouseExited
+        jLabel93.setForeground(Color.BLACK);
+    }//GEN-LAST:event_jLabel93MouseExited
     /*    */
     /**
      * @param args the command line arguments
@@ -2533,7 +2361,6 @@ public class BookFlightPage extends javax.swing.JFrame {
     private javax.swing.JTextField C8;
     private javax.swing.JTextField C9;
     private javax.swing.JLabel Chicago;
-    private javax.swing.JLabel Columbus;
     private javax.swing.JTextField D1;
     private javax.swing.JTextField D10;
     private javax.swing.JTextField D2;

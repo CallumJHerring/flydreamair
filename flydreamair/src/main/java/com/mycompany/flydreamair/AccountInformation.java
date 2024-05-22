@@ -60,25 +60,6 @@ public class AccountInformation extends javax.swing.JFrame {
         jComboBox1 = new javax.swing.JComboBox<>();
         redDotOne = new javax.swing.JLabel();
         jLabel41 = new javax.swing.JLabel();
-        jPanel6 = new javax.swing.JPanel();
-        jPanel5 = new javax.swing.JPanel();
-        jLabel24 = new javax.swing.JLabel();
-        jLabel26 = new javax.swing.JLabel();
-        jLabel27 = new javax.swing.JLabel();
-        jTextField10 = new javax.swing.JTextField();
-        jTextField11 = new javax.swing.JTextField();
-        jTextField12 = new javax.swing.JTextField();
-        jLabel33 = new javax.swing.JLabel();
-        jTextField17 = new javax.swing.JTextField();
-        jLabel34 = new javax.swing.JLabel();
-        jTextField18 = new javax.swing.JTextField();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel29 = new javax.swing.JLabel();
-        jLabel30 = new javax.swing.JLabel();
-        jLabel31 = new javax.swing.JLabel();
-        jLabel32 = new javax.swing.JLabel();
-        jLabel36 = new javax.swing.JLabel();
-        jPanel7 = new javax.swing.JPanel();
         jPanel8 = new javax.swing.JPanel();
         jLabel17 = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
@@ -203,94 +184,6 @@ public class AccountInformation extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("My Account", jPanel4);
 
-        jPanel6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel24.setFont(new java.awt.Font("Georgia", 0, 24)); // NOI18N
-        jLabel24.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel24.setText("Username");
-        jPanel5.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, 110, -1));
-
-        jLabel26.setFont(new java.awt.Font("Georgia", 0, 24)); // NOI18N
-        jLabel26.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel26.setText("Password");
-        jPanel5.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, 110, -1));
-
-        jLabel27.setFont(new java.awt.Font("Georgia", 0, 24)); // NOI18N
-        jLabel27.setText("Address");
-        jPanel5.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 80, -1, -1));
-
-        jTextField10.setText("username");
-        jPanel5.add(jTextField10, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, 250, 40));
-
-        jTextField11.setText("password");
-        jPanel5.add(jTextField11, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, 250, 40));
-
-        jTextField12.setText("street address");
-        jPanel5.add(jTextField12, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 120, 510, 40));
-
-        jLabel33.setFont(new java.awt.Font("Georgia", 0, 24)); // NOI18N
-        jLabel33.setText("Last name");
-        jPanel5.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 180, -1, -1));
-
-        jTextField17.setText("firstname");
-        jPanel5.add(jTextField17, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 120, 230, 40));
-
-        jLabel34.setFont(new java.awt.Font("Georgia", 0, 24)); // NOI18N
-        jLabel34.setText("First name");
-        jPanel5.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 80, -1, -1));
-
-        jTextField18.setText("lastname");
-        jPanel5.add(jTextField18, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 220, 230, 40));
-
-        jLabel5.setFont(new java.awt.Font("Georgia", 0, 32)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel5.setText("Edit Account Information");
-        jPanel5.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, -1, -1));
-
-        jLabel29.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
-        jLabel29.setForeground(new java.awt.Color(255, 51, 51));
-        jLabel29.setText("*");
-        jPanel5.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 80, 20, -1));
-
-        jLabel30.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
-        jLabel30.setForeground(new java.awt.Color(255, 51, 51));
-        jLabel30.setText("*");
-        jPanel5.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 180, 20, -1));
-
-        jLabel31.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
-        jLabel31.setForeground(new java.awt.Color(255, 51, 51));
-        jLabel31.setText("*");
-        jPanel5.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 80, 20, -1));
-
-        jLabel32.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
-        jLabel32.setForeground(new java.awt.Color(255, 51, 51));
-        jLabel32.setText("*");
-        jPanel5.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 180, 10, -1));
-
-        jLabel36.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
-        jLabel36.setForeground(new java.awt.Color(255, 51, 51));
-        jLabel36.setText("*");
-        jPanel5.add(jLabel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 80, 10, -1));
-
-        jPanel6.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1260, 620));
-
-        jTabbedPane1.addTab("Account Information", jPanel6);
-
-        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
-        jPanel7.setLayout(jPanel7Layout);
-        jPanel7Layout.setHorizontalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1260, Short.MAX_VALUE)
-        );
-        jPanel7Layout.setVerticalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 625, Short.MAX_VALUE)
-        );
-
-        jTabbedPane1.addTab("Address Management", jPanel7);
-
         jPanel8.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel17.setFont(new java.awt.Font("Georgia", 0, 36)); // NOI18N
@@ -411,25 +304,14 @@ public class AccountInformation extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
-    private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
-    private javax.swing.JLabel jLabel26;
-    private javax.swing.JLabel jLabel27;
-    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel30;
-    private javax.swing.JLabel jLabel31;
-    private javax.swing.JLabel jLabel32;
-    private javax.swing.JLabel jLabel33;
-    private javax.swing.JLabel jLabel34;
-    private javax.swing.JLabel jLabel36;
     private javax.swing.JLabel jLabel37;
     private javax.swing.JLabel jLabel38;
     private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel40;
     private javax.swing.JLabel jLabel41;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
@@ -440,17 +322,9 @@ public class AccountInformation extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel6;
-    private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField10;
-    private javax.swing.JTextField jTextField11;
-    private javax.swing.JTextField jTextField12;
-    private javax.swing.JTextField jTextField17;
-    private javax.swing.JTextField jTextField18;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;

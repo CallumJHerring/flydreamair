@@ -2,8 +2,11 @@ package com.mycompany.flydreamair;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.Color;
 
 public class ManageSeating extends javax.swing.JFrame {
+    private BookFlightPage bfp = new BookFlightPage();
+    private ButtonGroup buttonGroup;
 
     /**
      * Creates new form ManageSeating
@@ -11,6 +14,26 @@ public class ManageSeating extends javax.swing.JFrame {
     public ManageSeating() {
         initComponents();
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        buttonGroup = new ButtonGroup();
+        
+        buttonGroup.add(premEconRadio);
+        buttonGroup.add(businessRadio);
+        buttonGroup.add(firstClassRadio);      
+    }
+    
+    public void displayRef(Flight flight) {
+        String f = flight.toString();
+        displayFlightInfo.setText(f);
+    }
+    
+    public void displayUpdatedRef(String seat) {
+        String newSeat = seat;
+        updatedFlightInfo.setText("Updated seat: " + newSeat);
+    }
+    
+    public void updateFlight() {
+       String newSeat = updateSeat.getText();
+       bfp.updateFlight(newSeat, this);
     }
 
     /**
@@ -23,40 +46,171 @@ public class ManageSeating extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
         jLabel2 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jTextField2 = new javax.swing.JTextField();
+        updateSeat = new javax.swing.JTextField();
+        updateButton = new javax.swing.JButton();
+        enterRef = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        firstClassRadio = new javax.swing.JRadioButton();
+        premEconRadio = new javax.swing.JRadioButton();
+        businessRadio = new javax.swing.JRadioButton();
+        searchButton = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        displayFlightInfo = new javax.swing.JTextArea();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        updatedFlightInfo = new javax.swing.JTextField();
+        jLabel74 = new javax.swing.JLabel();
+        backBooking = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setText("Enter your reference number");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 30, -1, -1));
-
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
-
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 120, 920, 40));
-
+        jLabel2.setFont(new java.awt.Font("Georgia", 0, 16)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("Update seat");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 180, -1, -1));
-        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 200, 90, 50));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 360, -1, -1));
 
-        jButton1.setText("Submit");
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 220, -1, -1));
-        jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 30, 250, 30));
+        updateSeat.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        jPanel1.add(updateSeat, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 390, 90, 50));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1040, 630));
+        updateButton.setText("Update seating");
+        updateButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                updateButtonMouseClicked(evt);
+            }
+        });
+        jPanel1.add(updateButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 400, -1, 30));
+        jPanel1.add(enterRef, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, 320, 40));
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/smallLogo.png"))); // NOI18N
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(-90, 0, 250, 220));
+
+        jLabel1.setFont(new java.awt.Font("Georgia", 0, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel1.setText("Flight Info");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, -1, -1));
+
+        jLabel3.setFont(new java.awt.Font("Georgia", 0, 24)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel3.setText("Enter reference number");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, -1, -1));
+
+        jLabel5.setFont(new java.awt.Font("Georgia", 0, 16)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel5.setText("Upgrade seat");
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 560, -1, -1));
+
+        firstClassRadio.setFont(new java.awt.Font("Georgia", 2, 14)); // NOI18N
+        firstClassRadio.setForeground(new java.awt.Color(0, 0, 0));
+        firstClassRadio.setText("First class");
+        jPanel1.add(firstClassRadio, new org.netbeans.lib.awtextra.AbsoluteConstraints(1170, 590, 140, -1));
+
+        premEconRadio.setFont(new java.awt.Font("Georgia", 2, 14)); // NOI18N
+        premEconRadio.setForeground(new java.awt.Color(0, 0, 0));
+        premEconRadio.setText("Premium economy");
+        jPanel1.add(premEconRadio, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 590, 150, -1));
+
+        businessRadio.setFont(new java.awt.Font("Georgia", 2, 14)); // NOI18N
+        businessRadio.setForeground(new java.awt.Color(0, 0, 0));
+        businessRadio.setText("Business");
+        jPanel1.add(businessRadio, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 590, 100, -1));
+
+        searchButton.setText("Search");
+        searchButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                searchButtonMouseClicked(evt);
+            }
+        });
+        jPanel1.add(searchButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 190, 80, 40));
+
+        displayFlightInfo.setColumns(20);
+        displayFlightInfo.setRows(5);
+        jScrollPane2.setViewportView(displayFlightInfo);
+
+        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 290, 1290, 40));
+
+        jLabel6.setFont(new java.awt.Font("Georgia", 0, 16)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel6.setText("Updated Flight info");
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 460, -1, -1));
+
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/premEcon (1).jpeg"))); // NOI18N
+        jLabel8.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 153, 255), 2, true));
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 620, -1, -1));
+
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/busClass (1).jpeg"))); // NOI18N
+        jLabel7.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 153, 255), 2, true));
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 620, -1, 270));
+
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/firstClass.jpeg"))); // NOI18N
+        jLabel9.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 153, 255), 2, true));
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(1010, 620, -1, -1));
+        jPanel1.add(updatedFlightInfo, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 490, 190, 50));
+
+        jLabel74.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel74.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel74.setIcon(new javax.swing.ImageIcon(getClass().getResource("/back3-removebg-preview 2 (1).png"))); // NOI18N
+        jPanel1.add(jLabel74, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 10, 60, -1));
+
+        backBooking.setFont(new java.awt.Font("Georgia", 0, 24)); // NOI18N
+        backBooking.setForeground(new java.awt.Color(0, 0, 0));
+        backBooking.setText("Back");
+        backBooking.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                backBookingMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                backBookingMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                backBookingMouseExited(evt);
+            }
+        });
+        jPanel1.add(backBooking, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 20, 60, 30));
+
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/wallpaper.jpeg"))); // NOI18N
+        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1460, 910));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1460, 910));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void searchButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_searchButtonMouseClicked
+        if (evt.getButton() == evt.BUTTON1) {
+            String input = enterRef.getText();
+            bfp.findFlight(input, this);
+        }
+    }//GEN-LAST:event_searchButtonMouseClicked
+
+    private void updateButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_updateButtonMouseClicked
+        if (evt.getButton() == evt.BUTTON1) {
+            updateFlight();
+        }
+    }//GEN-LAST:event_updateButtonMouseClicked
+
+    private void backBookingMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backBookingMouseClicked
+        if (evt.getButton() == evt.BUTTON1) {
+            dispose();
+        }
+    }//GEN-LAST:event_backBookingMouseClicked
+
+    private void backBookingMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backBookingMouseEntered
+        backBooking.setForeground(new Color(128, 0, 0));
+    }//GEN-LAST:event_backBookingMouseEntered
+
+    private void backBookingMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backBookingMouseExited
+        backBooking.setForeground(Color.BLACK);
+    }//GEN-LAST:event_backBookingMouseExited
 
     /**
      * @param args the command line arguments
@@ -94,13 +248,28 @@ public class ManageSeating extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel backBooking;
+    private javax.swing.JRadioButton businessRadio;
+    private javax.swing.JTextArea displayFlightInfo;
+    private javax.swing.JTextField enterRef;
+    private javax.swing.JRadioButton firstClassRadio;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel74;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JRadioButton premEconRadio;
+    private javax.swing.JButton searchButton;
+    private javax.swing.JButton updateButton;
+    private javax.swing.JTextField updateSeat;
+    private javax.swing.JTextField updatedFlightInfo;
     // End of variables declaration//GEN-END:variables
 }
