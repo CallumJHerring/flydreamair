@@ -30,22 +30,72 @@ public class BookFlightPage extends javax.swing.JFrame {
         return this.flights;
     }
     
+    
     public void findFlight(String input, ReservationManagement rm) {
         String ref = input;
         
         for (Flight f: flights) {
             if (ref.equals(f.getTicketID())) {
                 System.out.println(f.toString());
-                //ReservationManagement rm = new ReservationManagement();
                 rm.setVisible(true);
                 rm.displayRef(f);
-                //rm.dispose();
+                
+                rm.updateFlight();
                 break;
+            } 
+        }
+        
+    }
+    
+    public void updateFlight(String newDateDep, String newDateArr, ReservationManagement rm) {
+        try {
+            String depCity = departureCity.getText();
+            String depDate = newDateDep;
+            String arrCity = arrivalCity.getText();
+            String arrDate = newDateArr;
+            String price = "TBD";
+            String seat = seating.getText();
+            String refNum = UUID.randomUUID().toString();
+            Flight newFlight = new Flight(depCity, newDateDep, arrCity, newDateArr, price, seat, refNum);
+            flights.add(newFlight);
+    
+            if (newFlight != null) {
+                writeFlights();
+                rm.setVisible(true);
+                //rm.displayUpdatedRef(newFlight);
+                rm.displayUpdatedRef(newDateDep, newDateArr);
+                //referenceDisplay.setText(refNum);
             }
+            
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
-
     
+    /*
+    public Flight getFlightByReference(String referenceNumber) {
+        for (Flight flight : flights) {
+            if (flight.getTicketID().equals(referenceNumber)) {
+                return flight;
+            }
+        }
+        return null;
+    }
+    */
+    
+    /*
+    public boolean deleteFlightByReference(String referenceNumber) {
+        Flight flightToDelete = getFlightByReference(referenceNumber);
+        if (flightToDelete != null) {
+            flights.remove(flightToDelete);
+            System.out.println("Flight deleted: " + flightToDelete.toString());
+            
+            writeFlights();
+            return true;
+        }
+        return false;
+    }
+    */
     
     public void seatingCursors() {
         A1.setCursor(new Cursor(Cursor.DEFAULT_CURSOR));

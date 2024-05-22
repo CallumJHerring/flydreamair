@@ -4,12 +4,15 @@ import java.util.*;
 import javax.swing.*;
 
 public class ReservationManagement extends javax.swing.JFrame {
+    private BookFlightPage bfp = new BookFlightPage();
     /**
      * Creates new form ReservationManagement
      */
+    
     public ReservationManagement() {
         initComponents();
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        
     }
 
     /**
@@ -30,14 +33,14 @@ public class ReservationManagement extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         displayFlightInfo = new javax.swing.JTextArea();
         jLabel3 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        deleteButton = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        updateDateOne = new javax.swing.JTextField();
-        updateDateTwo = new javax.swing.JTextField();
+        departureDateField = new javax.swing.JTextField();
+        arrivalDateField = new javax.swing.JTextField();
         jScrollPane2 = new javax.swing.JScrollPane();
         updatedFlightInfo = new javax.swing.JTextArea();
-        jButton2 = new javax.swing.JButton();
+        updateButton = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
@@ -82,11 +85,11 @@ public class ReservationManagement extends javax.swing.JFrame {
         jLabel3.setText("Remove this flight");
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 640, -1, -1));
 
-        jButton1.setBackground(new java.awt.Color(255, 51, 51));
-        jButton1.setFont(new java.awt.Font("Georgia", 1, 14)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(0, 0, 0));
-        jButton1.setText("REMOVE THIS FLIGHT FOREVER");
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 670, -1, 40));
+        deleteButton.setBackground(new java.awt.Color(255, 51, 51));
+        deleteButton.setFont(new java.awt.Font("Georgia", 1, 14)); // NOI18N
+        deleteButton.setForeground(new java.awt.Color(0, 0, 0));
+        deleteButton.setText("REMOVE THIS FLIGHT FOREVER");
+        jPanel1.add(deleteButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 670, -1, 40));
 
         jLabel5.setText("Updated Flight info");
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 470, -1, -1));
@@ -94,11 +97,11 @@ public class ReservationManagement extends javax.swing.JFrame {
         jLabel6.setText("Change dates");
         jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 360, -1, -1));
 
-        updateDateOne.setText("departureDate");
-        jPanel1.add(updateDateOne, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 390, 100, 40));
+        departureDateField.setText("departureDate");
+        jPanel1.add(departureDateField, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 390, 100, 40));
 
-        updateDateTwo.setText("arrivalDate");
-        jPanel1.add(updateDateTwo, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 390, 100, 40));
+        arrivalDateField.setText("arrivalDate");
+        jPanel1.add(arrivalDateField, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 390, 100, 40));
 
         updatedFlightInfo.setColumns(20);
         updatedFlightInfo.setRows(5);
@@ -106,13 +109,13 @@ public class ReservationManagement extends javax.swing.JFrame {
 
         jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 500, 1390, 50));
 
-        jButton2.setText("Update flight information");
-        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+        updateButton.setText("Update flight information");
+        updateButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton2MouseClicked(evt);
+                updateButtonMouseClicked(evt);
             }
         });
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 400, -1, 30));
+        jPanel1.add(updateButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 400, -1, 30));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1420, 740));
 
@@ -130,30 +133,78 @@ public class ReservationManagement extends javax.swing.JFrame {
         displayFlightInfo.setText(f);
     }
     
+    public void displayUpdatedRef(Flight flight) {
+        String f = flight.toString();
+        updatedFlightInfo.setText(f);
+    }
+    
+    public void displayUpdatedRef(String dd, String ad) {
+        String d = dd;
+        String a = ad;
+        updatedFlightInfo.setText("Updated Departure Date: " + d + "  Updated Arrival Date:" + ad);
+    }
+    
     private void searchButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_searchButtonMouseClicked
         if (evt.getButton() == evt.BUTTON1) {
-            BookFlightPage bfp = new BookFlightPage();
+            //BookFlightPage bfp = new BookFlightPage();
             String input = enterRef.getText();
             bfp.findFlight(input, this);
         }
     }//GEN-LAST:event_searchButtonMouseClicked
+    
+    /*
+    private void deleteButtonMouseClicked(java.awt.event.MouseEvent evt) {
+        if (evt.getButton() == evt.BUTTON1) {
+            String input = enterRef.getText();
+            //BookFlightPage bfp = new BookFlightPage();
+             System.out.println("Attempting to delete flight with ID: " + input);
+            boolean success = bfp.deleteFlightByReference(input);
+            if (success) {
+                displayFlightInfo.setText("Flight deleted successfully.");
+            } else {
+                displayFlightInfo.setText("Flight not found.");
+            }
+        }
+    }
+    */
+    
+    /*
+    private void updateFlight() {
+        String referenceNumber = enterRef.getText();
+        String newDestination = departureField.getText();
+        String newDepartureTime = departureDateField.getText();
+        String newArrival = arrivalField.getText();
+        String newArrivalTime = arrivalDateField.getText();
+        String newSeat = seatField.getText();
 
+        Flight flight = bookFlightPage.getFlightByReference(referenceNumber);
+        if (flight != null) {
+            flight.setDepartureCity(newDestination);
+            flight.setDepartureDate(newDepartureTime);
+            flight.setArrivalCity(newArrival);
+            flight.setArrivalDate(newArrivalTime);
+            flight.setSeat(newSeat);
+            
+            JOptionPane.showMessageDialog(null, "Success");
+            updatedFlightInfo.setText(flight.toString());
+        } else {
+            JOptionPane.showMessageDialog(null, "error");
+        }
+    }
+    */
+    
     public void updateFlight() {
-        
+       String newDateDep = departureDateField.getText();
+       String newDateArr = arrivalDateField.getText();
+       bfp.updateFlight(newDateDep, newDateArr, this);
     }
     
-    private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
+    private void updateButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_updateButtonMouseClicked
         if (evt.getButton() == evt.BUTTON1) {
-            String updateFlight = displayFlightInfo.getText();
-            String updateDepartureDate = updateDateOne.getText();
-            String updateArrivalDate = updateDateTwo.getText();
-            
-            Flight f = new Flight();
-       
-            //updatedFlightInfo.setText(updateFlight);
+            updateFlight();
         }
-    }//GEN-LAST:event_jButton2MouseClicked
-
+    }//GEN-LAST:event_updateButtonMouseClicked
+    
     /**
      * @param args the command line arguments
      */
@@ -190,10 +241,11 @@ public class ReservationManagement extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField arrivalDateField;
+    private javax.swing.JButton deleteButton;
+    private javax.swing.JTextField departureDateField;
     private javax.swing.JTextArea displayFlightInfo;
     private javax.swing.JTextField enterRef;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -207,8 +259,7 @@ public class ReservationManagement extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JButton searchButton;
-    private javax.swing.JTextField updateDateOne;
-    private javax.swing.JTextField updateDateTwo;
+    private javax.swing.JButton updateButton;
     private javax.swing.JTextArea updatedFlightInfo;
     // End of variables declaration//GEN-END:variables
 }

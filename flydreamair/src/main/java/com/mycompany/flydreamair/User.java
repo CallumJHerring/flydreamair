@@ -59,7 +59,7 @@ public class User implements CompanyFileIO {
     public ArrayList<Flight> getFlights() {
         return this.flights;
     }
-
+    
     @Override
     public void writeData(Formatter formatter) {
         formatter.format("%d, %s, %s, %s%n", customerID, username, password, email);

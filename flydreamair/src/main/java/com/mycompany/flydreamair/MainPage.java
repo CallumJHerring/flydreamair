@@ -22,7 +22,10 @@ public class MainPage extends javax.swing.JFrame {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy/MM/dd");
         String formatDate = now.format(formatter);
         dateBox.setText(formatDate);
-     
+        
+       // User user = new User();
+        UserSession us = new UserSession();
+        welcomeLabel.setText("Welcome back " + us.getCurrentUser().getUsername());
     }
 
     /**
@@ -39,6 +42,7 @@ public class MainPage extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         dateBox = new javax.swing.JLabel();
+        welcomeLabel = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         bookFlightLabel = new javax.swing.JLabel();
         manageReservation = new javax.swing.JLabel();
@@ -118,6 +122,10 @@ public class MainPage extends javax.swing.JFrame {
         dateBox.setForeground(new java.awt.Color(255, 255, 255));
         dateBox.setText("Date:");
         jPanel2.add(dateBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 214, 27));
+
+        welcomeLabel.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
+        welcomeLabel.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel2.add(welcomeLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 10, 220, 30));
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1462, 140));
 
@@ -838,5 +846,6 @@ public class MainPage extends javax.swing.JFrame {
     private javax.swing.JMenu logoutButton;
     private javax.swing.JLabel manageReservation;
     private javax.swing.JLabel manageSeating;
+    private javax.swing.JLabel welcomeLabel;
     // End of variables declaration//GEN-END:variables
 }

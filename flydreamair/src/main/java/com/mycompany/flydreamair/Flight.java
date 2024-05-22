@@ -82,44 +82,11 @@ public class Flight implements CompanyFileIO {
     public String getSeat() {
         return this.seat;
     }
-    
-    /*
-    public void setTicketID(String ticketID) {
-        ticketID = ticketID;
-    }
-    */
-    
+
     public String getTicketID() {
         return ticketID;
     }
-    
-    /*
-    @Override
-    public void writeData(Formatter formatter) {
-        formatter.format("%s\n");
-    }
-         
-    
-    @Override
-    public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append("Airport Departing: ").append(this.departureCity).append("\n");
-        sb.append("Departure Date: ").append(this.departureDate.toString()).append("\n");
-        sb.append("Airport Destination: ").append(this.arrivalCity).append("\n");
-        sb.append("Arrival Date: ").append(this.arrivalDate.toString()).append("\n");
-        sb.append("Price: ").append(this.price).append("\n");
-        sb.append("Seating: ").append(this.seat).append("\n");
-        sb.append("Reference: ").append(this.ticketID).append("");
-        return sb.toString();
-    }
-    
-    
-    @Override
-    public String toString() {
-        return "Airport Departing: " + departureCity + ", Departure Date: " + departureDate + ", Airport Destination: " + arrivalCity +
-                ", Arrival Date: " + arrivalDate + ", Price: " + price + ", Seating: " + seat + ", TicketID: " + ticketID;
-    }
-    */
+   
     @Override
     public void writeData(Formatter formatter) {
         formatter.format("%s, %s, %s, %s, %s, %s, %s%n",
